@@ -5,6 +5,7 @@
     <title>Interaxys - Cabinet de consulting</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <meta name="description" content="Bienvenue sur le site web d'interaxys">
 </head>
 <body>
@@ -13,12 +14,14 @@
         <ul>
             <li><a href="#presentation"><p>Qui sommes-nous ?</p></a></li>
             <li><a href="#solutions"><p>Nos solutions</p></a></li>
-            <li><a href="#"><img src="" alt="Logo d'interaxys"></a></li>
+            <li><a href="#"><img src="{{ asset('img/interblanc.png') }}" alt="Logo d'interaxys"></a></li>
             <li><a href="#savoir-faire"><p>Nos savoir-faire</p></a></li>
             <li><a href="#contact"><p>Nous contacter</p></a></li>
         </ul>
     </nav>
+</header>
 
+<section id="headerbg">
     <div id="sliderdiv">
         <div id="synergieslide" class="sliderslide">
             <h1 class="slidertitre">SYNERGIE</h1>
@@ -27,14 +30,15 @@
     </div>
 
     <div class="scrollicon">
-        <img src="" alt="scroll_blanc">
-        <img src="" alt="scroll_jaune">
+        <img id="scrollb" src="{{ asset('img/scroll_blanc.png') }}" alt="scroll_blanc">
+        <img id="scrollj" src="{{ asset('img/scroll_jaune.png') }}" alt="scroll_jaune">
     </div>
-</header>
+</section>
 
 <section id="presentation">
     <article>
         <div class="premierepresentation">
+            <div class="sectionlimit">
                 <h2>QUI SOMMES-NOUS ?</h2>
                 <div class="doubleflex">
                     <div class="textpresentation">
@@ -43,6 +47,7 @@
                             vel nibh. Integer odio purus, sollicitudin ac convallis scelerisque, pulvinar ut libero. Vivamus sapien elit,
                             maximus aliquam sapien ut, viverra finibus lacus. Ut rutrum nisi tortor, non varius quam sodales ac.
                         </p>
+                        <br>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tortor id augue accumsan,
                             at laoreet justo sodales. Etiam tortor augue, gravida egestas accumsan at, egestas vel nibh. Integer odio purus,
@@ -54,41 +59,44 @@
                             quam sodales ac.
                         </p>
                     </div>
-                    <img src="" alt="forme geométrique 1">
+                    <img src="{{ asset('img/baggle.svg') }}" alt="forme geométrique 1">
                 </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tortor id augue
+                <p class="pflex">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tortor id augue
                     accumsan, at laoreet justo sodales. Etiam tortor augue, gravida egestas accumsan at, egestas
                     vel nibh. Integer odio purus, sollicitudin ac convallis scelerisque, pulvinar ut libero. Vivamus sapien elit,
                     maximus aliquam sapien ut, viverra finibus lacus. Ut rutrum nisi tortor, non varius quam sodales ac.
                 </p>
+            </div>
         </div>
 
         <div class="bgcitation">
-            <strong>" Le modèle de la réduction des coûts</strong>
-            <strong> nous envoie droit dans le mur !"</strong>
+            <strong id="citation1">« Le modèle de la réduction des coûts</strong>
+            <strong id="citation2"> nous envoie droit dans le mur ! »</strong>
         </div>
 
         <div class="deuxiemepresentation">
-            <div class="doubleflex">
-                <img src="" alt="forme geométrique 2">
-                <div class="text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tortor id augue accumsan,
-                        at laoreet justo sodales. Etiam tortor augue, gravida egestas accumsan at, egestas vel nibh. Integer
-                        odio purus, sollicitudin ac convallis scelerisque, pulvinar ut libero. Vivamus sapien elit, maximus
-                        aliquam sapien ut, viverra finibus lacus. Ut rutrum nisi tortor, non varius quam sodales ac.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tortor id augue accumsan,
-                        at laoreet justo sodales. Etiam tortor augue, gravida egestas accumsan at, egestas vel nibh. Integer
-                        odio purus, sollicitudin ac convallis scelerisque, pulvinar ut libero. Vivamus sapien elit, maximus
-                        aliquam sapien ut, viverra finibus lacus.
-                    </p>
+            <div class="sectionlimit">
+                <div class="doubleflex">
+                    <img src="{{ asset('img/sphere.png') }}" alt="forme geométrique 2">
+                    <div class="text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tortor id augue accumsan,
+                            at laoreet justo sodales. Etiam tortor augue, gravida egestas accumsan at, egestas vel nibh. Integer
+                            odio purus, sollicitudin ac convallis scelerisque, pulvinar ut libero. Vivamus sapien elit, maximus
+                            aliquam sapien ut, viverra finibus lacus. Ut rutrum nisi tortor, non varius quam sodales ac.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tortor id augue accumsan,
+                            at laoreet justo sodales. Etiam tortor augue, gravida egestas accumsan at, egestas vel nibh. Integer
+                            odio purus, sollicitudin ac convallis scelerisque, pulvinar ut libero. Vivamus sapien elit, maximus
+                            aliquam sapien ut, viverra finibus lacus.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="presentation-video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/rZQ8aMvsikc"
+            <iframe width="907" height="510" src="https://www.youtube.com/embed/rZQ8aMvsikc"
                     title="YouTube video player" frameborder="0" allow="accelerometer;
                      autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
             </iframe>
@@ -96,205 +104,201 @@
     </article>
 </section>
 <section id="solutions">
-    <h2>NOS SOLUTIONS</h2>
-    <div class="flex-solution">
-        <div class="flexcolumncat">
-            <div id="philo"><p>Philosophique</p></div>
-            <div id="strat"><p>Stratégique</p></div>
-            <div id="tact"><p>Tactique</p></div>
-            <div id="ope"><p>Opérationnel</p></div>
-        </div>
-        <div id="cardphilo">
-            <!-- FORME RECTANGULAIRE A INTEGRER -->
-            <article>
-                <h3>Philosophique</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tortor id augue
-                    accumsan, at laoreet justo sodales. Etiam tortor augue, gravida egestas accumsan at, egestas
-                    vel nibh. Integer odio purus, sollicitudin ac convallis scelerisque, pulvinar ut libero. Vivamus sapien elit,
-                    maximus aliquam sapien ut, viverra finibus lacus.</p>
-                <ul>
-                    <li><strong>HORIZON :</strong><p>Éternité</p></li>
-                    <li><strong>DOMAINE :</strong><p>Vision</p></li>
-                    <li><strong>ESPRIT :</strong><p>Engagement</p></li>
-                    <li><strong>FINALITÉ :</strong><p>Sens</p></li>
-                    <li><strong>OBJET :</strong><p>Environement</p></li>
-                </ul>
-                <div><p>RESPONSABILITÉ</p></div>
-            </article>
-        </div>
+    <div class="sectionlimit">
+        <h2>NOS SOLUTIONS</h2>
+        <div class="flex-solution">
+            <div class="flexcolumncat">
+                <div id="philo"><p>Philosophique</p></div>
+                <div id="strat"><p>Stratégique</p></div>
+                <div id="tact"><p>Tactique</p></div>
+                <div id="ope"><p>Opérationnel</p></div>
+            </div>
+            <div class="cardsol" id="cardphilo">
+            <div class="rectbleu"></div>
+                <article>
+                    <h3>Philosophique</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tortor id augue
+                        accumsan, at laoreet justo sodales. Etiam tortor augue, gravida egestas accumsan at, egestas
+                        vel nibh. Integer odio purus, sollicitudin ac convallis scelerisque, pulvinar ut libero. Vivamus sapien elit,
+                        maximus aliquam sapien ut, viverra finibus lacus.</p>
+                    <br>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tortor id augue
+                        accumsan, at laoreet justo sodales. Etiam tortor augue, gravida egestas accumsan at, egestas
+                        vel nibh.</p>
+                    <ul>
+                        <li><strong>HORIZON : </strong><p> Éternité</p></li>
+                        <li><strong>DOMAINE : </strong><p> Vision</p></li>
+                        <li><strong>ESPRIT : </strong><p> Engagement</p></li>
+                        <li><strong>FINALITÉ : </strong><p> Sens</p></li>
+                        <li><strong>OBJET : </strong><p> Environement</p></li>
+                    </ul>
+                </article>
+                <div class="result"><p>responsabilité</p></div>
+            </div>
 
-        <div id="cardphilo">
-            <!-- FORME RECTANGULAIRE A INTEGRER -->
-            <article>
-                <h3>Stratégique</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tortor id augue
-                    accumsan, at laoreet justo sodales. Etiam tortor augue, gravida egestas accumsan at, egestas
-                    vel nibh. Integer odio purus, sollicitudin ac convallis scelerisque, pulvinar ut libero. Vivamus sapien elit,
-                    maximus aliquam sapien ut, viverra finibus lacus.</p>
-                <ul>
-                    <li><strong>HORIZON :</strong><p>Année</p></li>
-                    <li><strong>DOMAINE :</strong><p>Objectifs</p></li>
-                    <li><strong>ESPRIT :</strong><p>Alignement</p></li>
-                    <li><strong>FINALITÉ :</strong><p>Pérennité</p></li>
-                    <li><strong>OBJET :</strong><p>Marché</p></li>
-                </ul>
-                <div><p>QUALITÉ</p></div>
-            </article>
-        </div>
+           <!-- <div  class="cardsol" id="cardphilo">
+                 FORME RECTANGULAIRE A INTEGRER
+                <article>
+                    <h3>Stratégique</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tortor id augue
+                        accumsan, at laoreet justo sodales. Etiam tortor augue, gravida egestas accumsan at, egestas
+                        vel nibh. Integer odio purus, sollicitudin ac convallis scelerisque, pulvinar ut libero. Vivamus sapien elit,
+                        maximus aliquam sapien ut, viverra finibus lacus.</p>
+                    <ul>
+                        <li><strong>HORIZON :</strong><p>Année</p></li>
+                        <li><strong>DOMAINE :</strong><p>Objectifs</p></li>
+                        <li><strong>ESPRIT :</strong><p>Alignement</p></li>
+                        <li><strong>FINALITÉ :</strong><p>Pérennité</p></li>
+                        <li><strong>OBJET :</strong><p>Marché</p></li>
+                    </ul>
+                    <div><p>QUALITÉ</p></div>
+                </article>
+            </div>
 
-        <div id="cardphilo">
-            <!-- FORME RECTANGULAIRE A INTEGRER -->
-            <article>
-                <h3>Tactique</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tortor id augue
-                    accumsan, at laoreet justo sodales. Etiam tortor augue, gravida egestas accumsan at, egestas
-                    vel nibh. Integer odio purus, sollicitudin ac convallis scelerisque, pulvinar ut libero. Vivamus sapien elit,
-                    maximus aliquam sapien ut, viverra finibus lacus.</p>
-                <ul>
-                    <li><strong>HORIZON :</strong><p>Mois</p></li>
-                    <li><strong>DOMAINE :</strong><p>Moyens</p></li>
-                    <li><strong>ESPRIT :</strong><p>Coordination</p></li>
-                    <li><strong>FINALITÉ :</strong><p>Santé</p></li>
-                    <li><strong>OBJET :</strong><p>Organisation</p></li>
-                </ul>
-                <div><p>Vitesse</p></div>
-            </article>
-        </div>
+            <div  class="cardsol" id="cardphilo">
+                 FORME RECTANGULAIRE A INTEGRER
+                <article>
+                    <h3>Tactique</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tortor id augue
+                        accumsan, at laoreet justo sodales. Etiam tortor augue, gravida egestas accumsan at, egestas
+                        vel nibh. Integer odio purus, sollicitudin ac convallis scelerisque, pulvinar ut libero. Vivamus sapien elit,
+                        maximus aliquam sapien ut, viverra finibus lacus.</p>
+                    <ul>
+                        <li><strong>HORIZON :</strong><p>Mois</p></li>
+                        <li><strong>DOMAINE :</strong><p>Moyens</p></li>
+                        <li><strong>ESPRIT :</strong><p>Coordination</p></li>
+                        <li><strong>FINALITÉ :</strong><p>Santé</p></li>
+                        <li><strong>OBJET :</strong><p>Organisation</p></li>
+                    </ul>
+                    <div><p>Vitesse</p></div>
+                </article>
+            </div>
 
-        <div id="cardphilo">
-            <!-- FORME RECTANGULAIRE A INTEGRER -->
-            <article>
-                <h3>Opérationnel</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tortor id augue
-                    accumsan, at laoreet justo sodales. Etiam tortor augue, gravida egestas accumsan at, egestas
-                    vel nibh. Integer odio purus, sollicitudin ac convallis scelerisque, pulvinar ut libero. Vivamus sapien elit,
-                    maximus aliquam sapien ut, viverra finibus lacus.</p>
-                <ul>
-                    <li><strong>HORIZON :</strong><p>Semaine</p></li>
-                    <li><strong>DOMAINE :</strong><p>Activités</p></li>
-                    <li><strong>ESPRIT :</strong><p>Synchronisation</p></li>
-                    <li><strong>FINALITÉ :</strong><p>Survie</p></li>
-                    <li><strong>OBJET :</strong><p>Produit</p></li>
-                </ul>
-                <div><p>EFFICIENCE</p></div>
-            </article>
-        </div>
+            <div class="cardsol" id="cardphilo">
+               FORME RECTANGULAIRE A INTEGRER
+                <article>
+                    <h3>Opérationnel</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tortor id augue
+                        accumsan, at laoreet justo sodales. Etiam tortor augue, gravida egestas accumsan at, egestas
+                        vel nibh. Integer odio purus, sollicitudin ac convallis scelerisque, pulvinar ut libero. Vivamus sapien elit,
+                        maximus aliquam sapien ut, viverra finibus lacus.</p>
+                    <ul>
+                        <li><strong>HORIZON :</strong><p>Semaine</p></li>
+                        <li><strong>DOMAINE :</strong><p>Activités</p></li>
+                        <li><strong>ESPRIT :</strong><p>Synchronisation</p></li>
+                        <li><strong>FINALITÉ :</strong><p>Survie</p></li>
+                        <li><strong>OBJET :</strong><p>Produit</p></li>
+                    </ul>
+                    <div><p>EFFICIENCE</p></div>
+                </article>
+            </div>-->
+    </div>
     </div>
 </section>
 
 <div class="ban-etoile">
     <div>
-        <strong>Améliorer vos perspectives d'entreprise avec</strong>
-        <strong>INTERAXYS</strong>
+        <strong>Améliorer vos perspectives <br> d'entreprise avec</strong> <br> <br>
+        <strong class="titreinteraxys">INTERAXYS</strong>
     </div>
 </div>
 
 <section id="savoir-faire">
-    <h2>NOS SAVOIR-FAIRE</h2>
 
     <div class="sliderdiag">
-        <div class="sliderpiece">
-            <img src="" alt="Orientation des modèles d'affaire">
-            <img src="" alt="Flèche">
-            <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tortor id augue
-                    accumsan, at laoreet justo sodales. Etiam tortor augue, gravida egestas accumsan at, egestas
-                    vel nibh. Integer odio purus, sollicitudin ac convallis scelerisque, pulvinar ut libero. Vivamus sapien elit,
-                    maximus aliquam sapien ut, viverra finibus lacus.
-                </p>
-            </div>
+        <div class="sectionlimit">
+          <h2>NOS SAVOIR-FAIRE</h2>
         </div>
-        <!--<div class="sliderpiece">
-            <img src="" alt="Orientation des modèles d'affaire">
-            <img src="" alt="Flèche">
-            <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tortor id augue
-                    accumsan, at laoreet justo sodales. Etiam tortor augue, gravida egestas accumsan at, egestas
-                    vel nibh. Integer odio purus, sollicitudin ac convallis scelerisque, pulvinar ut libero. Vivamus sapien elit,
-                    maximus aliquam sapien ut, viverra finibus lacus.
-                </p>
-            </div>
-        </div>
-        <div class="sliderpiece">
-            <img src="" alt="Orientation des modèles d'affaire">
-            <img src="" alt="Flèche">
-            <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tortor id augue
-                    accumsan, at laoreet justo sodales. Etiam tortor augue, gravida egestas accumsan at, egestas
-                    vel nibh. Integer odio purus, sollicitudin ac convallis scelerisque, pulvinar ut libero. Vivamus sapien elit,
-                    maximus aliquam sapien ut, viverra finibus lacus.
-                </p>
-            </div>
-        </div>
-        <div class="sliderpiece">
-            <img src="" alt="Orientation des modèles d'affaire">
-            <img src="" alt="Flèche">
-            <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tortor id augue
-                    accumsan, at laoreet justo sodales. Etiam tortor augue, gravida egestas accumsan at, egestas
-                    vel nibh. Integer odio purus, sollicitudin ac convallis scelerisque, pulvinar ut libero. Vivamus sapien elit,
-                    maximus aliquam sapien ut, viverra finibus lacus.
-                </p>
-            </div>
-        </div> -->
     </div>
 </section>
 
 <section id="clients">
+    <div class="sectionlimit">
     <h2>NOS CLIENTS</h2>
     <div class="flexclient">
-        <img src="" alt="LOGO1">
-        <img src="" alt="LOGO2">
-        <img src="" alt="LOGO3">
-        <img src="" alt="LOGO4">
+        <img src="{{ asset('img/logo-seb.jpg') }}" alt="LOGO1">
+        <img src="{{ asset('img/banquefrance.jpg') }}" alt="LOGO2">
+        <img src="{{ asset('img/Alcatel.png') }}" alt="LOGO3">
+        <img src="{{ asset('img/logoacome.jpg') }}" alt="LOGO4">
+    </div>
     </div>
 </section>
 
 <section id="contact">
-    <h2>NOUS CONTACTER</h2>
-    <div class="formulaire">
-        <form action="" method="post">
-            <div>
-                <input type="text" nom="nom" placeholder="NOM">
-                <input type="text" name="prenom" placeholder="PRENOM">
-            </div>
-            <div>
-                <input type="text" name="email" placeholder="EMAIL">
-                <select name="raison" id="selectraison">
-                    <option value="lorem">LOREM</option>
-                    <option value="lorem">LOREM</option>
-                    <option value="lorem">LOREM</option>
-                </select>
-            </div>
-            <textarea name="" id="" cols="30" rows="10">
-                Votre message...
-            </textarea>
-            <div class="btn-right">
-                <input type="submit" value="VALIDER">
-            </div>
-        </form>
+    <div class="sectionlimit">
+        <h2>NOUS CONTACTER</h2>
+        <div class="formulaire">
+            <form action="" method="post">
+                <div class="flexline">
+                    <div class="firstflexform">
+                        <div class="geometrieconteneur">
+                            <div class="geometrietop"></div>
+                            <div class="geometrieright"></div>
+                            <input type="text" nom="nom" placeholder="NOM">
+                        </div>
+                        <div class="geometrieconteneur">
+                            <div class="geometrietop2"></div>
+                            <div class="geometrieright"></div>
+                            <input id="email" type="text" name="email" placeholder="EMAIL">
+                        </div>
+                    </div>
+                    <div class="secondflexform">
+                        <div class="geometrieconteneur">
+                            <div class="geometrietop"></div>
+                            <div class="geometrieright"></div>
+                            <input type="text" name="prenom" placeholder="PRENOM">
+                        </div>
+                        <div class="geometrieconteneur">
+                            <div class="geometrietop"></div>
+                            <div class="geometrieright"></div>
+                            <select name="raison" id="selectraison">
+                                <option value="lorem">LOREM</option>
+                                <option value="lorem">LOREM</option>
+                                <option value="lorem">LOREM</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="geometrieconteneur">
+                    <div class="geometrietop3"></div>
+                    <div class="geometrieright2"></div>
+                    <textarea style="resize: none" name="" id="" cols="30" rows="10">Votre message...
+                    </textarea>
+                </div>
+                <div class="btn-right">
+                    <div class="geometrieconteneur">
+                        <div class="geometrietop"></div>
+                        <div class="geometrieright"></div>
+                        <input type="submit" value="VALIDER">
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 </section>
 
 <section id="footer">
-    <div>
-        <div class="leftfooter">
-            <div class="mail"><img src="" alt="Mail picto"><p>contact@interaxys.fr</p></div>
-            <div class="home"><img src="" alt="Maison picto"><p>8 Bis, Boulevard Victor Hugo <br>
-                    10000 Troyes </p></div>
-            <div class="tel"><img src="" alt="Tel picto"><p>+ 33 680 230 239</p></div>
-        </div>
-        <div class="midfooter">
-            <img src="" alt="logotwitter">
-            <img src="" alt="logo linkedin">
-        </div>
-        <div class="rightfooter">
-            <div>
-                <img src="" alt="logointeraxys">
+    <div class="sectionlimit">
+        <div class="fullfooter">
+            <div class="leftfooter">
+                <div class="mail"><img src="{{ asset('img/email.svg') }}" alt="Mail picto"><p>contact@interaxys.fr</p></div>
+                <div class="home"><img src="{{ asset('img/home.svg') }}" alt="Maison picto"><p>8 Bis, Boulevard Victor Hugo <br>
+                        10000 Troyes </p></div>
+                <div class="tel"><img src="{{ asset('img/call.svg') }}" alt="Tel picto"><p>+ 33 680 230 239</p></div>
             </div>
-            <div>
-                <a href="#">Mentions Légales</a>
-                <a href="#">Retour en haut de la page</a>
+            <div class="midfooter">
+                <img src="{{ asset('img/twitter.svg') }}" alt="logotwitter">
+                <img src="{{ asset('img/linkedin.svg') }}" alt="logo linkedin">
+            </div>
+            <div class="rightfooter">
+                <div class="img">
+                    <img src="{{ asset('img/interblanc.png') }}" alt="logointeraxys">
+                </div>
+                <div>
+                    <a href="#">Mentions Légales</a>
+                    <br>
+                    <a href="#">Retour en haut de la page</a>
+                </div>
             </div>
         </div>
     </div>

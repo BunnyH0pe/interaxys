@@ -1,0 +1,714 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+@font-face {
+    font-family: "Qualy";
+    src: url("../fonts/qualy_bold.ttf") format("truetype");
+}
+
+#headerbg{
+    position: sticky;
+    background-image: url("../img/banheader.jpg");
+    background-size: cover;
+    top: calc(-100vmin + 80px);
+    width: 100%;
+    height: 100vmin;
+    overflow: hidden;
+    z-index: 1000;
+    margin-top: 0;
+}
+
+nav{
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    position: fixed;
+    top: 0;
+    left: 10%;
+    z-index: 1100;
+    box-sizing: border-box;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    font-family: "Roboto";
+    text-transform: uppercase;
+    list-style: none;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    text-shadow: 0px 3px 6px black;
+    font-size: 18px;
+}
+
+nav img{
+    width: 140px;
+}
+
+#sliderdiv{
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+}
+
+#sliderdiv h1 {
+    text-shadow: 6px -8px 0 #FFD433;
+    color: white;
+    font-family: Qualy;
+    font-size: 128px;
+    text-align: center;
+    letter-spacing: 15px;
+}
+
+#sliderdiv p{
+    text-align: center;
+    font-size: 26px;
+    font-family: Roboto;
+    font-style: italic;
+    color: white;
+    text-shadow: 0px 2px 2px black;
+}
+
+.scrollicon{
+    position: absolute;
+    bottom: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: -25px;
+}
+
+.scrollicon img{
+    width: 35px;
+}
+
+#scrollb{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 800;
+}
+
+#scrollj{
+    position: absolute;
+    top: -8px;
+    left: 5px;
+    z-index: 600;
+}
+
+h2{
+    text-orientation: upright;
+    writing-mode: vertical-rl;
+    position: absolute;
+    left: -8%;
+    top: 15%;
+    font-size: 20px;
+    color: white;
+    font-family: Qualy;
+    letter-spacing: 2px;
+}
+
+.premierepresentation{
+    background-image: url("../img/grille.png");
+    background-size: 108%;
+    background-position: 45%;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.sectionlimit{
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+}
+
+.doubleflex{
+    display: flex;
+    width: 100%;
+    font-size: 16px;
+    line-height: 28px;
+    color: white;
+    font-family: Roboto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.textpresentation{
+    width: 60%;
+}
+
+.doubleflex img{
+    width: 30%;
+}
+
+.pflex{
+    margin-top: 50px;
+    font-size: 16px;
+    line-height: 28px;
+    color: white;
+    font-family: Roboto;
+}
+
+.bgcitation{
+    width: 100%;
+    height: 400px;
+    background-image: url("../img/bancitation.jpg");
+    background-size: 100%;
+    background-position: 50% 100%;
+    font-family: Qualy;
+    font-size:3.4vw;
+    color: white;
+    position: relative;
+}
+
+#citation1{
+    position: absolute;
+    top: 32%;
+    left: 10%;
+}
+
+#citation2{
+    position: absolute;
+    bottom: 32%;
+    right: 10%;
+}
+
+.deuxiemepresentation{
+    background-image: url("../img/grille.png");
+    background-size: 108%;
+    background-position: 45%;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.text{
+    width: 65%;
+}
+
+.presentation-video{
+    background-image: url("../img/videoban.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    min-height: 700px;
+}
+
+#solutions{
+    background-image: url("../img/grille.png");
+    background-size: 108%;
+    background-position: 45%;
+    height: 100vh;
+    min-height: 700px;
+}
+
+.flex-solution{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.flexcolumncat{
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    justify-content: center;
+}
+
+.flexcolumncat div{
+    width: 200px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    font-family: Qualy;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    box-shadow: 6px 6px 0 #FFD433 ;
+}
+
+.rectbleu{
+    width: 40px;
+    height: 70px;
+    background-color: #94C8EE;
+    border: solid #303030 8px;
+    position: absolute;
+    top: -35px;
+    left: -20px;
+}
+
+.cardsol{
+    width: 45%;
+    height: 78vh;
+    min-height: 550px;
+    min-width: 500px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.cardsol article{
+    height: 70vh;
+    min-height: 500px;
+    width: 85%;
+    position: relative;
+}
+
+.cardsol h3{
+    text-align: center;
+    margin-top: 10px;
+    font-family: Qualy;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.cardsol p {
+    font-size: 14px;
+    line-height: 24px;
+    font-family: Roboto;
+}
+
+.cardsol ul {
+    list-style: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.cardsol li {
+    margin-top: 10px;
+}
+
+.cardsol ul p{
+    display: inline-block;
+    font-size: 18px;
+    font-family: Roboto;
+}
+
+.cardsol strong{
+    font-size: 20px;
+    font-family: Qualy;
+    font-weight: bold;
+}
+
+.cardsol .result{
+    position: absolute;
+    bottom: 4vh;
+    right: 0;
+    background-color: #94C8EE;
+    padding: 15px 30px 15px 15px;
+}
+
+
+.cardsol .result p{
+    font-size: 20px;
+    font-family: Qualy;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.ban-etoile{
+    width: 100%;
+    background-color: black;
+    border-top: solid white 2px;
+    border-bottom: solid white 2px;
+    height: 400px;
+     display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.ban-etoile div{
+    display: flex;
+    align-items: flex-end;
+    justify-items: right;
+    flex-direction: column;
+    margin-right: 10%;
+}
+
+.ban-etoile strong {
+    color: white;
+    font-family: Qualy;
+    font-size: 28px;
+    letter-spacing: 2px;
+    text-align: right;
+}
+
+.titreinteraxys{
+    font-size: 64px !important;
+    letter-spacing: 5px !important;
+}
+
+#savoir-faire{
+    background-image: url("../img/grille.png");
+    background-size: 108%;
+    background-position: 45%;
+    height: 100vh;
+    min-height: 700px;
+}
+
+#savoir-faire .sectionlimit{
+    min-height: 600px;
+}
+
+.fleche{
+    display : inline-block;
+    height : 0;
+    width : 0;
+    border-top : 40px solid red;
+    border-right : 53px solid transparent;
+    border-left : 53px solid transparent;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,110%);
+    cursor: pointer;
+}
+
+.sliderdiag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 80px;
+    padding-top: 80px;
+}
+
+.hiddenslide{
+    display: none;
+}
+
+.sliderpiece{
+    background-color: white;
+    border: #303030 solid 2px;
+    width: 400px;
+    height: 250px;
+    position: relative;
+    cursor: pointer;
+}
+
+#orientation{
+    transform: scale(1);
+    z-index: 900;
+    margin-right: 0;
+}
+
+#gestion{
+    transform: scale(0.8);
+    margin-left: 200px;
+    margin-top: -100px;
+    z-index: 800;
+}
+
+#management{
+    transform: scale(0.6);
+    margin-left: 400px;
+    margin-top: -120px;
+    z-index: 600;
+}
+
+#pilotage{
+    transform: scale(0.4);
+    margin-left: 550px;
+    margin-top: -170px;
+    z-index: 400;
+}
+
+.sliderpiece img{
+    width: 80%;
+    margin-top: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+
+
+.flexclient{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.flexclient img{
+    width: 200px;
+}
+
+#contact{
+    background-image: url("../img/grille.png");
+    background-size: 108%;
+    background-position: 45%;
+    height: 100vh;
+    min-height: 750px;
+}
+
+.formulaire form{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.formulaire{
+    padding-top: 100px;
+    padding-bottom: 80px;
+}
+
+.firstflexform{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.secondflexform{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.flexline{
+    display: flex;
+    justify-content: space-between;
+}
+
+.formulaire textarea{
+    display: block;
+    width: 98%;
+    padding: 10px;
+    font-family: Roboto;
+    font-size: 20px;
+    border: none;
+}
+
+.formulaire input{
+    width: 300px;
+    padding: 10px;
+    font-family: Roboto;
+    font-size: 20px;
+    border: none;
+}
+
+.formulaire #email{
+    width: 400px;
+}
+
+.formulaire select{
+    width: 320px;
+    padding: 10px;
+    font-family: Roboto;
+    font-size: 20px;
+}
+
+.geometrieconteneur{
+    position: relative;
+}
+
+.geometrietop{
+    width:99%;
+    height:20px;
+    background:transparent;
+    border: white solid 1px;
+    -webkit-transform:skew(-30deg);
+    -moz-transform:skew(-30deg);
+    -o-transform:skew(-30deg);
+    tranform:skew(-30deg);
+    position: absolute;
+    top: -22px;
+    left: 7px;
+}
+
+.geometrieright{
+    width:25px;
+    height:20px;
+    background:transparent;
+    border: white solid 1px;
+    -webkit-transform:rotate(-60deg) skew(-60deg);
+    -moz-transform:skew(-60deg) rotate(-40deg);
+    -o-transform:skew(-60deg) rotate(-30deg);
+    tranform:skew(-60deg)  rotate(-30deg);
+    position: absolute;
+    top: -0.5px;
+    right: -20px;
+}
+
+.geometrietop2{
+    width:99.5%;
+    height:20px;
+    background:transparent;
+    border: white solid 1px;
+    -webkit-transform:skew(-30deg);
+    -moz-transform:skew(-30deg);
+    -o-transform:skew(-30deg);
+    tranform:skew(-30deg);
+    position: absolute;
+    top: -22px;
+    left: 7px;
+}
+
+.geometrietop3{
+    width:99.5%;
+    height:20px;
+    background:transparent;
+    border: white solid 1px;
+    -webkit-transform:skew(-30deg);
+    -moz-transform:skew(-30deg);
+    -o-transform:skew(-30deg);
+    tranform:skew(-30deg);
+    position: absolute;
+    top: -22px;
+    left: 7px;
+}
+
+.geometrieright2{
+    width:29px;
+    height:125px;
+    background:transparent;
+    border: white solid 1px;
+    -webkit-transform:rotate(-60deg) skew(-60deg);
+    -moz-transform:skew(-60deg) rotate(-40deg);
+    -o-transform:skew(-60deg) rotate(-30deg);
+    tranform:skew(-60deg)  rotate(-30deg);
+    position: absolute;
+    top: 54px;
+    right: -18px;
+}
+
+.btn-right{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#footer{
+    background-image: url("../img/banfooter.jpg");
+    background-size: 180%;
+    height: 350px;
+    background-position: 80% 50%;
+}
+
+#footer .sectionlimit{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.fullfooter{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.leftfooter{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 250px ;
+}
+
+.leftfooter img{
+    width: 30px;
+}
+
+.leftfooter div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.leftfooter{
+    color: white;
+    text-shadow: 1px 1px 4px black;
+    font-size: 18px;
+    font-family: Roboto;
+}
+
+.midfooter{
+    display: flex;
+    gap: 20px;
+}
+
+.midfooter img{
+    width: 60px ;
+}
+
+.rightfooter img{
+    width: 200px;
+}
+
+.rightfooter{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 100px;
+}
+
+.rightfooter div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.rightfooter a{
+    color: white;
+    text-shadow: 1px 1px 6px black;
+    text-decoration: none;
+    font-family: Roboto;
+    font-size: 16px;
+}
+
+/* POUR LE RESPONSIVE */
+
+@media screen and (max-height: 700px){
+
+    #headerbg{
+        top: calc(-700px + 80px);
+        height: 700px;
+    }
+
+}
+
+@media screen and (max-width: 1080px) {
+    nav{
+        width: 100%;
+        left: 0;
+    }
+
+    nav ul{
+        justify-content: space-around;
+    }
+}
