@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('js/glide-3.4.1/dist/css/glide.core.min.css') }}">
     <meta name="description" content="Bienvenue sur le site web d'interaxys">
 </head>
 <body>
@@ -59,7 +60,7 @@
                             quam sodales ac.
                         </p>
                     </div>
-                    <img src="{{ asset('img/baggle.svg') }}" alt="forme geométrique 1">
+                    <img src="{{ asset('img/formegeo1.svg') }}" alt="forme geométrique 1">
                 </div>
                 <p class="pflex">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tortor id augue
                     accumsan, at laoreet justo sodales. Etiam tortor augue, gravida egestas accumsan at, egestas
@@ -72,28 +73,9 @@
         <div class="bgcitation">
             <strong id="citation1">« Le modèle de la réduction des coûts</strong>
             <strong id="citation2"> nous envoie droit dans le mur ! »</strong>
+            <strong id="nommage">José Gramdi</strong>
         </div>
 
-        <div class="deuxiemepresentation">
-            <div class="sectionlimit">
-                <div class="doubleflex">
-                    <img src="{{ asset('img/sphere.png') }}" alt="forme geométrique 2">
-                    <div class="text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tortor id augue accumsan,
-                            at laoreet justo sodales. Etiam tortor augue, gravida egestas accumsan at, egestas vel nibh. Integer
-                            odio purus, sollicitudin ac convallis scelerisque, pulvinar ut libero. Vivamus sapien elit, maximus
-                            aliquam sapien ut, viverra finibus lacus. Ut rutrum nisi tortor, non varius quam sodales ac.
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tortor id augue accumsan,
-                            at laoreet justo sodales. Etiam tortor augue, gravida egestas accumsan at, egestas vel nibh. Integer
-                            odio purus, sollicitudin ac convallis scelerisque, pulvinar ut libero. Vivamus sapien elit, maximus
-                            aliquam sapien ut, viverra finibus lacus.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <div class="presentation-video">
             <iframe width="907" height="510" src="https://www.youtube.com/embed/rZQ8aMvsikc"
@@ -208,6 +190,15 @@
     <div class="sliderdiag">
         <div class="sectionlimit">
           <h2>NOS SAVOIR-FAIRE</h2>
+            <div class="glide">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <li class="glide__slide">0</li>
+                        <li class="glide__slide">1</li>
+                        <li class="glide__slide">2</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -303,6 +294,9 @@
         </div>
     </div>
 </section>
-
+<script src="{{ asset('js/glide-3.4.1/dist/glide.min.js') }}"></script>
+<script>
+    new Glide('.glide').mount()
+</script>
 </body>
 </html>

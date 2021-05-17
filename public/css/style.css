@@ -28,7 +28,7 @@ time, mark, audio, video {
     position: sticky;
     background-image: url("../img/banheader.jpg");
     background-size: cover;
-    top: calc(-100vmin + 80px);
+    top: calc(-100vmin + 95px);
     width: 100%;
     height: 100vmin;
     overflow: hidden;
@@ -51,7 +51,7 @@ nav ul{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
+    height: 95px;
     font-family: "Roboto";
     text-transform: uppercase;
     list-style: none;
@@ -65,7 +65,7 @@ nav a{
 }
 
 nav img{
-    width: 140px;
+    width: 180px;
 }
 
 #sliderdiv{
@@ -79,14 +79,15 @@ nav img{
     text-shadow: 6px -8px 0 #FFD433;
     color: white;
     font-family: Qualy;
-    font-size: 128px;
+    font-size: 86px;
     text-align: center;
     letter-spacing: 15px;
+    margin-bottom: 10px;
 }
 
 #sliderdiv p{
     text-align: center;
-    font-size: 26px;
+    font-size: 22px;
     font-family: Roboto;
     font-style: italic;
     color: white;
@@ -124,9 +125,9 @@ h2{
     writing-mode: vertical-rl;
     position: absolute;
     left: -8%;
-    top: 15%;
-    font-size: 20px;
-    color: white;
+    top: 0;
+    font-size: 22px;
+    color: #FFD433 ;
     font-family: Qualy;
     letter-spacing: 2px;
 }
@@ -197,6 +198,13 @@ h2{
     right: 10%;
 }
 
+#nommage{
+    position: absolute;
+    bottom: 15%;
+    right: 10%;
+    font-size:2vw;
+}
+
 .deuxiemepresentation{
     background-image: url("../img/grille.png");
     background-size: 108%;
@@ -228,12 +236,19 @@ h2{
     min-height: 700px;
 }
 
+#solutions .sectionlimit{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+#solutions h2{
+    top: 80px;
+}
+
 .flex-solution{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-top: 80px;
-    padding-bottom: 80px;
 }
 
 .flexcolumncat{
@@ -348,6 +363,11 @@ h2{
      display: flex;
     align-items: center;
     justify-content: flex-end;
+    background-image: url("../img/formegeo2.svg");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-position: 20% 50%;
+    background-size: 25%;
 }
 
 .ban-etoile div{
@@ -379,81 +399,17 @@ h2{
     min-height: 700px;
 }
 
+#savoir-faire h2{
+    top: 80px;
+}
+
 #savoir-faire .sectionlimit{
     min-height: 600px;
 }
 
-.fleche{
-    display : inline-block;
-    height : 0;
-    width : 0;
-    border-top : 40px solid red;
-    border-right : 53px solid transparent;
-    border-left : 53px solid transparent;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%,110%);
-    cursor: pointer;
-}
-
-.sliderdiag{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 80px;
-    padding-top: 80px;
-}
-
-.hiddenslide{
+#clients h2{
     display: none;
 }
-
-.sliderpiece{
-    background-color: white;
-    border: #303030 solid 2px;
-    width: 400px;
-    height: 250px;
-    position: relative;
-    cursor: pointer;
-}
-
-#orientation{
-    transform: scale(1);
-    z-index: 900;
-    margin-right: 0;
-}
-
-#gestion{
-    transform: scale(0.8);
-    margin-left: 200px;
-    margin-top: -100px;
-    z-index: 800;
-}
-
-#management{
-    transform: scale(0.6);
-    margin-left: 400px;
-    margin-top: -120px;
-    z-index: 600;
-}
-
-#pilotage{
-    transform: scale(0.4);
-    margin-left: 550px;
-    margin-top: -170px;
-    z-index: 400;
-}
-
-.sliderpiece img{
-    width: 80%;
-    margin-top: 20%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-}
-
-
 
 .flexclient{
     display: flex;
@@ -473,6 +429,10 @@ h2{
     background-position: 45%;
     height: 100vh;
     min-height: 750px;
+}
+
+#contact h2{
+    top: 80px;
 }
 
 .formulaire form{
