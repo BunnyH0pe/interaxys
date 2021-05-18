@@ -6,8 +6,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('js/glide-3.4.1/dist/css/glide.core.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('js/glide-3.4.1/dist/css/glide.core.css') }}">
+    <link rel="stylesheet" href="{{ asset('js/glide-3.4.1/dist/css/glide.theme.css') }}">
     <meta name="description" content="Bienvenue sur le site web d'interaxys">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
 </head>
 <body>
 <header>
@@ -15,13 +19,12 @@
         <ul>
             <li><a href="#presentation"><p>Qui sommes-nous ?</p></a></li>
             <li><a href="#solutions"><p>Nos solutions</p></a></li>
-            <li><a href="#"><img src="{{ asset('img/interblanc.png') }}" alt="Logo d'interaxys"></a></li>
+            <li><a href="#"><img id="logomenu" src="{{ asset('img/interblanc.png') }}" alt="Logo d'interaxys"></a></li>
             <li><a href="#savoir-faire"><p>Nos savoir-faire</p></a></li>
             <li><a href="#contact"><p>Nous contacter</p></a></li>
         </ul>
     </nav>
 </header>
-
 <section id="headerbg">
     <div id="sliderdiv">
         <div id="synergieslide" class="sliderslide">
@@ -191,11 +194,40 @@
         <div class="sectionlimit">
           <h2>NOS SAVOIR-FAIRE</h2>
             <div class="glide">
-                <div class="glide__track" data-glide-el="track">
+                <div data-glide-el="track" class="glide__track">
                     <ul class="glide__slides">
-                        <li class="glide__slide">0</li>
-                        <li class="glide__slide">1</li>
-                        <li class="glide__slide">2</li>
+                        <li class="glide__slide">
+                            <div class="glide__container">
+                                <div class="glidecontent">
+                                    <img class="logoslide" src="{{ asset('img/orientation.png') }}" alt="picto orientation">
+                                    <img class="flechebot" src="{{ asset('img/flechebot.svg') }}" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="glide__slide">
+                            <div class="glide__container">
+                                <div class="glidecontent">
+                                    <img class="logoslide" src="{{ asset('img/gestion.png') }}" alt="picto orientation">
+                                    <img class="flechebot" src="{{ asset('img/flechebot.svg') }}" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="glide__slide">
+                            <div class="glide__container">
+                                <div class="glidecontent">
+                                    <img class="logoslide" src="{{ asset('img/manage.png') }}" alt="picto orientation">
+                                    <img class="flechebot" src="{{ asset('img/flechebot.svg') }}" alt="">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="glide__slide">
+                            <div class="glide__container">
+                                <div class="glidecontent">
+                                    <img class="logoslide" src="{{ asset('img/pilotage.png') }}" alt="picto orientation">
+                                    <img class="flechebot" src="{{ asset('img/flechebot.svg') }}" alt="">
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -294,9 +326,97 @@
         </div>
     </div>
 </section>
-<script src="{{ asset('js/glide-3.4.1/dist/glide.min.js') }}"></script>
+<script src="{{ asset('js/glide-3.4.1/dist/glide.js') }}"></script>
 <script>
-    new Glide('.glide').mount()
+    $(document).ready(function (){
+        $(document).scroll(function (){
+            var positionscroll = $(document).scrollTop();
+            var limitnav = 90;
+
+            if( positionscroll > 90){
+                $("nav ul").css("height", "60px");
+                $("nav").css("background-color", "white");
+                $("nav").css("box-shadow", "0px 3px 12px rgba(0,0,0,0.6)");
+                $("nav a").css("color","black");
+                $("#logomenu").attr('src','{{ asset('img/interaxys.png') }}');
+                $("#logomenu").css('width','110px');
+            }else{
+                $("nav ul").css("height", "95px");
+                $("nav").css("background-color", "transparent");
+                $("nav").css("box-shadow", "none");
+                $("nav a").css("color","white").css("text-shadow","0px 3px 4px rgba(0,0,0,0.3)");
+                $("#logomenu").attr('src','{{ asset('img/interblanc.png') }}');
+                $("#logomenu").css('width','180px');
+            }
+        })
+    })
+</script>
+<script>
+    const glider = new Glide('.glide', {
+        autoplay: 2000,
+        type: 'slider',
+        perView: 3,
+        focusAt: 'center'
+    });
+
+    // The classname for the element that gets transformed
+    const tiltableElement = '.glide__container';
+    glider.mount({
+        Coverflow: (Glide, Components, Events) => {
+            const Plugin = {
+                tilt (element) {
+                    element.querySelector(tiltableElement).style.transform = "perspective(1500px) rotateY(0deg)";
+                    element.querySelector(tiltableElement).style.transform = "width(500px)";
+                    this.tiltPrevElements();
+                    this.tiltNextElements();
+                },
+                tiltPrevElements () {
+                    const activeSlide = Components.Html.slides[Glide.index];
+
+                    const previousElements = [];
+                    const getPrevious = (element) => {
+                        const e = element.previousElementSibling;
+                        if (e) {
+                            previousElements.push(e.querySelector(tiltableElement));
+                            getPrevious(e);
+                        }
+                    };
+                    getPrevious(activeSlide);
+
+                    previousElements.forEach((item, index) => {
+                        item.style.transformOrigin = "100% 50%";
+                        item.style.transform = `perspective(1500px) rotateY(${20 * Math.max(index, 2)}deg)`
+                    })
+
+                },
+                tiltNextElements () {
+                    const activeSlide = Components.Html.slides[Glide.index];
+
+                    const nextElements = [];
+
+                    const getNext = (element) => {
+                        const e = element.nextElementSibling;
+                        if (e) {
+                            nextElements.push(e.querySelector(tiltableElement));
+                            getNext(e);
+                        }
+                    };
+                    getNext(activeSlide);
+
+                    nextElements.forEach((item, index) => {
+                        item.style.transformOrigin = "0% 50%";
+                        item.style.transform = `perspective(1500px) rotateY(${-20 * Math.max(index, 2)}deg)`
+                    })
+                }
+            }
+
+            Events.on(['mount.after', 'run'], () => {
+                Plugin.tilt(Components.Html.slides[Glide.index]);
+            });
+
+            return Plugin;
+        }
+    });
 </script>
 </body>
 </html>

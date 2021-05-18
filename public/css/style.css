@@ -25,10 +25,8 @@ time, mark, audio, video {
 }
 
 #headerbg{
-    position: sticky;
     background-image: url("../img/banheader.jpg");
     background-size: cover;
-    top: calc(-100vmin + 95px);
     width: 100%;
     height: 100vmin;
     overflow: hidden;
@@ -37,17 +35,20 @@ time, mark, audio, video {
 }
 
 nav{
-    width: 80%;
-    margin-right: auto;
-    margin-left: auto;
+    transition: background-color ease-in 0.3s;
+    width: 100%;
     position: fixed;
     top: 0;
-    left: 10%;
+    left: 0;
     z-index: 1100;
     box-sizing: border-box;
 }
 
 nav ul{
+    transition:height ease-in 0.3s;
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -58,6 +59,7 @@ nav ul{
 }
 
 nav a{
+    transition: color ease-in 0.3s;
     text-decoration: none;
     color: white;
     text-shadow: 0px 3px 6px black;
@@ -66,6 +68,10 @@ nav a{
 
 nav img{
     width: 180px;
+}
+
+#logomenu{
+    transition: width ease-in 0.3s;
 }
 
 #sliderdiv{
@@ -395,8 +401,8 @@ h2{
     background-image: url("../img/grille.png");
     background-size: 108%;
     background-position: 45%;
-    height: 100vh;
-    min-height: 700px;
+    height: 90vh;
+    min-height: 620px;
 }
 
 #savoir-faire h2{
@@ -404,7 +410,9 @@ h2{
 }
 
 #savoir-faire .sectionlimit{
-    min-height: 600px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    min-height: 460px;
 }
 
 #clients h2{
@@ -671,4 +679,59 @@ h2{
     nav ul{
         justify-content: space-around;
     }
+}
+
+.glide__slides {
+    overflow: visible;
+    transform-style: preserve-3d;
+}
+
+.glide__slide {
+    transform: perspective(2000px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.glide__container {
+    border: 2px solid #000;
+    border-radius: 4px;
+    width: 350px;
+    transition: all 500ms ease;
+    will-change: transform;
+    transform-style: preserve-3d;
+    position: relative;
+    background-color: white;
+}
+
+.glide__track{
+    height: 460px;
+}
+
+.glide__track ul {
+    height: 460px;
+}
+
+#savoir-faire .logoslide{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 20px;
+}
+
+.glidecontent{
+    margin-right: auto;
+    margin-left: auto;
+    width: 90%;
+}
+
+.flechebot{
+    width: 10%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
 }
