@@ -262,6 +262,7 @@ h2{
     flex-direction: column;
     gap: 80px;
     justify-content: center;
+    width: 220px;
 }
 
 .flexcolumncat div{
@@ -275,7 +276,8 @@ h2{
     text-transform: uppercase;
     letter-spacing: 2px;
     cursor: pointer;
-    box-shadow: 6px 6px 0 #FFD433 ;
+    box-shadow: 6px 6px 0 #FFD433;
+    transition: margin-left 250ms ease-in, box-shadow 250ms ease-in;
 }
 
 .rectbleu{
@@ -286,6 +288,12 @@ h2{
     position: absolute;
     top: -35px;
     left: -20px;
+}
+
+
+.safecard{
+    width: 45%;
+    height: 78vh;
 }
 
 .cardsol{

@@ -12,6 +12,9 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
             crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+            integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
+            crossorigin="anonymous"></script>
 </head>
 <body>
 <header>
@@ -98,8 +101,9 @@
                 <div id="tact"><p>Tactique</p></div>
                 <div id="ope"><p>Opérationnel</p></div>
             </div>
+            <div class="safecard">
             <div class="cardsol" id="cardphilo">
-            <div class="rectbleu"></div>
+                <div class="rectbleu"></div>
                 <article>
                     <h3>Philosophique</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tortor id augue
@@ -121,8 +125,8 @@
                 <div class="result"><p>responsabilité</p></div>
             </div>
 
-           <!-- <div  class="cardsol" id="cardphilo">
-                 FORME RECTANGULAIRE A INTEGRER
+           <div  class="cardsol" id="cardstrat">
+               <div class="rectbleu"></div>
                 <article>
                     <h3>Stratégique</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tortor id augue
@@ -130,18 +134,18 @@
                         vel nibh. Integer odio purus, sollicitudin ac convallis scelerisque, pulvinar ut libero. Vivamus sapien elit,
                         maximus aliquam sapien ut, viverra finibus lacus.</p>
                     <ul>
-                        <li><strong>HORIZON :</strong><p>Année</p></li>
-                        <li><strong>DOMAINE :</strong><p>Objectifs</p></li>
-                        <li><strong>ESPRIT :</strong><p>Alignement</p></li>
-                        <li><strong>FINALITÉ :</strong><p>Pérennité</p></li>
-                        <li><strong>OBJET :</strong><p>Marché</p></li>
+                        <li><strong>HORIZON : </strong><p>Année</p></li>
+                        <li><strong>DOMAINE : </strong><p>Objectifs</p></li>
+                        <li><strong>ESPRIT : </strong><p>Alignement</p></li>
+                        <li><strong>FINALITÉ : </strong><p>Pérennité</p></li>
+                        <li><strong>OBJET : </strong><p>Marché</p></li>
                     </ul>
-                    <div><p>QUALITÉ</p></div>
                 </article>
+               <div class="result"><p>QUALITÉ</p></div>
             </div>
 
-            <div  class="cardsol" id="cardphilo">
-                 FORME RECTANGULAIRE A INTEGRER
+            <div  class="cardsol" id="cardtact">
+                <div class="rectbleu"></div>
                 <article>
                     <h3>Tactique</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tortor id augue
@@ -149,18 +153,18 @@
                         vel nibh. Integer odio purus, sollicitudin ac convallis scelerisque, pulvinar ut libero. Vivamus sapien elit,
                         maximus aliquam sapien ut, viverra finibus lacus.</p>
                     <ul>
-                        <li><strong>HORIZON :</strong><p>Mois</p></li>
-                        <li><strong>DOMAINE :</strong><p>Moyens</p></li>
-                        <li><strong>ESPRIT :</strong><p>Coordination</p></li>
-                        <li><strong>FINALITÉ :</strong><p>Santé</p></li>
-                        <li><strong>OBJET :</strong><p>Organisation</p></li>
+                        <li><strong>HORIZON : </strong><p>Mois</p></li>
+                        <li><strong>DOMAINE : </strong><p>Moyens</p></li>
+                        <li><strong>ESPRIT : </strong><p>Coordination</p></li>
+                        <li><strong>FINALITÉ : </strong><p>Santé</p></li>
+                        <li><strong>OBJET : </strong><p>Organisation</p></li>
                     </ul>
-                    <div><p>Vitesse</p></div>
                 </article>
+                <div class="result"><p>Vitesse</p></div>
             </div>
 
-            <div class="cardsol" id="cardphilo">
-               FORME RECTANGULAIRE A INTEGRER
+            <div class="cardsol" id="cardope">
+                <div class="rectbleu"></div>
                 <article>
                     <h3>Opérationnel</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tortor id augue
@@ -168,15 +172,16 @@
                         vel nibh. Integer odio purus, sollicitudin ac convallis scelerisque, pulvinar ut libero. Vivamus sapien elit,
                         maximus aliquam sapien ut, viverra finibus lacus.</p>
                     <ul>
-                        <li><strong>HORIZON :</strong><p>Semaine</p></li>
-                        <li><strong>DOMAINE :</strong><p>Activités</p></li>
-                        <li><strong>ESPRIT :</strong><p>Synchronisation</p></li>
-                        <li><strong>FINALITÉ :</strong><p>Survie</p></li>
-                        <li><strong>OBJET :</strong><p>Produit</p></li>
+                        <li><strong>HORIZON : </strong><p>Semaine</p></li>
+                        <li><strong>DOMAINE : </strong><p>Activités</p></li>
+                        <li><strong>ESPRIT : </strong><p>Synchronisation</p></li>
+                        <li><strong>FINALITÉ : </strong><p>Survie</p></li>
+                        <li><strong>OBJET : </strong><p>Produit</p></li>
                     </ul>
-                    <div><p>EFFICIENCE</p></div>
                 </article>
-            </div>-->
+                <div class="result"><p>EFFICIENCE</p></div>
+            </div>
+            </div>
     </div>
     </div>
 </section>
@@ -197,7 +202,7 @@
                 <div data-glide-el="track" class="glide__track">
                     <ul class="glide__slides">
                         <li class="glide__slide">
-                            <div class="glide__container">
+                            <div class="glide__container glider-persp">
                                 <div class="glidecontent">
                                     <img class="logoslide" src="{{ asset('img/orientation.png') }}" alt="picto orientation">
                                     <img class="flechebot" src="{{ asset('img/flechebot.svg') }}" alt="">
@@ -329,6 +334,29 @@
 <script src="{{ asset('js/glide-3.4.1/dist/glide.js') }}"></script>
 <script>
     $(document).ready(function (){
+        $('.cardsol').hide();
+        $('#cardphilo').show();
+        $('#philo').css('margin-left','20px').css('box-shadow','6px 6px 0 #94C8EE, -6px -6px 0 #94C8EE');
+
+        var positionscroll = $(document).scrollTop();
+        var limitnav = 90;
+
+        if( positionscroll > 90){
+            $("nav ul").css("height", "60px");
+            $("nav").css("background-color", "white");
+            $("nav").css("box-shadow", "0px 3px 12px rgba(0,0,0,0.6)");
+            $("nav a").css("color","black");
+            $("#logomenu").attr('src','{{ asset('img/interaxys.png') }}');
+            $("#logomenu").css('width','110px');
+        }else{
+            $("nav ul").css("height", "95px");
+            $("nav").css("background-color", "transparent");
+            $("nav").css("box-shadow", "none");
+            $("nav a").css("color","white").css("text-shadow","0px 3px 4px rgba(0,0,0,0.3)");
+            $("#logomenu").attr('src','{{ asset('img/interblanc.png') }}');
+            $("#logomenu").css('width','180px');
+        }
+
         $(document).scroll(function (){
             var positionscroll = $(document).scrollTop();
             var limitnav = 90;
@@ -348,6 +376,50 @@
                 $("#logomenu").attr('src','{{ asset('img/interblanc.png') }}');
                 $("#logomenu").css('width','180px');
             }
+        })
+
+        $('#philo').on('click', function (){
+            $(this).css('margin-left','20px').css('box-shadow','6px 6px 0 #94C8EE, -6px -6px 0 #94C8EE');
+            $('#tact, #ope, #strat').css('margin-left','0px').css('box-shadow','6px 6px 0 #FFD433')
+            $('#cardtact').fadeOut('fast');
+            $('#cardope').fadeOut('fast');
+            $('#cardstrat').fadeOut('fast');
+            setTimeout(function (){
+                $('#cardphilo').fadeIn('fast');
+            },200)
+        })
+
+        $('#tact').on('click', function (){
+            $(this).css('margin-left','20px').css('box-shadow','6px 6px 0 #94C8EE, -6px -6px 0 #94C8EE');
+            $('#ope, #philo, #strat').css('margin-left','0px').css('box-shadow','6px 6px 0 #FFD433')
+            $('#cardphilo').fadeOut('fast');
+            $('#cardope').fadeOut('fast');
+            $('#cardstrat').fadeOut('fast');
+            setTimeout(function (){
+                $('#cardtact').fadeIn('fast');
+            },200)
+        })
+
+        $('#ope').on('click', function (){
+            $(this).css('margin-left','20px').css('box-shadow','6px 6px 0 #94C8EE, -6px -6px 0 #94C8EE');
+            $('#tact, #philo, #strat').css('margin-left','0px').css('box-shadow','6px 6px 0 #FFD433');
+            $('#cardtact').fadeOut('fast');
+            $('#cardphilo').fadeOut('fast');
+            $('#cardstrat').fadeOut('fast');
+            setTimeout(function (){
+                $('#cardope').fadeIn('fast');
+            },200)
+        })
+
+        $('#strat').on('click', function (){
+            $(this).css('margin-left','20px').css('box-shadow','6px 6px 0 #94C8EE, -6px -6px 0 #94C8EE');
+            $('#tact, #philo, #ope').css('margin-left','0px').css('box-shadow','6px 6px 0 #FFD433')
+            $('#cardtact').fadeOut('fast');
+            $('#cardope').fadeOut('fast');
+            $('#cardphilo').fadeOut('fast');
+            setTimeout(function (){
+                $('#cardstrat').fadeIn('fast');
+            },200)
         })
     })
 </script>
