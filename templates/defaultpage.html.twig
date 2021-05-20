@@ -29,10 +29,20 @@
     </nav>
 </header>
 <section id="headerbg">
-    <div id="sliderdiv">
-        <div id="synergieslide" class="sliderslide">
-            <h1 class="slidertitre">SYNERGIE</h1>
-            <p class="sliderundertitle">« Un système d'information interactionnel pour piloter l'activité et synchroniser les décisions » </p>
+    <div class="sliderdiv">
+        <div class="everybgdiv">
+            <div id="synergieslide" class="sliderslide">
+                <div class="centerslider">
+                    <h1 class="slidertitre">SYNERGIE</h1>
+                    <p class="sliderundertitle">« Un système d'information interactionnel pour piloter l'activité et synchroniser les décisions » </p>
+                </div>
+            </div>
+            <div id="interactionslide" class="sliderslide">
+                <div class="centerslider">
+                    <h1 class="slidertitre">INTERACTION</h1>
+                    <p class="sliderundertitle">« Un système d'information interactionnel pour piloter l'activité et synchroniser les décisions » </p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -66,7 +76,7 @@
                             quam sodales ac.
                         </p>
                     </div>
-                    <img src="{{ asset('img/formegeo1.svg') }}" alt="forme geométrique 1">
+                    <img id="imgtourne" src="{{ asset('img/formegeo1.svg') }}" alt="forme geométrique 1">
                 </div>
                 <p class="pflex">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tortor id augue
                     accumsan, at laoreet justo sodales. Etiam tortor augue, gravida egestas accumsan at, egestas
@@ -338,6 +348,15 @@
         $('#cardphilo').show();
         $('#philo').css('margin-left','20px').css('box-shadow','6px 6px 0 #94C8EE, -6px -6px 0 #94C8EE');
 
+        //SCROLL TO
+
+        $('nav a').click(function(){
+            $('html, body').animate({
+                scrollTop: $( $(this).attr('href') ).offset().top - 60
+            }, 500);
+            return false;
+        });
+
         var positionscroll = $(document).scrollTop();
         var limitnav = 90;
 
@@ -345,29 +364,84 @@
             $("nav ul").css("height", "60px");
             $("nav").css("background-color", "white");
             $("nav").css("box-shadow", "0px 3px 12px rgba(0,0,0,0.6)");
-            $("nav a").css("color","black");
+            $("nav a").css("color","#black").css("text-shadow","none");
             $("#logomenu").attr('src','{{ asset('img/interaxys.png') }}');
             $("#logomenu").css('width','110px');
+            $("nav a").mouseover(function() {
+                $(this).css("color","#94C8EE")
+            }).mouseout(function (){
+                $(this).css("color","black")
+            });
         }else{
             $("nav ul").css("height", "95px");
             $("nav").css("background-color", "transparent");
             $("nav").css("box-shadow", "none");
-            $("nav a").css("color","white").css("text-shadow","0px 3px 4px rgba(0,0,0,0.3)");
+            $("nav a").css("color","white");
             $("#logomenu").attr('src','{{ asset('img/interblanc.png') }}');
             $("#logomenu").css('width','180px');
+            $("nav a").mouseover(function() {
+                $(this).css("color","white")
+            }).mouseout(function (){
+                $(this).css("color","white")
+            });
         }
+
+        var i = 0;
+        var rotation = 0;
+        var oldpositionscroll = 0;
+        var positionscroll = $(document).scrollTop();
+        var upscroll = 1;
+        setInterval(function (){
+            oldpositionscroll = positionscroll;
+            positionscroll = $(document).scrollTop();
+            if (oldpositionscroll > positionscroll){
+                if (upscroll == 1){
+                    upscroll = 1;
+                }else {
+                    upscroll = 1;
+                    i = 0 ;
+                }
+            }else if(oldpositionscroll < positionscroll){
+                if (upscroll == 0){
+                    upscroll = 0;
+                    i += 0.5;
+                }else {
+                    upscroll = 0;
+                    i = 0;
+                    i += 0.5;
+                }
+                rotation = positionscroll + i;
+            }
+            if (upscroll == 1){
+                i+= 0.5;
+                rotation = positionscroll - i;
+            }else{
+                i += 0.5;
+                rotation = positionscroll + i;
+            }
+            console.log(upscroll)
+            $('#imgtourne').css('transform','rotate('+ rotation +'deg)');
+        }, 20)
+
+        // ANIMATION BOULE
 
         $(document).scroll(function (){
             var positionscroll = $(document).scrollTop();
+
             var limitnav = 90;
 
             if( positionscroll > 90){
                 $("nav ul").css("height", "60px");
                 $("nav").css("background-color", "white");
                 $("nav").css("box-shadow", "0px 3px 12px rgba(0,0,0,0.6)");
-                $("nav a").css("color","black");
+                $("nav a").css("color","black").css("text-shadow","none");;
                 $("#logomenu").attr('src','{{ asset('img/interaxys.png') }}');
                 $("#logomenu").css('width','110px');
+                $("nav a").mouseover(function() {
+                    $(this).css("color","#94C8EE")
+                }).mouseout(function (){
+                    $(this).css("color","black")
+                });
             }else{
                 $("nav ul").css("height", "95px");
                 $("nav").css("background-color", "transparent");
@@ -375,6 +449,11 @@
                 $("nav a").css("color","white").css("text-shadow","0px 3px 4px rgba(0,0,0,0.3)");
                 $("#logomenu").attr('src','{{ asset('img/interblanc.png') }}');
                 $("#logomenu").css('width','180px');
+                $("nav a").mouseover(function() {
+                    $(this).css("color","white")
+                }).mouseout(function (){
+                    $(this).css("color","white")
+                });
             }
         })
 
@@ -426,7 +505,7 @@
 <script>
     const glider = new Glide('.glide', {
         autoplay: 2000,
-        type: 'slider',
+        type: 'carousel',
         perView: 3,
         focusAt: 'center'
     });
