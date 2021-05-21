@@ -180,6 +180,8 @@ h2{
     letter-spacing: 2px;
 }
 
+
+
 .premierepresentation{
     background-image: url("../img/grille.png");
     background-size: 108%;
@@ -416,14 +418,10 @@ h2{
     border-top: solid white 2px;
     border-bottom: solid white 2px;
     height: 400px;
+    overflow: hidden;
      display: flex;
     align-items: center;
-    justify-content: flex-end;
-    background-image: url("../img/formegeo2.svg");
-    background-position: left;
-    background-repeat: no-repeat;
-    background-position: 20% 50%;
-    background-size: 25%;
+    justify-content: space-around;
 }
 
 .ban-etoile div{
@@ -432,6 +430,10 @@ h2{
     justify-items: right;
     flex-direction: column;
     margin-right: 10%;
+}
+
+#canvas{
+    margin-left: 10%;
 }
 
 .ban-etoile strong {

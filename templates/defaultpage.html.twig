@@ -15,6 +15,7 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
             integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
             crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
 </head>
 <body>
 <header>
@@ -45,11 +46,12 @@
             </div>
         </div>
     </div>
-
-    <div class="scrollicon">
-        <img id="scrollb" src="{{ asset('img/scroll_blanc.png') }}" alt="scroll_blanc">
-        <img id="scrollj" src="{{ asset('img/scroll_jaune.png') }}" alt="scroll_jaune">
-    </div>
+    <a class="linkdown" href="#presentation">
+        <div class="scrollicon">
+            <img id="scrollb" src="{{ asset('img/scroll_blanc.png') }}" alt="scroll_blanc">
+            <img id="scrollj" src="{{ asset('img/scroll_jaune.png') }}" alt="scroll_jaune">
+        </div>
+    </a>
 </section>
 
 <section id="presentation">
@@ -197,6 +199,7 @@
 </section>
 
 <div class="ban-etoile">
+    <canvas id="canvas" height="350" width="350"></canvas>
     <div>
         <strong>Améliorer vos perspectives <br> d'entreprise avec</strong> <br> <br>
         <strong class="titreinteraxys">INTERAXYS</strong>
@@ -350,7 +353,7 @@
 
         //SCROLL TO
 
-        $('nav a').click(function(){
+        $('nav a, .linkdown').click(function(){
             $('html, body').animate({
                 scrollTop: $( $(this).attr('href') ).offset().top - 60
             }, 500);
@@ -568,6 +571,58 @@
             return Plugin;
         }
     });
+</script>
+<script>
+    let scene = new THREE.Scene();
+
+    let camera = new THREE.PerspectiveCamera(
+        75,
+        1,
+        0.1,
+        1000
+    );
+
+    let renderer = new THREE.WebGLRenderer({
+        canvas: document.getElementById("canvas")
+    });
+
+    renderer.setClearColor(0x000000, 1);
+
+    let opaqueGeo = new THREE.SphereGeometry(5, 24, 24);
+
+    let opaqueMat = new THREE.MeshBasicMaterial({
+        color: 0x000000,
+        polygonOffset: true,
+        polygonOffsetFactor: 1,
+        polygonOffsetUnits: 1
+    });
+
+    let opaqueSphere = new THREE.Mesh(opaqueGeo, opaqueMat);
+
+    scene.add(opaqueSphere);
+
+    var wireframeGeo = new THREE.EdgesGeometry(opaqueSphere.geometry);
+
+    var wireframeMat = new THREE.LineBasicMaterial({
+        color: 0x94C8EE,
+        linewidth: 1
+    });
+
+    var wireframeSphere = new THREE.LineSegments(wireframeGeo, wireframeMat);
+
+    opaqueSphere.add(wireframeSphere);
+
+    camera.position.z = 8.5;
+
+    function animate(t) {
+        requestAnimationFrame(animate);
+
+        opaqueSphere.rotation.y += 0.01;
+
+        renderer.render(scene, camera);
+    }
+
+    animate();
 </script>
 </body>
 </html>
