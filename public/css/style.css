@@ -88,7 +88,6 @@ nav img{
     width: 300vw;
     height: 100%;
     justify-content: flex-start;
-    animation: infinite 10s sliderhome;
 }
 
 .sliderslide{
@@ -109,6 +108,14 @@ nav img{
     background-image: url("../img/banheader2.jpg");
     background-size: cover;
     height: 100%;
+    float: left;
+    display: inline-block;
+}
+
+#syntheseslide{
+    width: 100vw;
+    background-image: url("../img/banheader3.jpg");
+    background-size: cover;    height: 100%;
     float: left;
     display: inline-block;
 }
@@ -148,6 +155,7 @@ nav img{
     transform: translate(-50%, -50%);
     margin-left: -25px;
     animation: animatedscroll infinite 3s ;
+    z-index: 1500;
 }
 
 .scrollicon img{
@@ -788,8 +796,32 @@ h2{
     cursor: pointer;
 }
 
+.swiper-container{
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-button-next{
+    --swiper-theme-color: #FFD433;
+    --swiper-navigation-size: 60px;
+}
+.swiper-button-prev{
+    --swiper-theme-color: #FFD433;
+    --swiper-navigation-size: 60px;
+}
+
+.swiper-pagination{
+    --swiper-theme-color: #FFD433;
+    --swiper-navigation-size: 100px;
+}
+
+.swiper-pagination-bullet{
+    width: 12px !important;
+    height: 12px !important;
+}
 
 /* CSS ANIMATIONS */
+
 
 
 
@@ -811,40 +843,7 @@ h2{
     }
 }
 
-@keyframes sliderhome {
-    0%{
-        margin-left: 0vw;
-    }
-    45%{
-        margin-left: 0vw;
-    }
-    55%{
-        margin-left: -100vw;
-    }
-    100%{
-        margin-left: -100vw;
-    }
-}
-
 @keyframes rotation {
     0%   { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-}
-
-@keyframes textslideanimated1 {
-    0%{
-        margin-left: 0;
-    }
-    48%{
-        margin-left: 0;
-    }
-    52%{
-        margin-left: 200px;
-    }
-    57%{
-        margin-left: 0px;
-    }
-    100%{
-        margin-left: 0px;
-    }
 }

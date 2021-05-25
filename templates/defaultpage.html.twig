@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('js/glide-3.4.1/dist/css/glide.core.css') }}">
     <link rel="stylesheet" href="{{ asset('js/glide-3.4.1/dist/css/glide.theme.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="{{ asset('css/glitch.css') }}">
     <meta name="description" content="Bienvenue sur le site web d'interaxys">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -16,6 +18,7 @@
             integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
             crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
 <header>
@@ -31,19 +34,42 @@
 </header>
 <section id="headerbg">
     <div class="sliderdiv">
-        <div class="everybgdiv">
-            <div id="synergieslide" class="sliderslide">
-                <div class="centerslider">
-                    <h1 class="slidertitre">SYNERGIE</h1>
-                    <p class="sliderundertitle">« Un système d'information interactionnel pour piloter l'activité et synchroniser les décisions » </p>
+        <!-- Slider main container -->
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div id="synergieslide" class="sliderslide">
+                        <div class="centerslider">
+                            <h1 class="slidertitre" data-glitch="SYNERGIE">SYNERGIE</h1>
+                            <p class="sliderundertitle">« Un système d'information interactionnel pour piloter l'activité et synchroniser les décisions » </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div id="interactionslide" class="sliderslide">
+                        <div class="centerslider">
+                            <h1 class="slidertitre" data-glitch="INTERACTION">INTERACTION</h1>
+                            <p class="sliderundertitle">« Un système d'information interactionnel pour piloter l'activité et synchroniser les décisions » </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div id="syntheseslide" class="sliderslide">
+                        <div class="centerslider">
+                            <h1 class="slidertitre" data-glitch="synthèse">SYNTHèSE</h1>
+                            <p class="sliderundertitle">« Un système d'information interactionnel pour piloter l'activité et synchroniser les décisions » </p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div id="interactionslide" class="sliderslide">
-                <div class="centerslider">
-                    <h1 class="slidertitre">INTERACTION</h1>
-                    <p class="sliderundertitle">« Un système d'information interactionnel pour piloter l'activité et synchroniser les décisions » </p>
-                </div>
-            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
     </div>
     <a class="linkdown" href="#presentation">
@@ -623,6 +649,50 @@
     }
 
     animate();
+</script>
+<script>
+    const swiper = new Swiper('.swiper-container', {
+        autoplay: {
+            delay: 5000,
+        },
+        keyboard: {
+            enabled: true,
+            onlyInViewport: true,
+        },
+        speed:400,
+        spaceBetween: 0,
+        slidesPerView: 1,
+        loopedSlides: 2,
+        // Optional parameters
+        direction: 'horizontal',
+        effect:'slide',
+        loop: true,
+        loopPreventsSlide : false,
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+            clickable : true,
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        on: {
+            slideChange: function () {
+                setTimeout(function (){
+                    $('.slidertitre').addClass('glitch');
+                    setTimeout(function (){
+                        $('.slidertitre').removeClass('glitch');
+                    },1000);
+                }, 1000);
+
+            },
+        },
+    });
+
 </script>
 </body>
 </html>
