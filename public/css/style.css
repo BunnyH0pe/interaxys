@@ -212,6 +212,7 @@ h2{
     background-position: 45%;
     padding-top: 80px;
     padding-bottom: 80px;
+    background-attachment: fixed;
 }
 
 .sectionlimit{
@@ -309,6 +310,7 @@ h2{
     height: 100vh;
     min-height: 700px;
     max-height: 1000px;
+    background-attachment: fixed;
 }
 
 #solutions .sectionlimit{
@@ -480,6 +482,11 @@ h2{
     background-position: 45%;
     height: 95vh;
     min-height: 620px;
+    background-attachment: fixed;
+}
+
+#savoir-faire p{
+    font-family: Roboto;
 }
 
 
@@ -522,6 +529,7 @@ h2{
     background-position: 45%;
     height: 100vh;
     min-height: 750px;
+    background-attachment: fixed;
 }
 
 #contact h2{
