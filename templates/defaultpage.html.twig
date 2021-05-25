@@ -6,9 +6,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('js/glide-3.4.1/dist/css/glide.core.css') }}">
-    <link rel="stylesheet" href="{{ asset('js/glide-3.4.1/dist/css/glide.theme.css') }}">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/components/effect-coverflow/effect-coverflow.min.css" />
     <link rel="stylesheet" href="{{ asset('css/glitch.css') }}">
     <meta name="description" content="Bienvenue sur le site web d'interaxys">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -237,42 +236,47 @@
     <div class="sliderdiag">
         <div class="sectionlimit">
           <h2>NOS SAVOIR-FAIRE</h2>
-            <div class="glide">
-                <div data-glide-el="track" class="glide__track">
-                    <ul class="glide__slides">
-                        <li class="glide__slide">
-                            <div class="glide__container glider-persp">
-                                <div class="glidecontent">
-                                    <img class="logoslide" src="{{ asset('img/orientation.png') }}" alt="picto orientation">
-                                    <img class="flechebot" src="{{ asset('img/flechebot.svg') }}" alt="">
+            <div class="alignswipecenter">
+                <!-- Slider main container -->
+                <div class="swiper-container2">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide flexswipe">
+                            <div>
+                                <img class="logoslide" src="{{ asset('img/orientation.png') }}" alt="picto orientation">
+                                <div class="invisible-text">
+                                    <p><br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa cumque dolor ducimus illum, molestias necessitatibus nisi perspiciatis possimus quas quibusdam quisquam reiciendis rerum sed totam velit veniam! Perferendis, quis.</p>
                                 </div>
                             </div>
-                        </li>
-                        <li class="glide__slide">
-                            <div class="glide__container">
-                                <div class="glidecontent">
-                                    <img class="logoslide" src="{{ asset('img/gestion.png') }}" alt="picto orientation">
-                                    <img class="flechebot" src="{{ asset('img/flechebot.svg') }}" alt="">
+                        </div>
+                        <div class="swiper-slide flexswipe">
+                            <div>
+                                <img class="logoslide" src="{{ asset('img/gestion.png') }}" alt="picto orientation">
+                                <div class="invisible-text">
+                                    <p><br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa cumque dolor ducimus illum, molestias necessitatibus nisi perspiciatis possimus quas quibusdam quisquam reiciendis rerum sed totam velit veniam! Perferendis, quis.</p>
                                 </div>
                             </div>
-                        </li>
-                        <li class="glide__slide">
-                            <div class="glide__container">
-                                <div class="glidecontent">
-                                    <img class="logoslide" src="{{ asset('img/manage.png') }}" alt="picto orientation">
-                                    <img class="flechebot" src="{{ asset('img/flechebot.svg') }}" alt="">
+                        </div>
+                        <div class="swiper-slide flexswipe">
+                            <div>
+                                <img class="logoslide" src="{{ asset('img/manage.png') }}" alt="picto orientation">
+                                <div class="invisible-text">
+                                    <p><br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa cumque dolor ducimus illum, molestias necessitatibus nisi perspiciatis possimus quas quibusdam quisquam reiciendis rerum sed totam velit veniam! Perferendis, quis.</p>
                                 </div>
                             </div>
-                        </li>
-                        <li class="glide__slide">
-                            <div class="glide__container">
-                                <div class="glidecontent">
-                                    <img class="logoslide" src="{{ asset('img/pilotage.png') }}" alt="picto orientation">
-                                    <img class="flechebot" src="{{ asset('img/flechebot.svg') }}" alt="">
+                        </div>
+                        <div class="swiper-slide flexswipe">
+                            <div>
+                                <img class="logoslide" src="{{ asset('img/pilotage.png') }}" alt="picto orientation">
+                                <div class="invisible-text">
+                                    <p><br><br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa cumque dolor ducimus illum, molestias necessitatibus nisi perspiciatis possimus quas quibusdam quisquam reiciendis rerum sed totam velit veniam! Perferendis, quis.</p>
                                 </div>
                             </div>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev swiper-button-prev2 "></div>
+                    <div class="swiper-button-next swiper-button-next2"></div>
                 </div>
             </div>
         </div>
@@ -280,14 +284,21 @@
 </section>
 
 <section id="clients">
-    <div class="sectionlimit">
     <h2>NOS CLIENTS</h2>
     <div class="flexclient">
-        <img src="{{ asset('img/logo-seb.jpg') }}" alt="LOGO1">
-        <img src="{{ asset('img/banquefrance.jpg') }}" alt="LOGO2">
-        <img src="{{ asset('img/Alcatel.png') }}" alt="LOGO3">
-        <img src="{{ asset('img/logoacome.jpg') }}" alt="LOGO4">
-    </div>
+        <div class="sectionlimit">
+        <!-- Slider main container -->
+        <div class="swiper-container3">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="{{ asset('img/logo-seb.jpg') }}" alt="LOGO1"></div>
+                <div class="swiper-slide"><img src="{{ asset('img/banquefrance.jpg') }}" alt="LOGO2"></div>
+                <div class="swiper-slide"><img src="{{ asset('img/Alcatel.png') }}" alt="LOGO3"></div>
+                <div class="swiper-slide"><img src="{{ asset('img/logoacome.jpg') }}" alt="LOGO4"></div>
+            </div>
+        </div>
+        </div>
     </div>
 </section>
 
@@ -370,7 +381,6 @@
         </div>
     </div>
 </section>
-<script src="{{ asset('js/glide-3.4.1/dist/glide.js') }}"></script>
 <script>
     $(document).ready(function (){
         $('.cardsol').hide();
@@ -532,73 +542,6 @@
     })
 </script>
 <script>
-    const glider = new Glide('.glide', {
-        autoplay: 2000,
-        type: 'carousel',
-        perView: 3,
-        focusAt: 'center'
-    });
-
-    // The classname for the element that gets transformed
-    const tiltableElement = '.glide__container';
-    glider.mount({
-        Coverflow: (Glide, Components, Events) => {
-            const Plugin = {
-                tilt (element) {
-                    element.querySelector(tiltableElement).style.transform = "perspective(1500px) rotateY(0deg)";
-                    element.querySelector(tiltableElement).style.transform = "width(500px)";
-                    this.tiltPrevElements();
-                    this.tiltNextElements();
-                },
-                tiltPrevElements () {
-                    const activeSlide = Components.Html.slides[Glide.index];
-
-                    const previousElements = [];
-                    const getPrevious = (element) => {
-                        const e = element.previousElementSibling;
-                        if (e) {
-                            previousElements.push(e.querySelector(tiltableElement));
-                            getPrevious(e);
-                        }
-                    };
-                    getPrevious(activeSlide);
-
-                    previousElements.forEach((item, index) => {
-                        item.style.transformOrigin = "100% 50%";
-                        item.style.transform = `perspective(1500px) rotateY(${20 * Math.max(index, 2)}deg)`
-                    })
-
-                },
-                tiltNextElements () {
-                    const activeSlide = Components.Html.slides[Glide.index];
-
-                    const nextElements = [];
-
-                    const getNext = (element) => {
-                        const e = element.nextElementSibling;
-                        if (e) {
-                            nextElements.push(e.querySelector(tiltableElement));
-                            getNext(e);
-                        }
-                    };
-                    getNext(activeSlide);
-
-                    nextElements.forEach((item, index) => {
-                        item.style.transformOrigin = "0% 50%";
-                        item.style.transform = `perspective(1500px) rotateY(${-20 * Math.max(index, 2)}deg)`
-                    })
-                }
-            }
-
-            Events.on(['mount.after', 'run'], () => {
-                Plugin.tilt(Components.Html.slides[Glide.index]);
-            });
-
-            return Plugin;
-        }
-    });
-</script>
-<script>
     let scene = new THREE.Scene();
 
     let camera = new THREE.PerspectiveCamera(
@@ -662,7 +605,7 @@
         speed:400,
         spaceBetween: 0,
         slidesPerView: 1,
-        loopedSlides: 2,
+        loopedSlides: 3,
         // Optional parameters
         direction: 'horizontal',
         effect:'slide',
@@ -681,16 +624,69 @@
             prevEl: '.swiper-button-prev',
         },
         on: {
-            slideChange: function () {
-                setTimeout(function (){
+            slideChangeTransitionEnd: function () {
                     $('.slidertitre').addClass('glitch');
                     setTimeout(function (){
                         $('.slidertitre').removeClass('glitch');
                     },1000);
-                }, 1000);
 
             },
         },
+    });
+
+</script>
+
+<script>
+    const swiper2 = new Swiper('.swiper-container2', {
+        autoplay: {
+            delay: 5000,
+        },
+        keyboard: {
+            enabled: true,
+            onlyInViewport: true,
+        },
+        coverflowEffect: {
+            slideShadows: false,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next2',
+            prevEl: '.swiper-button-prev2',
+        },
+        speed:400,
+        spaceBetween: 50,
+        slidesPerView: 3,
+        centeredSlides:true,
+        // Optional parameters
+        direction: 'horizontal',
+        effect:'coverflow',
+        loop: true,
+        on: {
+            slideChangeTransitionStart: function () {
+                $('.swiper-slide-duplicate').find('.invisible-text').hide();
+                $('.swiper-slide-active').find('.invisible-text').slideDown(200);
+                $('.swiper-slide-next').find('.invisible-text').slideUp(300);
+                $('.swiper-slide-prev').find('.invisible-text').slideUp(300);
+            },
+        },
+    });
+</script>
+<script>
+    const swiper3 = new Swiper('.swiper-container3', {
+        autoplay: {
+            delay: 3000,
+        },
+        keyboard: {
+            enabled: false,
+        },
+        speed:400,
+        spaceBetween: 160,
+        loopedSlides: 4,
+        slidesPerView: 4,
+        // Optional parameters
+        direction: 'horizontal',
+        effect:'slide',
+        loop: true,
+
     });
 
 </script>

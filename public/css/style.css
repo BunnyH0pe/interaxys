@@ -19,6 +19,22 @@ time, mark, audio, video {
     vertical-align: baseline;
 }
 
+body{
+
+}
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-thumb{
+    background: white;
+    border-radius: 99vmax;
+    border: 4px solid #111;
+}
+::-webkit-scrollbar-track {
+    background: black;
+}
+
 @font-face {
     font-family: "Qualy";
     src: url("../fonts/qualy_bold.ttf") format("truetype");
@@ -292,6 +308,7 @@ h2{
     background-position: 45%;
     height: 100vh;
     min-height: 700px;
+    max-height: 1000px;
 }
 
 #solutions .sectionlimit{
@@ -461,7 +478,7 @@ h2{
     background-image: url("../img/grille.png");
     background-size: 108%;
     background-position: 45%;
-    height: 90vh;
+    height: 95vh;
     min-height: 620px;
 }
 
@@ -488,7 +505,14 @@ h2{
     padding-bottom: 80px;
 }
 
+.flexclient{
+    overflow: hidden;
+}
+
 .flexclient img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     width: 200px;
 }
 
@@ -741,64 +765,53 @@ h2{
     }
 }
 
-.glide__slides {
-    overflow: visible;
-    transform-style: preserve-3d;
+#savoir-faire .logoslide{
+    width: 100%;
+    display: block;
+    margin: 20px auto 20px auto;
 }
 
-.glide__slide {
-    transform: perspective(2000px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.flexswipe div{
+    padding: 10px;
 }
 
-.glide__container {
-    border: 2px solid #000;
-    border-radius: 4px;
-    width: 350px;
-    transition: all 500ms ease;
-    will-change: transform;
-    transform-style: preserve-3d;
-    position: relative;
+.swiper-wrapper{
+    align-items: center !important;
+}
+
+.flexswipe{
     background-color: white;
 }
 
-.glide__track{
-    height: 460px;
-}
-
-.glide__track ul {
-    height: 460px;
-}
-
-#savoir-faire .logoslide{
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    margin-top: 20px;
-}
-
-.glidecontent{
-    margin-right: auto;
-    margin-left: auto;
-    width: 90%;
-}
-
-.flechebot{
-    width: 10%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    cursor: pointer;
+.invisible-text{
+    display: none;
 }
 
 .swiper-container{
     width: 100%;
     height: 100%;
+}
+
+.swiper-container2 {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    overflow: hidden;
+    height: 460px;
+}
+
+.alignswipecenter{
+    width: 100%;
+    min-height: 460px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-container2 .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    height: auto !important;
 }
 
 .swiper-button-next{
@@ -818,6 +831,13 @@ h2{
 .swiper-pagination-bullet{
     width: 12px !important;
     height: 12px !important;
+    background: white !important;
+    opacity: 0.8 !important;
+}
+
+.swiper-pagination-bullet-active{
+    background: #FFD433 !important;
+    opacity: 1 !important;
 }
 
 /* CSS ANIMATIONS */
