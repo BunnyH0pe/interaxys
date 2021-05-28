@@ -24,11 +24,11 @@
 <header>
     <nav>
         <ul>
-            <li><a href="#presentation"><p>Notre vision</p></a></li>
-            <li><a href="#solutions"><p>Notre approche</p></a></li>
+            <li><a id="presentationlink" href="#presentation"><p>Notre vision</p></a></li>
+            <li><a id="solutionslink" href="#solutions"><p>Notre approche</p></a></li>
             <li><a href="#"><img id="logomenu" src="{{ asset('img/interblanc.png') }}" alt="Logo d'interaxys"></a></li>
-            <li><a href="#savoir-faire"><p>Notre offre</p></a></li>
-            <li><a href="#contact"><p>Nous contacter</p></a></li>
+            <li><a id="savoir-fairelink" href="#savoir-faire"><p>Notre offre</p></a></li>
+            <li><a id="contactlink" href="#contact"><p>Nous contacter</p></a></li>
         </ul>
     </nav>
 </header>
@@ -404,7 +404,34 @@
             $("nav ul").css("height", "60px");
             $("nav").css("background-color", "white");
             $("nav").css("box-shadow", "0px 3px 12px rgba(0,0,0,0.6)");
-            $("nav a").css("color","#black").css("text-shadow","none");
+            $("nav a").css("color","black").css("text-shadow","none");
+            if (positionscroll < 650){
+                $('nav a').css('border-bottom','0');
+            }
+            if ( positionscroll > 650 && positionscroll < 2400 ){
+                $('#presentationlink').css('border-bottom','#94C8EE solid 5px');
+                $('#presentationlink p').css('margin-bottom','-5px');
+                $('nav a').not('#presentationlink').css('border-bottom','#94C8EE solid 0');
+                $('nav p').not('#presentationlink p').css('margin-bottom','0');
+            }
+            if ( positionscroll > 2400 && positionscroll < 3500  ){
+                $('#solutionslink').css('border-bottom','#94C8EE solid 5px');
+                $('#solutionslink p').css('margin-bottom','-5px');
+                $('nav a').not('#solutionslink').css('border-bottom','#94C8EE solid 0');
+                $('nav p').not('#solutionslink p').css('margin-bottom','0');
+            }
+            if ( positionscroll > 3500 && positionscroll < 4400  ){
+                $('#savoir-fairelink').css('border-bottom','#94C8EE solid 5px');
+                $('#savoir-fairelink p').css('margin-bottom','-5px');
+                $('nav a').not('#savoir-fairelink').css('border-bottom','#94C8EE solid 0');
+                $('nav p').not('#savoir-fairelink p').css('margin-bottom','0');
+            }
+            if ( positionscroll > 4400){
+                $('#contactlink').css('border-bottom','#94C8EE solid 5px');
+                $('#contactlink p').css('margin-bottom','-5px');
+                $('nav a').not('#contactlink').css('border-bottom','#94C8EE solid 0');
+                $('nav p').not('#contactlink p').css('margin-bottom','0');
+            }
             $("#logomenu").attr('src','{{ asset('img/interaxys.png') }}');
             $("#logomenu").css('width','110px');
             $("nav a").mouseover(function() {
@@ -420,7 +447,7 @@
             $("#logomenu").attr('src','{{ asset('img/interblanc.png') }}');
             $("#logomenu").css('width','180px');
             $("nav a").mouseover(function() {
-                $(this).css("color","white")
+                $(this).css("color","#FFD433")
             }).mouseout(function (){
                 $(this).css("color","white")
             });
@@ -467,14 +494,41 @@
 
         $(document).scroll(function (){
             var positionscroll = $(document).scrollTop();
-
+            console.log(positionscroll);
             var limitnav = 90;
 
             if( positionscroll > 90){
                 $("nav ul").css("height", "60px");
                 $("nav").css("background-color", "white");
+                $("nav a").css("color", "black");
                 $("nav").css("box-shadow", "0px 3px 12px rgba(0,0,0,0.6)");
-                $("nav a").css("color","black").css("text-shadow","none");;
+                if (positionscroll < 650){
+                    $('nav a').css('border-bottom','0');
+                }
+                if ( positionscroll > 650 && positionscroll < 2400 ){
+                    $('#presentationlink').css('border-bottom','#94C8EE solid 5px');
+                    $('#presentationlink p').css('margin-bottom','-5px');
+                    $('nav a').not('#presentationlink').css('border-bottom','#94C8EE solid 0');
+                    $('nav p').not('#presentationlink p').css('margin-bottom','0');
+                }
+                if ( positionscroll > 2400 && positionscroll < 3500  ){
+                    $('#solutionslink').css('border-bottom','#94C8EE solid 5px');
+                    $('#solutionslink p').css('margin-bottom','-5px');
+                    $('nav a').not('#solutionslink').css('border-bottom','#94C8EE solid 0');
+                    $('nav p').not('#solutionslink p').css('margin-bottom','0');
+                }
+                if ( positionscroll > 3500 && positionscroll < 4400  ){
+                    $('#savoir-fairelink').css('border-bottom','#94C8EE solid 5px');
+                    $('#savoir-fairelink p').css('margin-bottom','-5px');
+                    $('nav a').not('#savoir-fairelink').css('border-bottom','#94C8EE solid 0');
+                    $('nav p').not('#savoir-fairelink p').css('margin-bottom','0');
+                }
+                if ( positionscroll > 4400){
+                    $('#contactlink').css('border-bottom','#94C8EE solid 5px');
+                    $('#contactlink p').css('margin-bottom','-5px');
+                    $('nav a').not('#contactlink').css('border-bottom','#94C8EE solid 0');
+                    $('nav p').not('#contactlink p').css('margin-bottom','0');
+                }
                 $("#logomenu").attr('src','{{ asset('img/interaxys.png') }}');
                 $("#logomenu").css('width','110px');
                 $("nav a").mouseover(function() {
@@ -490,7 +544,7 @@
                 $("#logomenu").attr('src','{{ asset('img/interblanc.png') }}');
                 $("#logomenu").css('width','180px');
                 $("nav a").mouseover(function() {
-                    $(this).css("color","white")
+                    $(this).css("color","#FFD433")
                 }).mouseout(function (){
                     $(this).css("color","white")
                 });
