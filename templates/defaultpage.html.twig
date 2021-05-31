@@ -22,16 +22,19 @@
 </head>
 <body>
 <header>
-    <nav>
-        <ul>
-            <li><a id="presentationlink" href="#presentation"><p>Notre vision</p></a></li>
-            <li><a id="solutionslink" href="#solutions"><p>Notre approche</p></a></li>
-            <li><a href="#"><img id="logomenu" src="{{ asset('img/interblanc.png') }}" alt="Logo d'interaxys"></a></li>
-            <li><a id="savoir-fairelink" href="#savoir-faire"><p>Notre offre</p></a></li>
-            <li><a id="contactlink" href="#contact"><p>Nous contacter</p></a></li>
-        </ul>
-    </nav>
+    <div class="flex-bet-header">
+        <img src="{{ asset('img/interblanc.png') }}" alt="logo">
+        <p>TRANSFORMATION CONTINUE <br>EXCELLENCE COMPETITIVE <br>PERFORMANCE GLOBALE</p>
+    </div>
 </header>
+<nav>
+    <ul>
+        <li><a id="presentationlink" href="#presentation"><p>Notre vision</p></a></li>
+        <li><a id="solutionslink" href="#solutions"><p>Notre approche</p></a></li>
+        <li><a id="savoir-fairelink" href="#savoir-faire"><p>Notre offre</p></a></li>
+        <li><a id="contactlink" href="#contact"><p>Nous contacter</p></a></li>
+    </ul>
+</nav>
 <section id="headerbg">
     <div class="sliderdiv">
         <!-- Slider main container -->
@@ -229,52 +232,49 @@
 </div>
 
 <section id="savoir-faire">
-
-    <div class="sliderdiag">
-        <div class="sectionlimit">
-          <h2>notre offre</h2>
-            <div class="alignswipecenter">
-                <!-- Slider main container -->
-                <div class="swiper-container2">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide flexswipe">
-                            <div>
-                                <img class="logoslide" src="{{ asset('img/orientation.png') }}" alt="picto orientation">
-                                <div class="invisible-text">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa cumque dolor ducimus illum, molestias necessitatibus nisi perspiciatis possimus quas quibusdam quisquam reiciendis rerum sed totam velit veniam! Perferendis, quis.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide flexswipe">
-                            <div>
-                                <img class="logoslide" src="{{ asset('img/gestion.png') }}" alt="picto orientation">
-                                <div class="invisible-text">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa cumque dolor ducimus illum, molestias necessitatibus nisi perspiciatis possimus quas quibusdam quisquam reiciendis rerum sed totam velit veniam! Perferendis, quis.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide flexswipe">
-                            <div>
-                                <img class="logoslide" src="{{ asset('img/manage.png') }}" alt="picto orientation">
-                                <div class="invisible-text">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa cumque dolor ducimus illum, molestias necessitatibus nisi perspiciatis possimus quas quibusdam quisquam reiciendis rerum sed totam velit veniam! Perferendis, quis.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide flexswipe">
-                            <div>
-                                <img class="logoslide" src="{{ asset('img/pilotage.png') }}" alt="picto orientation">
-                                <div class="invisible-text">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa cumque dolor ducimus illum, molestias necessitatibus nisi perspiciatis possimus quas quibusdam quisquam reiciendis rerum sed totam velit veniam! Perferendis, quis.</p>
-                                </div>
+    <div class="sectionlimit">
+      <h2>notre offre</h2>
+        <div class="alignswipecenter">
+            <!-- Slider main container -->
+            <div class="swiper-container2">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide flexswipe">
+                        <div>
+                            <img class="logoslide" src="{{ asset('img/orientation.png') }}" alt="picto orientation">
+                            <div class="invisible-text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa cumque dolor ducimus illum, molestias necessitatibus nisi perspiciatis possimus quas quibusdam quisquam reiciendis rerum sed totam velit veniam! Perferendis, quis.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-button-prev swiper-button-prev2 "></div>
-                    <div class="swiper-button-next swiper-button-next2"></div>
+                    <div class="swiper-slide flexswipe">
+                        <div>
+                            <img class="logoslide" src="{{ asset('img/gestion.png') }}" alt="picto orientation">
+                            <div class="invisible-text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa cumque dolor ducimus illum, molestias necessitatibus nisi perspiciatis possimus quas quibusdam quisquam reiciendis rerum sed totam velit veniam! Perferendis, quis.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide flexswipe">
+                        <div>
+                            <img class="logoslide" src="{{ asset('img/manage.png') }}" alt="picto orientation">
+                            <div class="invisible-text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa cumque dolor ducimus illum, molestias necessitatibus nisi perspiciatis possimus quas quibusdam quisquam reiciendis rerum sed totam velit veniam! Perferendis, quis.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide flexswipe">
+                        <div>
+                            <img class="logoslide" src="{{ asset('img/pilotage.png') }}" alt="picto orientation">
+                            <div class="invisible-text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa cumque dolor ducimus illum, molestias necessitatibus nisi perspiciatis possimus quas quibusdam quisquam reiciendis rerum sed totam velit veniam! Perferendis, quis.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <div class="swiper-button-prev swiper-button-prev2 "></div>
+                <div class="swiper-button-next swiper-button-next2"></div>
             </div>
         </div>
     </div>
@@ -386,7 +386,7 @@
     $(document).ready(function (){
         $('.cardsol').hide();
         $('#cardphilo').show();
-        $('#philo').css('box-shadow','6px 6px 0 #94C8EE, -6px -6px 0 #94C8EE');
+        $('#philo').css('box-shadow','6px 6px 0 #94C8EE');
 
         //SCROLL TO
 
@@ -401,10 +401,6 @@
         var limitnav = 90;
 
         if( positionscroll > 90){
-            $("nav ul").css("height", "60px");
-            $("nav").css("background-color", "white");
-            $("nav").css("box-shadow", "0px 3px 12px rgba(0,0,0,0.6)");
-            $("nav a").css("color","black").css("text-shadow","none");
             if (positionscroll < 650){
                 $('nav a').css('border-bottom','0');
             }
@@ -437,15 +433,9 @@
             $("nav a").mouseover(function() {
                 $(this).css("color","#94C8EE")
             }).mouseout(function (){
-                $(this).css("color","black")
+                $(this).css("color","white")
             });
         }else{
-            $("nav ul").css("height", "95px");
-            $("nav").css("background-color", "transparent");
-            $("nav").css("box-shadow", "none");
-            $("nav a").css("color","white");
-            $("#logomenu").attr('src','{{ asset('img/interblanc.png') }}');
-            $("#logomenu").css('width','180px');
             $("nav a").mouseover(function() {
                 $(this).css("color","#FFD433")
             }).mouseout(function (){
@@ -498,10 +488,6 @@
             var limitnav = 90;
 
             if( positionscroll > 90){
-                $("nav ul").css("height", "60px");
-                $("nav").css("background-color", "white");
-                $("nav a").css("color", "black");
-                $("nav").css("box-shadow", "0px 3px 12px rgba(0,0,0,0.6)");
                 if (positionscroll < 650){
                     $('nav a').css('border-bottom','0');
                 }
@@ -534,15 +520,9 @@
                 $("nav a").mouseover(function() {
                     $(this).css("color","#94C8EE")
                 }).mouseout(function (){
-                    $(this).css("color","black")
+                    $(this).css("color","white")
                 });
             }else{
-                $("nav ul").css("height", "95px");
-                $("nav").css("background-color", "transparent");
-                $("nav").css("box-shadow", "none");
-                $("nav a").css("color","white").css("text-shadow","0px 3px 4px rgba(0,0,0,0.3)");
-                $("#logomenu").attr('src','{{ asset('img/interblanc.png') }}');
-                $("#logomenu").css('width','180px');
                 $("nav a").mouseover(function() {
                     $(this).css("color","#FFD433")
                 }).mouseout(function (){
@@ -552,7 +532,7 @@
         })
 
         $('#philo').on('click', function (){
-            $(this).css('box-shadow','6px 6px 0 #94C8EE, -6px -6px 0 #94C8EE');
+            $(this).css('box-shadow','6px 6px 0 #94C8EE');
             $('#tact, #ope, #strat').css('box-shadow','6px 6px 0 #FFD433')
             $('#cardtact').fadeOut('fast');
             $('#cardope').fadeOut('fast');
@@ -563,7 +543,7 @@
         })
 
         $('#tact').on('click', function (){
-            $(this).css('box-shadow','6px 6px 0 #94C8EE, -6px -6px 0 #94C8EE');
+            $(this).css('box-shadow','6px 6px 0 #94C8EE');
             $('#ope, #philo, #strat').css('box-shadow','6px 6px 0 #FFD433')
             $('#cardphilo').fadeOut('fast');
             $('#cardope').fadeOut('fast');
@@ -574,7 +554,7 @@
         })
 
         $('#ope').on('click', function (){
-            $(this).css('box-shadow','6px 6px 0 #94C8EE, -6px -6px 0 #94C8EE');
+            $(this).css('box-shadow','6px 6px 0 #94C8EE');
             $('#tact, #philo, #strat').css('box-shadow','6px 6px 0 #FFD433');
             $('#cardtact').fadeOut('fast');
             $('#cardphilo').fadeOut('fast');
@@ -585,7 +565,7 @@
         })
 
         $('#strat').on('click', function (){
-            $(this).css('box-shadow','6px 6px 0 #94C8EE, -6px -6px 0 #94C8EE');
+            $(this).css('box-shadow','6px 6px 0 #94C8EE');
             $('#tact, #philo, #ope').css('box-shadow','6px 6px 0 #FFD433')
             $('#cardtact').fadeOut('fast');
             $('#cardope').fadeOut('fast');
@@ -702,7 +682,9 @@
         },
         coverflowEffect: {
             slideShadows: false,
-            rotate: 30,
+            rotate: 65,
+            depth : 400,
+            stretch :320,
         },
         navigation: {
             nextEl: '.swiper-button-next2',
@@ -711,8 +693,9 @@
         noSwiping: true,
         allowTouchMove:false,
         speed:400,
-        spaceBetween: -50,
-        slidesPerView: 3,
+        spaceBetween: 50,
+        slidesPerView: 'auto',
+        loopedSlides: 3,
         centeredSlides:true,
         // Optional parameters
         direction: 'horizontal',
@@ -720,10 +703,11 @@
         loop: true,
         on: {
             slideChangeTransitionStart: function () {
-                $('#savoir-faire .swiper-slide-active, #savoir-faire .swiper-slide-duplicate-active').find('.invisible-text').slideDown(200);
+                $('#savoir-faire .swiper-slide-active, #savoir-faire .swiper-slide-duplicate-active').find('.invisible-text').slideDown(500);
                 $('#savoir-faire .swiper-slide-active, #savoir-faire .swiper-slide-duplicate-active').css('opacity', '1');
-                $('#savoir-faire .swiper-slide-next, #savoir-faire .swiper-slide-duplicate-next').find('.invisible-text').slideUp(300);
-                $('#savoir-faire .swiper-slide-prev, #savoir-faire .swiper-slide-duplicate-prev').find('.invisible-text').slideUp(300);
+                $('#savoir-faire .swiper-slide-active, #savoir-faire .swiper-slide-duplicate-active');
+                $('#savoir-faire .swiper-slide-next, #savoir-faire .swiper-slide-duplicate-next').find('.invisible-text').slideUp(400);
+                $('#savoir-faire .swiper-slide-prev, #savoir-faire .swiper-slide-duplicate-prev').find('.invisible-text').slideUp(400);
                 $('#savoir-faire .swiper-slide-next, #savoir-faire .swiper-slide-duplicate-next').css('opacity', '0.6');
                 $('#savoir-faire .swiper-slide-prev, #savoir-faire .swiper-slide-duplicate-prev').css('opacity', '0.6');
                 $('#savoir-faire .swiper-slide').not('.swiper-slide-prev, .swiper-slide-next, .swiper-slide-active, .swiper-slide-duplicate-next, .swiper-slide-duplicate-prev, .swiper-slide-duplicate-active').css('opacity', '0');
