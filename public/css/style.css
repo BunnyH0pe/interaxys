@@ -56,7 +56,7 @@ header{
     height: 100vmin;
     position: relative;
     z-index: 1000;
-    margin-top: -200px;
+    margin-top: -190px;
 }
 
 .flex-bet-header{
@@ -69,7 +69,7 @@ header{
 }
 
 .flex-bet-header img{
-    width: 200px;
+    width: 210px;
 }
 
 .flex-bet-header p {
@@ -77,8 +77,19 @@ header{
     text-transform: uppercase;
     font-family: Roboto;
     font-weight: bold;
-    color: white;
+    color: #94C8EE;
     line-height: 30px;
+    font-size: 1.4vw;
+}
+
+#headertitle1{
+    align-self: flex-start;
+    color: #FFD433;
+}
+
+#headertitle3{
+    align-self: flex-end;
+    color: #FFD433;
 }
 
 nav{
@@ -101,7 +112,7 @@ nav ul{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
+    height: 70px;
     font-family: "Roboto";
     text-transform: uppercase;
     list-style: none;
@@ -185,7 +196,7 @@ nav img{
 .centerslider{
     position: absolute;
     left: 50%;
-    top: 40%;
+    top: 60%;
     transform: translate(-50%, -50%);
     width: 80%;
 }
@@ -594,8 +605,10 @@ h2{
 .formulaire{
     padding-top: 100px;
     padding-bottom: 80px;
-    margin-right: 10px;
-    margin-left: -10px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 .firstflexform{
@@ -626,7 +639,6 @@ h2{
     width: 100%;
     padding: 10px;
     font-family: Roboto;
-    font-size: 20px;
     height: 200px;
     border: none;
     box-sizing: border-box;
@@ -637,10 +649,9 @@ h2{
 }
 
 .formulaire input{
-    width: 400px;
+    width: 300px;
     padding: 10px;
     font-family: Roboto;
-    font-size: 20px;
     border: none;
     z-index: 1000;
     position: absolute;
@@ -649,8 +660,8 @@ h2{
 }
 
 .firstflexform .geometrieconteneur, .secondflexform .geometrieconteneur{
-    width: 420px;
-    height: 44px;
+    width: 320px;
+    height: 36px;
 }
 
 
@@ -660,7 +671,7 @@ h2{
 
 .geometrieconteneurobjet{
     width: 100%;
-    height: 44px;
+    height: 36px;
 }
 
 .geometrieconteneurobjet input{
@@ -669,13 +680,13 @@ h2{
 }
 
 .geometrieconteneurobjet .backgroundform{
-    height: 64px;
+    height: 54px;
     width: 102%;
 }
 
 .btn-right .geometrieconteneur{
     width: 320px;
-    height: 44px;
+    height: 36px;
 }
 
 .btn-right input{
@@ -688,8 +699,8 @@ h2{
 }
 
 .backgroundform{
-    width: 443px;
-    height: 63px;
+    width: 340px;
+    height: 55px;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -702,7 +713,7 @@ h2{
     left: 0;
     z-index: 0;
     width: 102%;
-    height:220px ;
+    height:219px ;
 }
 
 .geometrieconteneurarea{
@@ -878,6 +889,10 @@ h2{
 .swiper-pagination{
     --swiper-theme-color: #FFD433;
     --swiper-navigation-size: 100px;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    top: 60% !important;
 }
 
 .swiper-pagination-bullet{
