@@ -120,6 +120,7 @@ nav ul{
 
 nav li{
     height: 100%;
+    flex-grow: 1;
 }
 
 nav a{
@@ -142,7 +143,11 @@ nav p{
 }
 
 nav img{
-    width: 180px;
+    height: 50px;
+}
+
+.imgcontent{
+    transition: flex-grow 500ms ease-in;
 }
 
 #logomenu{
