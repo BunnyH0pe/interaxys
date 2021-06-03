@@ -22,20 +22,17 @@
 </head>
 <body>
 <header>
-    <div class="flex-bet-header">
-        <img src="{{ asset('img/interblanc.png') }}" alt="logo">
-        <p id="headertitle1">TRANSFORMATION CONTINUE</p>
-        <p id="headertitle2">EXCELLENCE COMPETITIVE</p>
-        <p id="headertitle3">PERFORMANCE GLOBALE</p>
+    <div class="flex-key">
+        <p>Performance Globale</p> <p>-</p> <p>Excellence Compétitive</p> <p>-</p> <p>Transformation Continue</p> <p>-</p> <p>Virtuosité Collective</p>
     </div>
 </header>
 <nav>
     <ul>
-        <li><a id="presentationlink" href="#presentation"><p>Notre vision</p></a></li>
-        <li><a id="solutionslink" href="#solutions"><p>Notre approche</p></a></li>
-        <li class="imgcontent" style="display:none;"><a href=""><img src="{{ asset('img/interblanc.png') }}" alt="logo"></a></li>
-        <li><a id="savoir-fairelink" href="#savoir-faire"><p>Notre offre</p></a></li>
-        <li><a id="contactlink" href="#contact"><p>Nous contacter</p></a></li>
+        <li><a class="logo-nav-link"><img class="logo-nav" src="{{ asset('img/interaxys.png') }}" alt="logo"></a></li>
+        <li><a id="presentationlink" href="#presentation"><p>vision</p></a></li>
+        <li><a id="solutionslink" href="#solutions"><p>approche</p></a></li>
+        <li><a id="savoir-fairelink" href="#savoir-faire"><p>offre</p></a></li>
+        <li><a id="contactlink" href="#contact"><p>contact</p></a></li>
     </ul>
 </nav>
 <section id="headerbg">
@@ -358,38 +355,25 @@
         </div>
     </div>
 </section>
+<footer>
+    <section id="footer">
+        <div class="tel"><img src="{{ asset('img/call.svg') }}" alt="Tel picto"><p>+ 33 680 230 239</p></div>
+        <div class="mail"><img src="{{ asset('img/email.svg') }}" alt="Mail picto"><p>contact@interaxys.fr</p></div>
+        <div class="reseaux-sociaux">
+            <a href="https://www.facebook.com/"><img id="facebook" src="{{ asset('img/001-facebook.svg') }}" alt="logo facebook"></a>
+            <a href="https://www.linkedin.com"><img id="linkedin" src="{{ asset('img/010-linkedin.svg') }}" alt="logo linkedin"></a>
+            <a href="https://www.twitter.com"><img id="twitter" src="{{ asset('img/013-twitter.svg') }}" alt="logo twitter"></a></div>
+        <a class="mentions-legales" href=""><p >Mentions Légales</p></a>
+        <p class="copyright">© Interaxys 2021</p>
+    </section>
+</footer>
 
-<section id="footer">
-    <div class="sectionlimit">
-        <div class="fullfooter">
-            <div class="leftfooter">
-                <div class="mail"><img src="{{ asset('img/email.svg') }}" alt="Mail picto"><p>contact@interaxys.fr</p></div>
-                <div class="home"><img src="{{ asset('img/home.svg') }}" alt="Maison picto"><p>8 Bis, Boulevard Victor Hugo <br>
-                        10000 Troyes </p></div>
-                <div class="tel"><img src="{{ asset('img/call.svg') }}" alt="Tel picto"><p>+ 33 680 230 239</p></div>
-            </div>
-            <div class="midfooter">
-                <img src="{{ asset('img/twitter.svg') }}" alt="logotwitter">
-                <img src="{{ asset('img/linkedin.svg') }}" alt="logo linkedin">
-            </div>
-            <div class="rightfooter">
-                <div class="img">
-                    <img src="{{ asset('img/interblanc.png') }}" alt="logointeraxys">
-                </div>
-                <div>
-                    <a href="#">Mentions Légales</a>
-                    <br>
-                    <a href="#">Retour en haut de la page</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 <script>
     $(document).ready(function (){
         $('.cardsol').hide();
         $('#cardphilo').show();
         $('#philo').css('box-shadow','6px 6px 0 #94C8EE');
+
 
         //SCROLL TO
 
@@ -400,11 +384,32 @@
             return false;
         });
 
-        var positionscroll = $(document).scrollTop();
-        var limitnav = 90;
+        //HOVER FOOTER
 
-        if( positionscroll > 90){
-            $('.imgcontent').show();
+        $("#facebook").mouseover(function() {
+            $(this).attr('src','{{ asset('img/001-facebook-hover.svg') }}')
+        }).mouseout(function (){
+            $(this).attr('src','{{ asset('img/001-facebook.svg') }}')
+        });
+
+        $("#linkedin").mouseover(function() {
+            $(this).attr('src','{{ asset('img/010-linkedin-hover.svg') }}')
+        }).mouseout(function (){
+            $(this).attr('src','{{ asset('img/010-linkedin.svg') }}')
+        });
+
+        $("#twitter").mouseover(function() {
+            $(this).attr('src','{{ asset('img/013-twitter-hover.svg') }}')
+        }).mouseout(function (){
+            $(this).attr('src','{{ asset('img/013-twitter.svg') }}')
+        });
+
+        // NAVBAR
+
+        var positionscroll = $(document).scrollTop();
+        var limitnav = 40;
+
+        if( positionscroll > 40){
             if (positionscroll < 650){
                 $('nav a').css('border-bottom','0');
             }
@@ -432,19 +437,24 @@
                 $('nav a').not('#contactlink').css('border-bottom','#94C8EE solid 0');
                 $('nav p').not('#contactlink p').css('margin-bottom','0');
             }
-            $("#logomenu").attr('src','{{ asset('img/interaxys.png') }}');
-            $("#logomenu").css('width','110px');
+            $(".logo-nav").css('transform','scale(1) translate(-14%)');
             $("nav a").mouseover(function() {
                 $(this).css("color","#94C8EE")
+                $(this).not('.logo-nav-link').css('border-bottom','#94C8EE solid 5px')
             }).mouseout(function (){
-                $(this).css("color","white")
+                $(this).css("color","#F5F5F5")
+                $(this).not('.logo-nav-link').css('border-bottom','#94C8EE solid 0px')
             });
         }else{
-            $('.imgcontent').hide();
+            $(".logo-nav").css('transform','scale(1.65) translate(-14%,-25%)');
             $("nav a").mouseover(function() {
-                $(this).css("color","#FFD433")
+                $(this).css("color","#94C8EE")
+                $(this).not('.logo-nav-link').css('border-bottom','#94C8EE solid 5px')
+                $(this).find('p').css('margin-bottom','-5px');
             }).mouseout(function (){
-                $(this).css("color","white")
+                $(this).css("color","#F5F5F5")
+                $(this).not('.logo-nav-link').css('border-bottom','#94C8EE solid 0px')
+                $(this).find('p').css('margin-bottom','0px');
             });
         }
 
@@ -490,11 +500,9 @@
         $(document).scroll(function (){
             var positionscroll = $(document).scrollTop();
             console.log(positionscroll);
-            var limitnav = 90;
+            var limitnav = 40;
 
-            if( positionscroll > 90){
-                $('.imgcontent').show(500);
-                $('.imgcontent').css('flex-grow','1');
+            if( positionscroll > 40){
                 if (positionscroll < 650){
                     $('nav a').css('border-bottom','0');
                 }
@@ -522,20 +530,26 @@
                     $('nav a').not('#contactlink').css('border-bottom','#94C8EE solid 0');
                     $('nav p').not('#contactlink p').css('margin-bottom','0');
                 }
-                $("#logomenu").attr('src','{{ asset('img/interaxys.png') }}');
-                $("#logomenu").css('width','110px');
+                $(".logo-nav").css('transform','scale(1) translate(-14%)');
                 $("nav a").mouseover(function() {
                     $(this).css("color","#94C8EE")
+                    $(this).not('.logo-nav-link').css('border-bottom','#94C8EE solid 5px')
+                    $(this).find('p').css('margin-bottom','-5px');
                 }).mouseout(function (){
-                    $(this).css("color","white")
+                    $(this).css("color","#F5F5F5")
+                    $(this).not('.logo-nav-link').css('border-bottom','#94C8EE solid 0px')
+                    $(this).find('p').css('margin-bottom','0px');
                 });
             }else{
-                $('.imgcontent').hide(500);
-                $('.imgcontent').css('flex-grow','0.0001');
+                $(".logo-nav").css('transform','scale(1.65) translate(-14%,-25%)');
                 $("nav a").mouseover(function() {
-                    $(this).css("color","#FFD433")
+                    $(this).css("color","#94C8EE")
+                    $(this).not('.logo-nav-link').css('border-bottom','#94C8EE solid 5px')
+                    $(this).find('p').css('margin-bottom','-5px');
                 }).mouseout(function (){
-                    $(this).css("color","white")
+                    $(this).css("color","#F5F5F5")
+                    $(this).not('.logo-nav-link').css('border-bottom','#94C8EE solid 0px')
+                    $(this).find('p').css('margin-bottom','0px');
                 });
             }
         })

@@ -19,9 +19,17 @@ time, mark, audio, video {
     vertical-align: baseline;
 }
 
+/* FONTS */
+
+@font-face {
+    font-family: "Qualy";
+    src: url("../fonts/qualy_bold.ttf") format("truetype");
+}
+
 body{
 
 }
+ /* SCROLLBAR */
 
 ::-webkit-scrollbar{
     width: 15px;
@@ -35,87 +43,61 @@ body{
     background: black;
 }
 
-@font-face {
-    font-family: "Qualy";
-    src: url("../fonts/qualy_bold.ttf") format("truetype");
-}
+/* HEADER */
 
 header{
-    width: 100%;
-    background-color: rgba(0,0,0,0.7);
     z-index: 1200;
     position: relative;
-    height: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding-top: 20px;
+    background-color: #1e1e1e;
 }
 
-#headerbg{
-    width: 100%;
-    height: 100vmin;
-    position: relative;
-    z-index: 1000;
-    margin-top: -190px;
+.logo-nav{
+    align-self: flex-end;
+    margin-bottom: 10px;
+    transform: scale(1.65) translate(-14%,-25%);
+    transition: transform ease-in 0.3s;
 }
 
-.flex-bet-header{
-    width: 80%;
-    margin-right: auto;
-    margin-left: auto;
+.flex-key p{
+    font-family: Roboto;
+    font-size: 18px;
+    color: #94C8EE;
+    font-weight: 500;
+}
+
+.flex-key{
     display: flex;
     justify-content: space-between;
-    align-items: center;
-}
-
-.flex-bet-header img{
-    width: 210px;
-}
-
-.flex-bet-header p {
-    text-align: right;
-    text-transform: uppercase;
-    font-family: Roboto;
-    font-weight: bold;
-    color: #94C8EE;
-    line-height: 30px;
-    font-size: 1.4vw;
-}
-
-#headertitle1{
-    align-self: flex-start;
-    color: #FFD433;
-}
-
-#headertitle3{
-    align-self: flex-end;
-    color: #FFD433;
+    width: 65%;
+    margin-right: 10%;
+    margin-left: auto;
+    align-items: flex-end;
 }
 
 nav{
-    transition: background-color ease-in 0.3s;
     width: 100%;
+    box-sizing: border-box;
+    z-index: 1500;
+    background-color: #1e1e1e;
     position: sticky;
     top: 0;
     left: 0;
-    z-index: 1100;
-    color: white;
-    box-sizing: border-box;
-    background-color: rgba(0,0,0,0.7);
 }
 
 nav ul{
-    transition:height ease-in 0.3s;
-    margin-right: auto;
-    margin-left: auto;
-    width: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
     font-family: "Roboto";
+    height: 70px;
     text-transform: uppercase;
     list-style: none;
+    z-index: 1500;
+    box-sizing: border-box;
 }
 
 nav li{
@@ -126,8 +108,7 @@ nav li{
 nav a{
     transition: color ease-in 0.3s, border-bottom-width ease-in 0.3s;
     text-decoration: none;
-    color: white;
-    text-shadow: 0px 3px 6px black;
+    color: #F5F5F5;
     font-size: 18px;
     display: flex;
     align-items: center;
@@ -154,6 +135,15 @@ nav img{
     transition: width ease-in 0.3s;
 }
 
+/* SLIDER */
+
+#headerbg{
+    width: 100%;
+    height: 100vmin;
+    position: relative;
+    z-index: 1000;
+    margin-top: -112px;
+}
 
 .sliderdiv{
     overflow: hidden;
@@ -201,7 +191,7 @@ nav img{
 .centerslider{
     position: absolute;
     left: 50%;
-    top: 60%;
+    top: 55%;
     transform: translate(-50%, -50%);
     width: 80%;
 }
@@ -260,7 +250,7 @@ h2{
     position: absolute;
     left: -8%;
     top: 0;
-    font-size: 24px;
+    font-size: 28px;
     color: #FFD433 ;
     font-family: Qualy;
     letter-spacing: 2px;
@@ -337,6 +327,8 @@ h2{
 
 #nommage{
     position: absolute;
+    font-family: Roboto;
+    text-transform: uppercase;
     bottom: 15%;
     right: 10%;
     font-size:2vw;
@@ -412,7 +404,7 @@ h2{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: white;
+    background-color: #F5F5F5;
     font-family: Qualy;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -431,7 +423,7 @@ h2{
     width: 100%;
     height: 100%;
     min-width: 700px;
-    background-color: white;
+    background-color: #F5F5F5;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -572,8 +564,8 @@ h2{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .flexclient{
@@ -731,81 +723,71 @@ h2{
     justify-content: center;
 }
 
-#footer{
-    background-image: url("../img/banfooter.jpg");
-    background-size: 180%;
-    height: 350px;
-    background-position: 80% 50%;
-}
+/* FOOTER */
 
-#footer .sectionlimit{
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
-.fullfooter{
-    display: flex;
+footer{
     width: 100%;
-    justify-content: space-between;
-    align-items: flex-end;
+    background-color: #1e1e1e;
 }
 
-.leftfooter{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 250px ;
-}
-
-.leftfooter img{
-    width: 30px;
-}
-
-.leftfooter div{
+#footer{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40px;
     display: flex;
     align-items: center;
-    gap: 20px;
-}
-
-.leftfooter{
-    color: white;
-    text-shadow: 1px 1px 4px black;
-    font-size: 18px;
+    justify-content: center;
+    gap: 50px;
+    color: #F5F5F5;
     font-family: Roboto;
 }
 
-.midfooter{
+
+.mail , .tel {
     display: flex;
-    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
-.midfooter img{
-    width: 60px ;
+.mail img ,.tel img{
+    height: 20px;
 }
 
-.rightfooter img{
-    width: 200px;
-}
-
-.rightfooter{
+.reseaux-sociaux{
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 100px;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
 }
 
-.rightfooter div{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+.reseaux-sociaux a{
+    display: block;
+    width: 25px;
+    height: 25px;
 }
 
-.rightfooter a{
-    color: white;
-    text-shadow: 1px 1px 6px black;
+.reseaux-sociaux img{
+    width: 25px;
+    height: 25px;
+}
+
+#footer a{
     text-decoration: none;
-    font-family: Roboto;
-    font-size: 16px;
+    color: #F5F5F5;
+}
+
+.mentions-legales, .copyright{
+    text-align: center;
+}
+
+.mail, .tel , .mentions-legales, .copyright{
+    width: 21.2%;
+}
+
+.reseaux-sociaux{
+    width: 15%;
 }
 
 /* POUR LE RESPONSIVE */
@@ -824,9 +806,6 @@ h2{
         left: 0;
     }
 
-    nav ul{
-        justify-content: space-around;
-    }
 }
 
 #savoir-faire .logoslide{
@@ -844,7 +823,7 @@ h2{
 }
 
 .flexswipe{
-    background-color: white;
+    background-color: #F5F5F5;
 }
 
 
@@ -896,8 +875,8 @@ h2{
     --swiper-navigation-size: 100px;
 }
 
-.swiper-button-next, .swiper-button-prev {
-    top: 60% !important;
+.swiper-container .swiper-button-next, .swiper-button-prev {
+    top: 55% !important;
 }
 
 .swiper-pagination-bullet{
