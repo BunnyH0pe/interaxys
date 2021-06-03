@@ -24,14 +24,25 @@ class DashboardController extends AbstractDashboardController
         return $this->render('my-dashboard.html.twig');
     }
 
+    public function configureDashboard(): Dashboard
+    {
+        return Dashboard::new()
+            // the name visible to end users
+            ->setTitle('<img src="/interaxys/public/img/interaxys.png" style="width: 80px"> Interaxys')
+
+            // the path defined in this method is passed to the Twig asset() function
+            ->setFaviconPath('img/interaxys.png');
+            ;
+    }
+
     public function configureMenuItems(): iterable
     {
-        yield MenuItem::linktoDashboard('Accueil Admin', 'fa fa-home');
-        yield MenuItem::linkToCrud('Slider principal', 'fas fa-arrows-alt-h', SliderBanniere::class);
-        yield MenuItem::linkToCrud('Notre Vision', 'fas fa-eye', NotreVision::class);
-        yield MenuItem::linkToCrud('Notre Approche', 'fas fa-map-signs', NotreApproche::class);
-        yield MenuItem::linkToCrud('Notre Offre', 'fas fa-gift', NotreOffre::class);
-        yield MenuItem::linkToCrud('Nos Clients', 'fas fa-user-friends', Clients::class);
-        yield MenuItem::linkToCrud('Nous Contacter', 'fas fa-address-card', Contact::class);
+        yield MenuItem::linktoDashboard('Administration', 'fa fa-home');
+        yield MenuItem::linkToCrud('Bannière', 'fas fa-arrows-alt-h', SliderBanniere::class);
+        yield MenuItem::linkToCrud('Vision', 'fas fa-eye', NotreVision::class);
+        yield MenuItem::linkToCrud('Approche', 'fas fa-map-signs', NotreApproche::class);
+        yield MenuItem::linkToCrud('Offre', 'fas fa-gift', NotreOffre::class);
+        yield MenuItem::linkToCrud('Clients', 'fas fa-user-friends', Clients::class);
+        yield MenuItem::linkToCrud('Contact', 'fas fa-address-card', Contact::class);
     }
 }
