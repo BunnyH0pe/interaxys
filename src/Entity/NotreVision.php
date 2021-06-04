@@ -28,7 +28,7 @@ class NotreVision
     private $paragraphe2;
 
     /**
-     * @ORM\Column(type="string")
+     * @ORM\Column(type="string", length=255 )
      */
     private $lienvideo;
 
