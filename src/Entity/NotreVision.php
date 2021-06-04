@@ -63,7 +63,7 @@ class NotreVision
 
     public function getLienvideo(): ?string
     {
-        return $this->getLienvideo();
+        return $this->lienvideo;
     }
 
     public function setLienvideo(string $lienvideo): self
