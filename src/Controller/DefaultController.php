@@ -2,22 +2,14 @@
 
 
 namespace App\Controller;
-use App\Entity\Clients;
-use App\Entity\Contact;
-use App\Entity\NotreApproche;
-use App\Entity\NotreOffre;
-use App\Entity\SliderBanniere;
 use App\Repository\ClientsRepository;
 use App\Repository\ContactRepository;
 use App\Repository\NotreApprocheRepository;
 use App\Repository\NotreOffreRepository;
 use App\Repository\SliderBanniereRepository;
 use Symfony\Component\HttpFoundation\Response;
-use Doctrine\ORM\EntityManagerInterface;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use App\Entity\NotreVision;
 use App\Repository\NotreVisionRepository;
 
 class DefaultController extends AbstractController
@@ -33,11 +25,11 @@ class DefaultController extends AbstractController
                           ContactRepository $contactRepository ): Response
     {
         $slider = $sliderBanniereRepository->findAll();
-        $vision = $notreVisionRepository->findAll();
+        $vision = $notreVisionRepository->find(1);
         $approche = $notreApprocheRepository->findAll();
         $offre = $notreOffreRepository->findAll();
         $clients = $clientsRepository->findAll();
-        $contact = $contactRepository->findAll();
+        $contact = $contactRepository->find(1);
 
         return $this->render('defaultpage.html.twig', [
             'slider' => $slider,

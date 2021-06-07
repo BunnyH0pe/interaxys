@@ -90,29 +90,11 @@
                 <h2>Notre vision</h2>
                 <div class="doubleflex">
                     <div class="textpresentation">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tortor id augue
-                            accumsan, at laoreet justo sodales. Etiam tortor augue, gravida egestas accumsan at, egestas
-                            vel nibh. Integer odio purus, sollicitudin ac convallis scelerisque, pulvinar ut libero. Vivamus sapien elit,
-                            maximus aliquam sapien ut, viverra finibus lacus. Ut rutrum nisi tortor, non varius quam sodales ac.
-                        </p>
-                        <br>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tortor id augue accumsan,
-                            at laoreet justo sodales. Etiam tortor augue, gravida egestas accumsan at, egestas vel nibh. Integer odio purus,
-                            sollicitudin ac convallis scelerisque, pulvinar ut libero. Vivamus sapien elit, maximus aliquam sapien ut,
-                            viverra finibus lacus. Ut rutrum nisi tortor, non varius quam sodales ac.Lorem ipsum dolor sit amet, consectetur
-                            adipiscing elit. Phasellus feugiat tortor id augue accumsan, at laoreet justo sodales. Etiam tortor augue, gravida
-                            egestas accumsan at, egestas vel nibh. Integer odio purus, sollicitudin ac convallis scelerisque, pulvinar ut
-                            libero. Vivamus sapien elit, maximus aliquam sapien ut, viverra finibus lacus. Ut rutrum nisi tortor, non varius
-                            quam sodales ac.
-                        </p>
+                        <p>{{ vision.paragraphe1 }}</p>
                     </div>
                     <img id="imgtourne" src="{{ asset('img/formegeo1.svg') }}" alt="forme geométrique 1">
                 </div>
-                <p class="pflex">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tortor id augue
-                    accumsan, at laoreet justo sodales. Etiam tortor augue, gravida egestas accumsan at, egestas
-                    vel nibh. Integer odio purus, sollicitudin ac convallis scelerisque, pulvinar ut libero. Vivamus sapien elit,
-                    maximus aliquam sapien ut, viverra finibus lacus. Ut rutrum nisi tortor, non varius quam sodales ac.
+                <p class="pflex">{{ vision.paragraphe2 }}
                 </p>
             </div>
         </div>
@@ -125,7 +107,7 @@
 
 
         <div class="presentation-video">
-            <iframe width="907" height="510" src="https://www.youtube.com/embed/rZQ8aMvsikc"
+            <iframe width="907" height="510" src="{{ vision.lienvideo }}"
                     title="YouTube video player" frameborder="0" allow="accelerometer;
                      autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
             </iframe>
@@ -137,7 +119,7 @@
         <h2>Notre approche</h2>
         <div class="flex-solution">
             <div class="flexcolumncat">
-                <div id="philo"><p>Philosophique</p></div>
+                <div id="philo"><p>Éthique</p></div>
                 <div id="strat"><p>Stratégique</p></div>
                 <div id="tact"><p>Tactique</p></div>
                 <div id="ope"><p>Opérationnel</p></div>
@@ -145,78 +127,90 @@
             <div class="safecard">
             <div class="cardsol" id="cardphilo">
                 <article>
-                    <h3>Philosophique</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tortor id augue
-                        accumsan, at laoreet justo sodales. Etiam tortor augue, gravida egestas accumsan at, egestas
-                        vel nibh. Integer odio purus, sollicitudin ac convallis scelerisque, pulvinar ut libero. Vivamus sapien elit,
-                        maximus aliquam sapien ut, viverra finibus lacus.</p>
-                    <br>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tortor id augue
-                        accumsan, at laoreet justo sodales. Etiam tortor augue, gravida egestas accumsan at, egestas
-                        vel nibh.</p>
+                    <h3>Engagement</h3>
+                    <img class="pictocarte" src="{{ asset('img/ethique.png') }}" alt="">
+                    <p>À ce premier niveau essentiel, mais pourtant le plus souvent oublié, il s’agit de se questionner sur la raison d’être de l’entreprise et de
+                        formaliser une vision, une raison d’être et un projet global en considérant son impact sur l’environnement et la société, et ce à un horizon infini.
+                        Cet impact, ce niveau de responsabilité sociétale et environnementale doit bien évidemment être évaluer et il convient donc d’identifier les signaux
+                        qui seront collectés et agrégés afin de suivre son évolution. C’est cette vision, mais surtout sa concrétisation dans un indicateur suivi et partagé
+                        au même titre que les autres dimensions plus traditionnelles de la performance, qui permettra de donner du sens à l’action de chacun et qui favorisera
+                        l’engagement de tous dans un projet collectif. </p>
+                    <h4>Performance Globale</h4>
                     <ul>
-                        <li><strong>HORIZON : </strong><p> Éternité</p></li>
-                        <li><strong>DOMAINE : </strong><p> Vision</p></li>
-                        <li><strong>ESPRIT : </strong><p> Engagement</p></li>
-                        <li><strong>FINALITÉ : </strong><p> Sens</p></li>
-                        <li><strong>OBJET : </strong><p> Environement</p></li>
+                        <li><h5>Horizon</h5><h6>Éternité</h6></li>
+                        <li><h5>Objet</h5><h6>Planète</h6></li>
+                        <li><h5>Finalité</h5><h6>Sens</h6></li>
+                        <li><h5>Résultat</h5><h6>Éternité</h6></li>
                     </ul>
                 </article>
-                <div class="result"><p>responsabilité</p></div>
             </div>
 
            <div  class="cardsol" id="cardstrat">
                 <article>
-                    <h3>Stratégique</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tortor id augue
-                        accumsan, at laoreet justo sodales. Etiam tortor augue, gravida egestas accumsan at, egestas
-                        vel nibh. Integer odio purus, sollicitudin ac convallis scelerisque, pulvinar ut libero. Vivamus sapien elit,
-                        maximus aliquam sapien ut, viverra finibus lacus.</p>
+                    <h3>Alignement</h3>
+                    <img class="pictocarte" src="{{ asset('img/strat.png') }}" alt="">
+                    <p>Il s’agit à ce niveau de basculer d’une approche en silo dans laquelle chaque acteur de l’organisation
+                        est objectivé sur sa performance individuelle, le plus souvent son efficience, vers une approche systémique
+                        interactionnelle focalisée sur la finalité de l’entreprise. Ici chacun doit prendre conscience de sa
+                        contribution quotidienne à la proposition de valeur globale de l’entreprise et pouvoir participer à son
+                        amélioration. L’obsession de la satisfaction client devient primordiale et passe devant l’obsession des résultats
+                        individuels. Cette satisfaction client doit ainsi être mesurée et monitorée afin de suivre l’amélioration
+                        de ce résultat collectif, de célébrer les succès et d’entretenir une dynamique enthousiasmante de transformation
+                        et de progrès.</p>
+                    <h4>Excellence Compétitive</h4>
                     <ul>
-                        <li><strong>HORIZON : </strong><p>Année</p></li>
-                        <li><strong>DOMAINE : </strong><p>Objectifs</p></li>
-                        <li><strong>ESPRIT : </strong><p>Alignement</p></li>
-                        <li><strong>FINALITÉ : </strong><p>Pérennité</p></li>
-                        <li><strong>OBJET : </strong><p>Marché</p></li>
+                        <li><h5>Horizon</h5><h6>Long terme</h6></li>
+                        <li><h5>Objet</h5><h6>Marché</h6></li>
+                        <li><h5>Finalité</h5><h6>Pérennité</h6></li>
+                        <li><h5>Résultat</h5><h6>Perfection</h6></li>
                     </ul>
                 </article>
-               <div class="result"><p>QUALITÉ</p></div>
+
             </div>
 
             <div  class="cardsol" id="cardtact">
                 <article>
-                    <h3>Tactique</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tortor id augue
-                        accumsan, at laoreet justo sodales. Etiam tortor augue, gravida egestas accumsan at, egestas
-                        vel nibh. Integer odio purus, sollicitudin ac convallis scelerisque, pulvinar ut libero. Vivamus sapien elit,
-                        maximus aliquam sapien ut, viverra finibus lacus.</p>
+                    <h3>Coordination</h3>
+                    <img class="pictocarte" src="{{ asset('img/tact.png') }}" alt="">
+                    <p>A ce niveau, le mouvement de transformation continue est abordé globalement. Il ne s’agit plus pour
+                        chaque chef de service de défendre son projet au détriment des autres mais plutôt de faire émerger
+                        collectivement les projets qui vont permettre d’améliorer significativement la proposition de valeur
+                        globale dans le respect de la vision et de la raison d’être de l’entreprise. Le principe est de faire
+                        émerger les différentes opportunités de transformation (investissement matériel ou logiciel, recrutement
+                        de nouvelle compétence, chantier d’amélioration continue) et d’évaluer l’impact de ces transformations
+                        sur la valeur ressentie par le client et sur performance globale. Cette évaluation est principalement
+                        qualitative et réalisée de façon collégiale</p>
+                    <h4>Transformation Continue</h4>
                     <ul>
-                        <li><strong>HORIZON : </strong><p>Mois</p></li>
-                        <li><strong>DOMAINE : </strong><p>Moyens</p></li>
-                        <li><strong>ESPRIT : </strong><p>Coordination</p></li>
-                        <li><strong>FINALITÉ : </strong><p>Santé</p></li>
-                        <li><strong>OBJET : </strong><p>Organisation</p></li>
+                        <li><h5>Horizon</h5><h6>Moyen terme</h6></li>
+                        <li><h5>Objet</h5><h6>Organisation</h6></li>
+                        <li><h5>Finalité</h5><h6>Santé</h6></li>
+                        <li><h5>Résultat</h5><h6>Agilité</h6></li>
                     </ul>
                 </article>
-                <div class="result"><p>Vitesse</p></div>
+
             </div>
 
             <div class="cardsol" id="cardope">
                 <article>
-                    <h3>Opérationnel</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat tortor id augue
-                        accumsan, at laoreet justo sodales. Etiam tortor augue, gravida egestas accumsan at, egestas
-                        vel nibh. Integer odio purus, sollicitudin ac convallis scelerisque, pulvinar ut libero. Vivamus sapien elit,
-                        maximus aliquam sapien ut, viverra finibus lacus.</p>
+                    <h3>Synchronisation</h3>
+                    <img class="pictocarte" src="{{ asset('img/ope.png') }}" alt="">
+                    <p>A ce dernier niveau opérationnel, chaque collaborateur inscrit ses décisions et actions
+                        dans un mouvement collectif visant un objectif commun, un peu comme un musicien dans son
+                        orchestre. Pour cela chacun doit avoir de la visibilité sur le contexte global instantané afin
+                        de prendre localement les décisions optimales globalement, en abandonnant donc le plus souvent
+                        ses résultats individuels. Dans cette dynamique temps-réel, l’importance du système d’information
+                        est crucial, celui-ci doit donc être abordé avec la volonté de mettre à disposition de chacun des
+                        informations robustes et fiables pour lui permettre de prendre la meilleure décision qu’il soit.
+                        Au niveau tactique, les projets de digitalisation allant dans ce sens seront donc à privilégier</p>
+                    <h4>Virtuosité Collective</h4>
                     <ul>
-                        <li><strong>HORIZON : </strong><p>Semaine</p></li>
-                        <li><strong>DOMAINE : </strong><p>Activités</p></li>
-                        <li><strong>ESPRIT : </strong><p>Synchronisation</p></li>
-                        <li><strong>FINALITÉ : </strong><p>Survie</p></li>
-                        <li><strong>OBJET : </strong><p>Produit</p></li>
+                        <li><h5>Horizon</h5><h6>Court terme</h6></li>
+                        <li><h5>Objet</h5><h6>Produit</h6></li>
+                        <li><h5>Finalité</h5><h6>Survie</h6></li>
+                        <li><h5>Résultat</h5><h6>Efficience</h6></li>
                     </ul>
                 </article>
-                <div class="result"><p>EFFICIENCE</p></div>
             </div>
             </div>
     </div>
@@ -245,6 +239,7 @@
                             <img class="logoslide" src="{{ asset('img/orientation.png') }}" alt="picto orientation">
                             <div class="invisible-text">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa cumque dolor ducimus illum, molestias necessitatibus nisi perspiciatis possimus quas quibusdam quisquam reiciendis rerum sed totam velit veniam! Perferendis, quis.</p>
+                                <button>Plus d'informations</button>
                             </div>
                         </div>
                     </div>
@@ -253,6 +248,7 @@
                             <img class="logoslide" src="{{ asset('img/gestion.png') }}" alt="picto orientation">
                             <div class="invisible-text">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa cumque dolor ducimus illum, molestias necessitatibus nisi perspiciatis possimus quas quibusdam quisquam reiciendis rerum sed totam velit veniam! Perferendis, quis.</p>
+                                <button>Plus d'informations</button>
                             </div>
                         </div>
                     </div>
@@ -261,6 +257,7 @@
                             <img class="logoslide" src="{{ asset('img/manage.png') }}" alt="picto orientation">
                             <div class="invisible-text">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa cumque dolor ducimus illum, molestias necessitatibus nisi perspiciatis possimus quas quibusdam quisquam reiciendis rerum sed totam velit veniam! Perferendis, quis.</p>
+                                <button>Plus d'informations</button>
                             </div>
                         </div>
                     </div>
@@ -269,6 +266,7 @@
                             <img class="logoslide" src="{{ asset('img/pilotage.png') }}" alt="picto orientation">
                             <div class="invisible-text">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa cumque dolor ducimus illum, molestias necessitatibus nisi perspiciatis possimus quas quibusdam quisquam reiciendis rerum sed totam velit veniam! Perferendis, quis.</p>
+                                <button>Plus d'informations</button>
                             </div>
                         </div>
                     </div>
@@ -372,8 +370,6 @@
     $(document).ready(function (){
         $('.cardsol').hide();
         $('#cardphilo').show();
-        $('#philo').css('box-shadow','6px 6px 0 #94C8EE');
-
 
         //SCROLL TO
 
@@ -412,30 +408,31 @@
         if( positionscroll > 40){
             if (positionscroll < 650){
                 $('nav a').css('border-bottom','0');
+                $('nav a p').css('margin-bottom','0').css('color','#F5F5F5').css('font-size','18px');
             }
             if ( positionscroll > 650 && positionscroll < 2400 ){
                 $('#presentationlink').css('border-bottom','#94C8EE solid 5px');
-                $('#presentationlink p').css('margin-bottom','-5px');
+                $('#presentationlink p').css('margin-bottom','-5px').css('color','#94C8EE').css('font-size','20px');
                 $('nav a').not('#presentationlink').css('border-bottom','#94C8EE solid 0');
-                $('nav p').not('#presentationlink p').css('margin-bottom','0');
+                $('nav p').not('#presentationlink p').css('margin-bottom','0').css('color','#F5F5F5').css('font-size','18px');
             }
             if ( positionscroll > 2400 && positionscroll < 3500  ){
                 $('#solutionslink').css('border-bottom','#94C8EE solid 5px');
-                $('#solutionslink p').css('margin-bottom','-5px');
+                $('#solutionslink p').css('margin-bottom','-5px').css('color','#94C8EE').css('font-size','20px');
                 $('nav a').not('#solutionslink').css('border-bottom','#94C8EE solid 0');
-                $('nav p').not('#solutionslink p').css('margin-bottom','0');
+                $('nav p').not('#solutionslink p').css('margin-bottom','0').css('color','#F5F5F5').css('font-size','18px');
             }
             if ( positionscroll > 3500 && positionscroll < 4400  ){
                 $('#savoir-fairelink').css('border-bottom','#94C8EE solid 5px');
-                $('#savoir-fairelink p').css('margin-bottom','-5px');
+                $('#savoir-fairelink p').css('margin-bottom','-5px').css('color','#94C8EE').css('font-size','20px');
                 $('nav a').not('#savoir-fairelink').css('border-bottom','#94C8EE solid 0');
-                $('nav p').not('#savoir-fairelink p').css('margin-bottom','0');
+                $('nav p').not('#savoir-fairelink p').css('margin-bottom','0').css('color','#F5F5F5').css('font-size','18px');
             }
             if ( positionscroll > 4400){
                 $('#contactlink').css('border-bottom','#94C8EE solid 5px');
-                $('#contactlink p').css('margin-bottom','-5px');
+                $('#contactlink p').css('margin-bottom','-5px').css('color','#94C8EE').css('font-size','20px');
                 $('nav a').not('#contactlink').css('border-bottom','#94C8EE solid 0');
-                $('nav p').not('#contactlink p').css('margin-bottom','0');
+                $('nav p').not('#contactlink p').css('margin-bottom','0').css('color','#F5F5F5').css('font-size','18px');
             }
             $(".logo-nav").css('transform','scale(1) translate(-14%)');
             $("nav a").mouseover(function() {
@@ -505,30 +502,31 @@
             if( positionscroll > 40){
                 if (positionscroll < 650){
                     $('nav a').css('border-bottom','0');
+                    $('nav a p').css('margin-bottom','0').css('color','#F5F5F5').css('font-size','18px');
                 }
                 if ( positionscroll > 650 && positionscroll < 2400 ){
                     $('#presentationlink').css('border-bottom','#94C8EE solid 5px');
-                    $('#presentationlink p').css('margin-bottom','-5px');
+                    $('#presentationlink p').css('color','#94C8EE').css('font-size','20px');
                     $('nav a').not('#presentationlink').css('border-bottom','#94C8EE solid 0');
-                    $('nav p').not('#presentationlink p').css('margin-bottom','0');
+                    $('nav p').not('#presentationlink p').css('margin-bottom','0').css('color','#F5F5F5').css('font-size','18px');
                 }
                 if ( positionscroll > 2400 && positionscroll < 3500  ){
                     $('#solutionslink').css('border-bottom','#94C8EE solid 5px');
-                    $('#solutionslink p').css('margin-bottom','-5px');
+                    $('#solutionslink p').css('color','#94C8EE').css('font-size','20px');
                     $('nav a').not('#solutionslink').css('border-bottom','#94C8EE solid 0');
-                    $('nav p').not('#solutionslink p').css('margin-bottom','0');
+                    $('nav p').not('#solutionslink p').css('margin-bottom','0').css('color','#F5F5F5').css('font-size','18px');
                 }
                 if ( positionscroll > 3500 && positionscroll < 4400  ){
                     $('#savoir-fairelink').css('border-bottom','#94C8EE solid 5px');
-                    $('#savoir-fairelink p').css('margin-bottom','-5px');
+                    $('#savoir-fairelink p').css('color','#94C8EE').css('font-size','20px');
                     $('nav a').not('#savoir-fairelink').css('border-bottom','#94C8EE solid 0');
-                    $('nav p').not('#savoir-fairelink p').css('margin-bottom','0');
+                    $('nav p').not('#savoir-fairelink p').css('margin-bottom','0').css('color','#F5F5F5').css('font-size','18px');
                 }
                 if ( positionscroll > 4400){
                     $('#contactlink').css('border-bottom','#94C8EE solid 5px');
-                    $('#contactlink p').css('margin-bottom','-5px');
+                    $('#contactlink p').css('color','#94C8EE').css('font-size','20px');
                     $('nav a').not('#contactlink').css('border-bottom','#94C8EE solid 0');
-                    $('nav p').not('#contactlink p').css('margin-bottom','0');
+                    $('nav p').not('#contactlink p').css('margin-bottom','0').css('color','#F5F5F5').css('font-size','18px');
                 }
                 $(".logo-nav").css('transform','scale(1) translate(-14%)');
                 $("nav a").mouseover(function() {
@@ -555,8 +553,8 @@
         })
 
         $('#philo').on('click', function (){
-            $(this).css('box-shadow','6px 6px 0 #94C8EE');
-            $('#tact, #ope, #strat').css('box-shadow','6px 6px 0 #FFD433')
+            $('#philo').css('background-color','#F5F5F5').css('color','#1e1e1e');
+            $('.flexcolumncat div').not('#philo').css('background-color','#1e1e1e').css('color','#F5F5F5');
             $('#cardtact').fadeOut('fast');
             $('#cardope').fadeOut('fast');
             $('#cardstrat').fadeOut('fast');
@@ -566,8 +564,8 @@
         })
 
         $('#tact').on('click', function (){
-            $(this).css('box-shadow','6px 6px 0 #94C8EE');
-            $('#ope, #philo, #strat').css('box-shadow','6px 6px 0 #FFD433')
+            $('#tact').css('background-color','#F5F5F5').css('color','#1e1e1e');
+            $('.flexcolumncat div').not('#tact').css('background-color','#1e1e1e').css('color','#F5F5F5');
             $('#cardphilo').fadeOut('fast');
             $('#cardope').fadeOut('fast');
             $('#cardstrat').fadeOut('fast');
@@ -577,8 +575,8 @@
         })
 
         $('#ope').on('click', function (){
-            $(this).css('box-shadow','6px 6px 0 #94C8EE');
-            $('#tact, #philo, #strat').css('box-shadow','6px 6px 0 #FFD433');
+            $('#ope').css('background-color','#F5F5F5').css('color','#1e1e1e');
+            $('.flexcolumncat div').not('#ope').css('background-color','#1e1e1e').css('color','#F5F5F5');
             $('#cardtact').fadeOut('fast');
             $('#cardphilo').fadeOut('fast');
             $('#cardstrat').fadeOut('fast');
@@ -588,8 +586,8 @@
         })
 
         $('#strat').on('click', function (){
-            $(this).css('box-shadow','6px 6px 0 #94C8EE');
-            $('#tact, #philo, #ope').css('box-shadow','6px 6px 0 #FFD433')
+            $('#strat').css('background-color','#F5F5F5').css('color','#1e1e1e');
+            $('.flexcolumncat div').not('#strat').css('background-color','#1e1e1e').css('color','#F5F5F5');
             $('#cardtact').fadeOut('fast');
             $('#cardope').fadeOut('fast');
             $('#cardphilo').fadeOut('fast');
@@ -716,7 +714,7 @@
         noSwiping: true,
         allowTouchMove:false,
         speed:400,
-        spaceBetween: 50,
+        spaceBetween: 100,
         slidesPerView: 'auto',
         loopedSlides: 3,
         centeredSlides:true,
@@ -727,13 +725,8 @@
         on: {
             slideChangeTransitionStart: function () {
                 $('#savoir-faire .swiper-slide-active, #savoir-faire .swiper-slide-duplicate-active').find('.invisible-text').slideDown(500);
-                $('#savoir-faire .swiper-slide-active, #savoir-faire .swiper-slide-duplicate-active').css('opacity', '1');
-                $('#savoir-faire .swiper-slide-active, #savoir-faire .swiper-slide-duplicate-active');
                 $('#savoir-faire .swiper-slide-next, #savoir-faire .swiper-slide-duplicate-next').find('.invisible-text').slideUp(400);
                 $('#savoir-faire .swiper-slide-prev, #savoir-faire .swiper-slide-duplicate-prev').find('.invisible-text').slideUp(400);
-                $('#savoir-faire .swiper-slide-next, #savoir-faire .swiper-slide-duplicate-next').css('opacity', '0.6');
-                $('#savoir-faire .swiper-slide-prev, #savoir-faire .swiper-slide-duplicate-prev').css('opacity', '0.6');
-                $('#savoir-faire .swiper-slide').not('.swiper-slide-prev, .swiper-slide-next, .swiper-slide-active, .swiper-slide-duplicate-next, .swiper-slide-duplicate-prev, .swiper-slide-duplicate-active').css('opacity', '0');
             },
         },
     });

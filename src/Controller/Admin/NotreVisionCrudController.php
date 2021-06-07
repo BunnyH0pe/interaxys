@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 use App\Entity\NotreVision;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Filters;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 
 class NotreVisionCrudController extends AbstractCrudController
