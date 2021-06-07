@@ -451,6 +451,7 @@ h2{
     height: 70vh;
     min-height: 500px;
     width: 85%;
+    text-align: center;
     position: relative;
 }
 
@@ -461,7 +462,7 @@ h2{
     font-family: Qualy;
     text-align: center;
     position: absolute;
-    top: 65%;
+    top: 70%;
 }
 
 .cardsol ul{
@@ -504,14 +505,13 @@ h2{
 
 .cardsol p {
     font-size: 16px;
-    line-height: 24px;
     font-family: Roboto;
-    line-height: 30px;
+    line-height: 28px;
 }
 
 .ban-etoile{
     width: 100%;
-    background-color: black;
+    background-color: #1e1e1e;
     border-top: solid white 2px;
     border-bottom: solid white 2px;
     height: 400px;
@@ -557,9 +557,14 @@ h2{
 
 #savoir-faire p{
     font-family: Roboto;
+    font-size: 18px;
     text-align: center;
     padding: 25px;
     box-sizing: border-box;
+    min-height: 150px;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 
@@ -568,17 +573,17 @@ h2{
 }
 
 #savoir-faire button{
-    background-color: #94C8EE;
     color: #1e1e1e;
     text-transform: uppercase;
     font-size: 24px;
-    padding: 10px;
+    padding: 15px;
     font-family: Roboto;
     border: none;
     font-weight: 500;
     display: block;
     margin-left: auto;
     margin-right: auto;
+    cursor: pointer;
 }
 
 #savoir-faire .sectionlimit{
@@ -586,7 +591,22 @@ h2{
     box-sizing: border-box;
     width: 100%;
     height: 100%;
+}
 
+#buttonorient{
+    background-color: #94C8EE;
+}
+
+#buttongestion{
+    background-color: #FFD433;
+}
+
+#buttonmanage{
+     background-color: #85FFDC;
+}
+
+#buttonpilote{
+    background-color: #919191;
 }
 
 #clients h2{
@@ -738,6 +758,7 @@ h2{
 .btn-right input{
     width: 320px;
     padding: 10px 0 10px 0;
+    cursor: pointer;
 }
 
 .btn-right .backgroundform{

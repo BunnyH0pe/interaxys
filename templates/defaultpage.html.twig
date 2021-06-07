@@ -239,7 +239,7 @@
                             <img class="logoslide" src="{{ asset('img/orientation.png') }}" alt="picto orientation">
                             <div class="invisible-text">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa cumque dolor ducimus illum, molestias necessitatibus nisi perspiciatis possimus quas quibusdam quisquam reiciendis rerum sed totam velit veniam! Perferendis, quis.</p>
-                                <button>Plus d'informations</button>
+                                <button id="buttonorient">Plus d'informations</button>
                             </div>
                         </div>
                     </div>
@@ -248,7 +248,7 @@
                             <img class="logoslide" src="{{ asset('img/gestion.png') }}" alt="picto orientation">
                             <div class="invisible-text">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa cumque dolor ducimus illum, molestias necessitatibus nisi perspiciatis possimus quas quibusdam quisquam reiciendis rerum sed totam velit veniam! Perferendis, quis.</p>
-                                <button>Plus d'informations</button>
+                                <button id="buttongestion">Plus d'informations</button>
                             </div>
                         </div>
                     </div>
@@ -257,7 +257,7 @@
                             <img class="logoslide" src="{{ asset('img/manage.png') }}" alt="picto orientation">
                             <div class="invisible-text">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa cumque dolor ducimus illum, molestias necessitatibus nisi perspiciatis possimus quas quibusdam quisquam reiciendis rerum sed totam velit veniam! Perferendis, quis.</p>
-                                <button>Plus d'informations</button>
+                                <button id="buttonmanage">Plus d'informations</button>
                             </div>
                         </div>
                     </div>
@@ -266,7 +266,7 @@
                             <img class="logoslide" src="{{ asset('img/pilotage.png') }}" alt="picto orientation">
                             <div class="invisible-text">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa cumque dolor ducimus illum, molestias necessitatibus nisi perspiciatis possimus quas quibusdam quisquam reiciendis rerum sed totam velit veniam! Perferendis, quis.</p>
-                                <button>Plus d'informations</button>
+                                <button id="buttonpilote">Plus d'informations</button>
                             </div>
                         </div>
                     </div>
@@ -611,12 +611,12 @@
         canvas: document.getElementById("canvas")
     });
 
-    renderer.setClearColor(0x000000, 1);
+    renderer.setClearColor(0x1e1e1e, 1);
 
     let opaqueGeo = new THREE.SphereGeometry(5, 24, 24);
 
     let opaqueMat = new THREE.MeshBasicMaterial({
-        color: 0x000000,
+        color: 0x1e1e1e,
         polygonOffset: true,
         polygonOffsetFactor: 1,
         polygonOffsetUnits: 1
