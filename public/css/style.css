@@ -62,8 +62,9 @@ header{
 .flex-key p{
     font-family: Roboto;
     font-size: 1.2vw;
-    color: #94C8EE;
+    color: #E6E6E6;
     font-weight: 500;
+    font-style: italic;
 }
 
 .flex-key{
@@ -108,7 +109,7 @@ nav li{
 nav a{
     transition: color ease-in 0.3s, border-bottom-width ease-in 0.3s;
     text-decoration: none;
-    color: #F5F5F5;
+    color: #E6E6E6;
     font-size: 18px;
     display: flex;
     align-items: center;
@@ -197,8 +198,8 @@ nav img{
 }
 
 .sliderdiv h1 {
-    text-shadow: 6px -8px 0 #FFD433;
-    color: white;
+    text-shadow: 6px -8px 0 #94C8EE;
+    color: #E6E6E6;
     font-family: Qualy;
     font-size: 100px;
     text-align: center;
@@ -212,7 +213,7 @@ nav img{
     font-size: 22px;
     font-family: Roboto;
     font-style: italic;
-    color: white;
+    color: #E6E6E6;
     text-shadow: 0px 2px 2px black;
 }
 
@@ -261,7 +262,7 @@ h2{
 
 .premierepresentation{
     background-image: url("../img/grille.png");
-    background-size: 108%;
+    background-size: 100%;
     background-position: 45%;
     padding-top: 80px;
     padding-bottom: 80px;
@@ -278,9 +279,9 @@ h2{
 .doubleflex{
     display: flex;
     width: 100%;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 28px;
-    color: white;
+    color: #E6E6E6;
     font-family: Roboto;
     justify-content: space-between;
     align-items: center;
@@ -296,9 +297,9 @@ h2{
 
 .pflex{
     margin-top: 50px;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 28px;
-    color: white;
+    color: #E6E6E6;
     font-family: Roboto;
 }
 
@@ -308,9 +309,11 @@ h2{
     background-image: url("../img/bancitation.jpg");
     background-size: 100%;
     background-position: 50% 100%;
-    font-family: Qualy;
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: 500;
     font-size:3.4vw;
-    color: white;
+    color: #E6E6E6;
     position: relative;
 }
 
@@ -328,16 +331,17 @@ h2{
 
 #nommage{
     position: absolute;
-    font-family: Roboto;
+    font-family: Qualy;
     text-transform: uppercase;
     bottom: 15%;
     right: 10%;
     font-size:2vw;
+    font-style: normal;
 }
 
 .deuxiemepresentation{
     background-image: url("../img/grille.png");
-    background-size: 108%;
+    background-size: 100%;
     background-position: 45%;
     padding-top: 80px;
     padding-bottom: 80px;
@@ -360,7 +364,7 @@ h2{
 
 #solutions{
     background-image: url("../img/grille.png");
-    background-size: 108%;
+    background-size: 100%;
     background-position: 45%;
     height: 100vh;
     min-height: 690px;
@@ -410,15 +414,15 @@ h2{
     text-transform: uppercase;
     letter-spacing: 2px;
     cursor: pointer;
-    border: #F5F5F5 2px solid;
+    border: #E6E6E6 2px solid;
     transition: background-color 250ms ease-in;
-    color: #F5F5F5;
+    color: #E6E6E6;
 }
 
 .flexcolumncat #philo{
-    background-color: #F5F5F5;
+    background-color: #E6E6E6;
     color: #1e1e1e;
-    border: #F5F5F5 2px solid;
+    border: #E6E6E6 2px solid;
 }
 
 .safecard{
@@ -436,8 +440,8 @@ h2{
     align-items: center;
     justify-content: center;
     position: relative;
-    border: #F5F5F5 2px solid;
-    color: #F5F5F5;
+    border: #E6E6E6 2px solid;
+    color: #E6E6E6;
 }
 
 .cardsol img{
@@ -489,7 +493,7 @@ h2{
 }
 
 .cardsol h6{
-    color: #F5F5F5;
+    color: #E6E6E6;
     font-family: Roboto;
     font-size: 24px;
     text-transform: uppercase;
@@ -512,8 +516,8 @@ h2{
 .ban-etoile{
     width: 100%;
     background-color: #1e1e1e;
-    border-top: solid white 2px;
-    border-bottom: solid white 2px;
+    border-top: solid #E6E6E6 2px;
+    border-bottom: solid #E6E6E6 2px;
     height: 400px;
     overflow: hidden;
      display: flex;
@@ -534,7 +538,7 @@ h2{
 }
 
 .ban-etoile strong {
-    color: white;
+    color: #E6E6E6;
     font-family: Qualy;
     font-size: 28px;
     letter-spacing: 2px;
@@ -548,7 +552,7 @@ h2{
 
 #savoir-faire{
     background-image: url("../img/grille.png");
-    background-size: 108%;
+    background-size: 100%;
     background-position: 45%;
     height: 100vh;
     min-height: 700px;
@@ -561,7 +565,7 @@ h2{
     text-align: center;
     padding: 25px;
     box-sizing: border-box;
-    min-height: 150px;
+    min-height: 250px;
     width: 90%;
     margin-right: auto;
     margin-left: auto;
@@ -634,7 +638,7 @@ h2{
 
 #contact{
     background-image: url("../img/grille.png");
-    background-size: 108%;
+    background-size: 100%;
     background-position: 20% 30%;
     height: 100vh;
     min-height: 750px;
@@ -697,12 +701,12 @@ h2{
     left: 0;
     z-index: 1000;
     background-color: #1e1e1e;
-    color: #F5F5F5;
-    border: #F5F5F5 solid 2px;
+    color: #E6E6E6;
+    border: #E6E6E6 solid 2px;
 }
 
 .formulaire textarea::placeholder{
-    color: #F5F5F5;
+    color: #E6E6E6;
 }
 
 .formulaire input{
@@ -715,14 +719,14 @@ h2{
     position: absolute;
     top: 0;
     left: 0;
-    border: #F5F5F5 solid 2px;
+    border: #E6E6E6 solid 2px;
     box-sizing: border-box;
     background-color: #1e1e1e;
-    color: #F5F5F5;
+    color: #E6E6E6;
 }
 
 .formulaire input::placeholder{
-    color: #F5F5F5;
+    color: #E6E6E6;
 }
 
 .firstflexform .geometrieconteneur, .secondflexform .geometrieconteneur{
@@ -809,7 +813,7 @@ footer{
     align-items: center;
     justify-content: center;
     gap: 50px;
-    color: #F5F5F5;
+    color: #E6E6E6;
     font-family: Roboto;
 }
 
@@ -845,7 +849,7 @@ footer{
 
 #footer a{
     text-decoration: none;
-    color: #F5F5F5;
+    color: #E6E6E6;
 }
 
 .mentions-legales, .copyright{
@@ -881,14 +885,16 @@ footer{
 #savoir-faire .logoslide{
     width: 60%;
     display: block;
-    margin: 20px auto 20px auto;
+    margin: 120px auto 20px auto;
+    transition: margin ease-in 0.4s;
 }
 
 .flexswipe > div{
-    padding: 40px 20px 40px 20px;
+    padding: 30px;
+    min-height: 400px;
     background-color: #1e1e1e ;
-    border:#F5F5F5 2px solid ;
-    color: #F5F5F5;
+    border:#E6E6E6 2px solid ;
+    color: #E6E6E6;
 }
 
 .swiper-wrapper{
@@ -896,12 +902,12 @@ footer{
 }
 
 .flexswipe{
-    background-color: #F5F5F5;
+    background-color: #E6E6E6;
 }
 
 
 .swiper-container2 .swiper-slide{
-    width: 65% !important;
+    width: 52% !important;
 }
 
 .invisible-text{
@@ -935,7 +941,7 @@ footer{
 }
 
 .swiper-container2 .swiper-button-next,.swiper-container2 .swiper-button-prev {
-    --swiper-theme-color: #F5F5F5;
+    --swiper-theme-color: #E6E6E6;
 }
 
 .swiper-button-next{

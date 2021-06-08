@@ -18,6 +18,11 @@ class NotreVision
     private $id;
 
     /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $titre;
+
+    /**
      * @ORM\Column(type="text")
      */
     private $paragraphe1;
@@ -35,6 +40,22 @@ class NotreVision
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTitre()
+    {
+        return $this->titre;
+    }
+
+    /**
+     * @param mixed $titre
+     */
+    public function setTitre($titre): void
+    {
+        $this->titre = $titre;
     }
 
     public function getParagraphe1(): ?string

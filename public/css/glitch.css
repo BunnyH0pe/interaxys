@@ -24,14 +24,14 @@
 
 /* line 26, ../../../../../wamp64/www/interaxys/public/scss/glitch.scss */
 .glitch:after {
-  color: black ;
+  color: #94C8EE ;
   z-index: -2;
   animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both 5;
 }
 
 /* line 29, ../../../../../wamp64/www/interaxys/public/scss/glitch.scss */
 .glitch:before {
-  color: #94C8EE;
+  color: #FFD433;
   z-index: -1;
   animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both 5;
 }

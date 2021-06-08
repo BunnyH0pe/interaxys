@@ -23,7 +23,7 @@
 <body>
 <header>
     <div class="flex-key">
-        <p>Performance Globale</p> <p>-</p> <p>Excellence Compétitive</p> <p>-</p> <p>Transformation Continue</p> <p>-</p> <p>Virtuosité Collective</p>
+        <p>Performance Globale</p> <p>Excellence Compétitive</p> <p>Transformation Continue</p> <p>Virtuosité Collective</p>
     </div>
 </header>
 <nav>
@@ -90,13 +90,15 @@
                 <h2>Notre vision</h2>
                 <div class="doubleflex">
                     <div class="textpresentation">
-                        <p>{{ vision.paragraphe1 }}</p>
+                        {{ vision.paragraphe1|raw }}
                     </div>
                     <img id="imgtourne" src="{{ asset('img/formegeo1.svg') }}" alt="forme geométrique 1">
                 </div>
-                <p class="pflex">{{ vision.paragraphe2 }}
-                </p>
-            </div>
+                <div class="pflex">
+                    {{ vision.paragraphe2|raw }}
+                </div>
+
+                </div>
         </div>
 
         <div class="bgcitation">
@@ -271,8 +273,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="swiper-button-prev swiper-button-prev2 "></div>
-                <div class="swiper-button-next swiper-button-next2"></div>
             </div>
         </div>
     </div>
@@ -316,37 +316,30 @@
                     <div class="firstflexform">
                         <div class="geometrieconteneur">
                             <input type="text" nom="nom" placeholder="NOM">
-                            <img class="backgroundform" src="{{ asset('img/contactform.png') }}" alt="">
                         </div>
                         <div class="geometrieconteneur">
                             <input id="email" type="text" name="prenom" placeholder="PRENOM">
-                            <img class="backgroundform" src="{{ asset('img/contactform.png') }}" alt="">
                         </div>
                     </div>
                     <div class="secondflexform">
                         <div class="geometrieconteneur">
                             <input type="text" name="prenom" placeholder="EMAIL">
-                            <img class="backgroundform" src="{{ asset('img/contactform.png') }}" alt="">
                         </div>
                         <div class="geometrieconteneur">
                             <input type="text" name="tel" placeholder="TEL">
-                            <img class="backgroundform" src="{{ asset('img/contactform.png') }}" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="geometrieconteneur geometrieconteneurobjet">
                     <input type="text" name="objet" placeholder="OBJET">
-                    <img class="backgroundform" src="{{ asset('img/contactobj.png') }}" alt="">
                 </div>
 
                 <div class="geometrieconteneur geometrieconteneurarea">
                     <textarea style="resize: none" name="" id="" cols="30" rows="10" placeholder="Votre message..."></textarea>
-                    <img class="backgroundform2" src="{{ asset('img/contacttext.png') }}" alt="">
                 </div>
                 <div class="btn-right">
                     <div class="geometrieconteneur">
                         <input type="submit" value="VALIDER">
-                        <img class="backgroundform" src="{{ asset('img/contactform.png') }}" alt="">
                     </div>
                 </div>
             </form>
@@ -408,38 +401,38 @@
         if( positionscroll > 40){
             if (positionscroll < 650){
                 $('nav a').css('border-bottom','0');
-                $('nav a p').css('margin-bottom','0').css('color','#F5F5F5').css('font-size','18px');
+                $('nav a p').css('margin-bottom','0').css('color','#E6E6E6').css('font-size','18px');
             }
             if ( positionscroll > 650 && positionscroll < 2400 ){
                 $('#presentationlink').css('border-bottom','#94C8EE solid 5px');
                 $('#presentationlink p').css('margin-bottom','-5px').css('color','#94C8EE').css('font-size','20px');
                 $('nav a').not('#presentationlink').css('border-bottom','#94C8EE solid 0');
-                $('nav p').not('#presentationlink p').css('margin-bottom','0').css('color','#F5F5F5').css('font-size','18px');
+                $('nav p').not('#presentationlink p').css('margin-bottom','0').css('color','#E6E6E6').css('font-size','18px');
             }
             if ( positionscroll > 2400 && positionscroll < 3500  ){
                 $('#solutionslink').css('border-bottom','#94C8EE solid 5px');
                 $('#solutionslink p').css('margin-bottom','-5px').css('color','#94C8EE').css('font-size','20px');
                 $('nav a').not('#solutionslink').css('border-bottom','#94C8EE solid 0');
-                $('nav p').not('#solutionslink p').css('margin-bottom','0').css('color','#F5F5F5').css('font-size','18px');
+                $('nav p').not('#solutionslink p').css('margin-bottom','0').css('color','#E6E6E6').css('font-size','18px');
             }
             if ( positionscroll > 3500 && positionscroll < 4400  ){
                 $('#savoir-fairelink').css('border-bottom','#94C8EE solid 5px');
                 $('#savoir-fairelink p').css('margin-bottom','-5px').css('color','#94C8EE').css('font-size','20px');
                 $('nav a').not('#savoir-fairelink').css('border-bottom','#94C8EE solid 0');
-                $('nav p').not('#savoir-fairelink p').css('margin-bottom','0').css('color','#F5F5F5').css('font-size','18px');
+                $('nav p').not('#savoir-fairelink p').css('margin-bottom','0').css('color','#E6E6E6').css('font-size','18px');
             }
             if ( positionscroll > 4400){
                 $('#contactlink').css('border-bottom','#94C8EE solid 5px');
                 $('#contactlink p').css('margin-bottom','-5px').css('color','#94C8EE').css('font-size','20px');
                 $('nav a').not('#contactlink').css('border-bottom','#94C8EE solid 0');
-                $('nav p').not('#contactlink p').css('margin-bottom','0').css('color','#F5F5F5').css('font-size','18px');
+                $('nav p').not('#contactlink p').css('margin-bottom','0').css('color','#E6E6E6').css('font-size','18px');
             }
             $(".logo-nav").css('transform','scale(1) translate(-14%)');
             $("nav a").mouseover(function() {
                 $(this).css("color","#94C8EE")
                 $(this).not('.logo-nav-link').css('border-bottom','#94C8EE solid 5px')
             }).mouseout(function (){
-                $(this).css("color","#F5F5F5")
+                $(this).css("color","#E6E6E6")
                 $(this).not('.logo-nav-link').css('border-bottom','#94C8EE solid 0px')
             });
         }else{
@@ -449,7 +442,7 @@
                 $(this).not('.logo-nav-link').css('border-bottom','#94C8EE solid 5px')
                 $(this).find('p').css('margin-bottom','-5px');
             }).mouseout(function (){
-                $(this).css("color","#F5F5F5")
+                $(this).css("color","#E6E6E6")
                 $(this).not('.logo-nav-link').css('border-bottom','#94C8EE solid 0px')
                 $(this).find('p').css('margin-bottom','0px');
             });
@@ -502,31 +495,31 @@
             if( positionscroll > 40){
                 if (positionscroll < 650){
                     $('nav a').css('border-bottom','0');
-                    $('nav a p').css('margin-bottom','0').css('color','#F5F5F5').css('font-size','18px');
+                    $('nav a p').css('margin-bottom','0').css('color','#E6E6E6').css('font-size','18px');
                 }
                 if ( positionscroll > 650 && positionscroll < 2400 ){
                     $('#presentationlink').css('border-bottom','#94C8EE solid 5px');
                     $('#presentationlink p').css('color','#94C8EE').css('font-size','20px');
                     $('nav a').not('#presentationlink').css('border-bottom','#94C8EE solid 0');
-                    $('nav p').not('#presentationlink p').css('margin-bottom','0').css('color','#F5F5F5').css('font-size','18px');
+                    $('nav p').not('#presentationlink p').css('margin-bottom','0').css('color','#E6E6E6').css('font-size','18px');
                 }
                 if ( positionscroll > 2400 && positionscroll < 3500  ){
                     $('#solutionslink').css('border-bottom','#94C8EE solid 5px');
                     $('#solutionslink p').css('color','#94C8EE').css('font-size','20px');
                     $('nav a').not('#solutionslink').css('border-bottom','#94C8EE solid 0');
-                    $('nav p').not('#solutionslink p').css('margin-bottom','0').css('color','#F5F5F5').css('font-size','18px');
+                    $('nav p').not('#solutionslink p').css('margin-bottom','0').css('color','#E6E6E6').css('font-size','18px');
                 }
                 if ( positionscroll > 3500 && positionscroll < 4400  ){
                     $('#savoir-fairelink').css('border-bottom','#94C8EE solid 5px');
                     $('#savoir-fairelink p').css('color','#94C8EE').css('font-size','20px');
                     $('nav a').not('#savoir-fairelink').css('border-bottom','#94C8EE solid 0');
-                    $('nav p').not('#savoir-fairelink p').css('margin-bottom','0').css('color','#F5F5F5').css('font-size','18px');
+                    $('nav p').not('#savoir-fairelink p').css('margin-bottom','0').css('color','#E6E6E6').css('font-size','18px');
                 }
                 if ( positionscroll > 4400){
                     $('#contactlink').css('border-bottom','#94C8EE solid 5px');
                     $('#contactlink p').css('color','#94C8EE').css('font-size','20px');
                     $('nav a').not('#contactlink').css('border-bottom','#94C8EE solid 0');
-                    $('nav p').not('#contactlink p').css('margin-bottom','0').css('color','#F5F5F5').css('font-size','18px');
+                    $('nav p').not('#contactlink p').css('margin-bottom','0').css('color','#E6E6E6').css('font-size','18px');
                 }
                 $(".logo-nav").css('transform','scale(1) translate(-14%)');
                 $("nav a").mouseover(function() {
@@ -534,7 +527,7 @@
                     $(this).not('.logo-nav-link').css('border-bottom','#94C8EE solid 5px')
                     $(this).find('p').css('margin-bottom','-5px');
                 }).mouseout(function (){
-                    $(this).css("color","#F5F5F5")
+                    $(this).css("color","#E6E6E6")
                     $(this).not('.logo-nav-link').css('border-bottom','#94C8EE solid 0px')
                     $(this).find('p').css('margin-bottom','0px');
                 });
@@ -545,7 +538,7 @@
                     $(this).not('.logo-nav-link').css('border-bottom','#94C8EE solid 5px')
                     $(this).find('p').css('margin-bottom','-5px');
                 }).mouseout(function (){
-                    $(this).css("color","#F5F5F5")
+                    $(this).css("color","#E6E6E6")
                     $(this).not('.logo-nav-link').css('border-bottom','#94C8EE solid 0px')
                     $(this).find('p').css('margin-bottom','0px');
                 });
@@ -553,8 +546,8 @@
         })
 
         $('#philo').on('click', function (){
-            $('#philo').css('background-color','#F5F5F5').css('color','#1e1e1e');
-            $('.flexcolumncat div').not('#philo').css('background-color','#1e1e1e').css('color','#F5F5F5');
+            $('#philo').css('background-color','#E6E6E6').css('color','#1e1e1e');
+            $('.flexcolumncat div').not('#philo').css('background-color','#1e1e1e').css('color','#E6E6E6');
             $('#cardtact').fadeOut('fast');
             $('#cardope').fadeOut('fast');
             $('#cardstrat').fadeOut('fast');
@@ -564,8 +557,8 @@
         })
 
         $('#tact').on('click', function (){
-            $('#tact').css('background-color','#F5F5F5').css('color','#1e1e1e');
-            $('.flexcolumncat div').not('#tact').css('background-color','#1e1e1e').css('color','#F5F5F5');
+            $('#tact').css('background-color','#E6E6E6').css('color','#1e1e1e');
+            $('.flexcolumncat div').not('#tact').css('background-color','#1e1e1e').css('color','#E6E6E6');
             $('#cardphilo').fadeOut('fast');
             $('#cardope').fadeOut('fast');
             $('#cardstrat').fadeOut('fast');
@@ -575,8 +568,8 @@
         })
 
         $('#ope').on('click', function (){
-            $('#ope').css('background-color','#F5F5F5').css('color','#1e1e1e');
-            $('.flexcolumncat div').not('#ope').css('background-color','#1e1e1e').css('color','#F5F5F5');
+            $('#ope').css('background-color','#E6E6E6').css('color','#1e1e1e');
+            $('.flexcolumncat div').not('#ope').css('background-color','#1e1e1e').css('color','#E6E6E6');
             $('#cardtact').fadeOut('fast');
             $('#cardphilo').fadeOut('fast');
             $('#cardstrat').fadeOut('fast');
@@ -586,8 +579,8 @@
         })
 
         $('#strat').on('click', function (){
-            $('#strat').css('background-color','#F5F5F5').css('color','#1e1e1e');
-            $('.flexcolumncat div').not('#strat').css('background-color','#1e1e1e').css('color','#F5F5F5');
+            $('#strat').css('background-color','#E6E6E6').css('color','#1e1e1e');
+            $('.flexcolumncat div').not('#strat').css('background-color','#1e1e1e').css('color','#E6E6E6');
             $('#cardtact').fadeOut('fast');
             $('#cardope').fadeOut('fast');
             $('#cardphilo').fadeOut('fast');
@@ -703,13 +696,9 @@
         },
         coverflowEffect: {
             slideShadows: false,
-            rotate: 65,
+            rotate: 30,
             depth : 400,
-            stretch :320,
-        },
-        navigation: {
-            nextEl: '.swiper-button-next2',
-            prevEl: '.swiper-button-prev2',
+            stretch :300,
         },
         noSwiping: true,
         allowTouchMove:false,
@@ -724,9 +713,12 @@
         loop: true,
         on: {
             slideChangeTransitionStart: function () {
+                $('#savoir-faire .swiper-slide-active, #savoir-faire .swiper-slide-duplicate-active').find('.logoslide').css('margin','20px auto 20px auto');
                 $('#savoir-faire .swiper-slide-active, #savoir-faire .swiper-slide-duplicate-active').find('.invisible-text').slideDown(500);
                 $('#savoir-faire .swiper-slide-next, #savoir-faire .swiper-slide-duplicate-next').find('.invisible-text').slideUp(400);
                 $('#savoir-faire .swiper-slide-prev, #savoir-faire .swiper-slide-duplicate-prev').find('.invisible-text').slideUp(400);
+                $('#savoir-faire .swiper-slide-next, #savoir-faire .swiper-slide-duplicate-next').find('.logoslide').css('margin','120px auto 20px auto');
+                $('#savoir-faire .swiper-slide-prev, #savoir-faire .swiper-slide-duplicate-prev').find('.logoslide').css('margin','120px auto 20px auto');
             },
         },
     });

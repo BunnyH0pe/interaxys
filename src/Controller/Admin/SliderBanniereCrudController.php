@@ -4,6 +4,8 @@ namespace App\Controller\Admin;
 
 use App\Entity\SliderBanniere;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 
 class SliderBanniereCrudController extends AbstractCrudController
 {
@@ -12,14 +14,12 @@ class SliderBanniereCrudController extends AbstractCrudController
         return SliderBanniere::class;
     }
 
-    /*
     public function configureFields(string $pageName): iterable
     {
         return [
-            IdField::new('id'),
-            TextField::new('title'),
-            TextEditorField::new('description'),
+            TextField::new('titre','Titre'),
+            TextEditorField::new('soustitre', 'Sous-titre'),
+            TextField::new('image', 'Image'),
         ];
     }
-    */
 }

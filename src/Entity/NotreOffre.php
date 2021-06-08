@@ -20,7 +20,12 @@ class NotreOffre
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $imageTitre;
+    private $titre;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $image_titre;
 
     /**
      * @ORM\Column(type="text")
@@ -32,14 +37,30 @@ class NotreOffre
         return $this->id;
     }
 
-    public function getImageTitre(): ?string
+    /**
+     * @return mixed
+     */
+    public function getTitre()
     {
-        return $this->imageTitre;
+        return $this->titre;
     }
 
-    public function setImageTitre(string $imageTitre): self
+    /**
+     * @param mixed $titre
+     */
+    public function setTitre($titre): void
     {
-        $this->imageTitre = $imageTitre;
+        $this->titre = $titre;
+    }
+
+    public function getImageTitre(): ?string
+    {
+        return $this->image_titre;
+    }
+
+    public function setImageTitre(string $image_titre): self
+    {
+        $this->image_titre = $image_titre;
 
         return $this;
     }

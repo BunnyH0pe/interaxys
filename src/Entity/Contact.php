@@ -22,10 +22,6 @@ class Contact
      */
     private $email;
 
-    /**
-     * @ORM\Column(type="string", length=255)
-     */
-    private $adresse;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -42,6 +38,11 @@ class Contact
      */
     private $lien_linkedin;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $lien_facebook;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -55,18 +56,6 @@ class Contact
     public function setEmail(string $email): self
     {
         $this->email = $email;
-
-        return $this;
-    }
-
-    public function getAdresse(): ?string
-    {
-        return $this->adresse;
-    }
-
-    public function setAdresse(string $adresse): self
-    {
-        $this->adresse = $adresse;
 
         return $this;
     }
@@ -105,5 +94,21 @@ class Contact
         $this->lien_linkedin = $lien_linkedin;
 
         return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLienFacebook()
+    {
+        return $this->lien_facebook;
+    }
+
+    /**
+     * @param mixed $lien_facebook
+     */
+    public function setLienFacebook($lien_facebook): void
+    {
+        $this->lien_facebook = $lien_facebook;
     }
 }
