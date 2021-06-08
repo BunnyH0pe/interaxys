@@ -63,14 +63,16 @@ header{
     font-family: Roboto;
     font-size: 1.2vw;
     color: #E6E6E6;
-    font-weight: 500;
     font-style: italic;
+    text-align: center;
+    flex-grow: 1;
+    width: 20%;
 }
 
 .flex-key{
     display: flex;
     justify-content: space-between;
-    width: 60%;
+    width: 80%;
     margin-right: 10%;
     margin-left: auto;
     align-items: flex-end;
@@ -262,7 +264,7 @@ h2{
 
 .premierepresentation{
     background-image: url("../img/grille.png");
-    background-size: 100%;
+    background-size: 108%;
     background-position: 45%;
     padding-top: 80px;
     padding-bottom: 80px;
@@ -339,14 +341,6 @@ h2{
     font-style: normal;
 }
 
-.deuxiemepresentation{
-    background-image: url("../img/grille.png");
-    background-size: 100%;
-    background-position: 45%;
-    padding-top: 80px;
-    padding-bottom: 80px;
-}
-
 .text{
     width: 65%;
 }
@@ -364,7 +358,7 @@ h2{
 
 #solutions{
     background-image: url("../img/grille.png");
-    background-size: 100%;
+    background-size: 108%;
     background-position: 45%;
     height: 100vh;
     min-height: 690px;
@@ -442,13 +436,7 @@ h2{
     position: relative;
     border: #E6E6E6 2px solid;
     color: #E6E6E6;
-}
-
-.cardsol img{
-    position: absolute;
-    top: -3.5%;
-    right: 10%;
-    width: 70px;
+    box-sizing: border-box;
 }
 
 .cardsol article{
@@ -552,7 +540,7 @@ h2{
 
 #savoir-faire{
     background-image: url("../img/grille.png");
-    background-size: 100%;
+    background-size: 108%;
     background-position: 45%;
     height: 100vh;
     min-height: 700px;
@@ -621,8 +609,8 @@ h2{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .flexclient{
@@ -633,12 +621,12 @@ h2{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 200px;
+    width: 150px;
 }
 
 #contact{
     background-image: url("../img/grille.png");
-    background-size: 100%;
+    background-size: 108%;
     background-position: 20% 30%;
     height: 100vh;
     min-height: 750px;
@@ -808,7 +796,7 @@ footer{
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    height: 40px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
