@@ -234,37 +234,49 @@
                     <!-- Slides -->
                     <div class="swiper-slide flexswipe">
                         <div>
-                            <img class="logoslide" src="{{ asset('img/orientation.png') }}" alt="picto orientation">
+                            <div class="relative-logo">
+                                <img class="logoslide" src="{{ asset('img/orientation.png') }}" alt="picto orientation">
+                                <h3>Orientation des modèles d'affaire</h3>
+                            </div>
                             <div class="invisible-text">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa cumque dolor ducimus illum, molestias necessitatibus nisi perspiciatis possimus quas quibusdam quisquam reiciendis rerum sed totam velit veniam! Perferendis, quis.</p>
-                                <button id="buttonorient">Plus d'informations</button>
+                                <button id="buttonorient">Plus d'infos</button>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide flexswipe">
                         <div>
-                            <img class="logoslide" src="{{ asset('img/gestion.png') }}" alt="picto orientation">
+                            <div class="relative-logo">
+                                <img class="logoslide" src="{{ asset('img/gestion.png') }}" alt="picto orientation">
+                                <h3>Gestion de la performance</h3>
+                            </div>
                             <div class="invisible-text">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa cumque dolor ducimus illum, molestias necessitatibus nisi perspiciatis possimus quas quibusdam quisquam reiciendis rerum sed totam velit veniam! Perferendis, quis.</p>
-                                <button id="buttongestion">Plus d'informations</button>
+                                <button id="buttongestion">Plus d'infos</button>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide flexswipe">
                         <div>
-                            <img class="logoslide" src="{{ asset('img/manage.png') }}" alt="picto orientation">
+                            <div class="relative-logo">
+                                <img class="logoslide" src="{{ asset('img/manage.png') }}" alt="picto orientation">
+                                <h3>Management des opérations</h3>
+                            </div>
                             <div class="invisible-text">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa cumque dolor ducimus illum, molestias necessitatibus nisi perspiciatis possimus quas quibusdam quisquam reiciendis rerum sed totam velit veniam! Perferendis, quis.</p>
-                                <button id="buttonmanage">Plus d'informations</button>
+                                <button id="buttonmanage">Plus d'infos</button>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide flexswipe">
                         <div>
-                            <img class="logoslide" src="{{ asset('img/pilotage.png') }}" alt="picto orientation">
+                            <div class="relative-logo">
+                                <img class="logoslide" src="{{ asset('img/pilotage.png') }}" alt="picto orientation">
+                                <h3>Pilotage de l'activité</h3>
+                            </div>
                             <div class="invisible-text">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa cumque dolor ducimus illum, molestias necessitatibus nisi perspiciatis possimus quas quibusdam quisquam reiciendis rerum sed totam velit veniam! Perferendis, quis.</p>
-                                <button id="buttonpilote">Plus d'informations</button>
+                                <button id="buttonpilote">Plus d'infos</button>
                             </div>
                         </div>
                     </div>
@@ -272,6 +284,17 @@
             </div>
         </div>
     </div>
+</section>
+
+<section>
+    <carousel-3d>
+    <slide :index="0">
+        Slide 1 Content
+    </slide>
+    <slide :index="1">
+        Slide 2 Content
+    </slide>
+    </carousel-3d>
 </section>
 
 <section id="clients">
@@ -334,13 +357,12 @@
                     <textarea style="resize: none" name="" id="" cols="30" rows="10" placeholder="Votre message..."></textarea>
                 </div>
                 <div class="btn-right">
-                    <div class="geometrieconteneur">
                         <input type="submit" value="VALIDER">
-                    </div>
                 </div>
             </form>
         </div>
     </div>
+
 </section>
 <footer>
     <section id="footer">
@@ -692,14 +714,14 @@
         },
         coverflowEffect: {
             slideShadows: false,
-            rotate: 30,
-            depth : 400,
-            stretch :300,
+            //rotate: 30,
+            //depth : 200,
+            //stretch :300,
         },
         noSwiping: true,
         allowTouchMove:false,
         speed:400,
-        spaceBetween: 100,
+        spaceBetween: -100,
         slidesPerView: 'auto',
         loopedSlides: 3,
         centeredSlides:true,
@@ -713,8 +735,8 @@
                 $('#savoir-faire .swiper-slide-active, #savoir-faire .swiper-slide-duplicate-active').find('.invisible-text').slideDown(500);
                 $('#savoir-faire .swiper-slide-next, #savoir-faire .swiper-slide-duplicate-next').find('.invisible-text').slideUp(400);
                 $('#savoir-faire .swiper-slide-prev, #savoir-faire .swiper-slide-duplicate-prev').find('.invisible-text').slideUp(400);
-                $('#savoir-faire .swiper-slide-next, #savoir-faire .swiper-slide-duplicate-next').find('.logoslide').css('margin','120px auto 20px auto');
-                $('#savoir-faire .swiper-slide-prev, #savoir-faire .swiper-slide-duplicate-prev').find('.logoslide').css('margin','120px auto 20px auto');
+                $('#savoir-faire .swiper-slide-next, #savoir-faire .swiper-slide-duplicate-next').find('.logoslide').css('margin','140px auto 20px auto');
+                $('#savoir-faire .swiper-slide-prev, #savoir-faire .swiper-slide-duplicate-prev').find('.logoslide').css('margin','140px auto 20px auto');
             },
         },
     });

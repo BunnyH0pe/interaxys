@@ -483,8 +483,7 @@ h2{
 .cardsol h6{
     color: #E6E6E6;
     font-family: Roboto;
-    font-size: 24px;
-    text-transform: uppercase;
+    font-size: 20px;
     font-weight: 500;
 }
 
@@ -553,7 +552,7 @@ h2{
     text-align: center;
     padding: 25px;
     box-sizing: border-box;
-    min-height: 250px;
+    min-height: 300px;
     width: 90%;
     margin-right: auto;
     margin-left: auto;
@@ -565,12 +564,13 @@ h2{
 }
 
 #savoir-faire button{
-    color: #1e1e1e;
+    color: #E6E6E6;
     text-transform: uppercase;
-    font-size: 24px;
+    font-size: 16px;
     padding: 15px;
-    font-family: Roboto;
-    border: none;
+    font-family: Qualy;
+    letter-spacing: 2px;
+    border: 2px #E6E6E6 solid;
     font-weight: 500;
     display: block;
     margin-left: auto;
@@ -585,20 +585,35 @@ h2{
     height: 100%;
 }
 
+.relative-logo{
+    position: relative;
+}
+
+.flexswipe h3{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30%;
+    text-align: center;
+    font-family: Qualy;
+    font-size: 1.6vw;
+}
+
 #buttonorient{
-    background-color: #94C8EE;
+    background-color: #1e1e1e;
 }
 
 #buttongestion{
-    background-color: #FFD433;
+    background-color: #1e1e1e;
 }
 
 #buttonmanage{
-     background-color: #85FFDC;
+     background-color: #1e1e1e;
 }
 
 #buttonpilote{
-    background-color: #919191;
+    background-color: #1e1e1e;
 }
 
 #clients h2{
@@ -699,7 +714,6 @@ h2{
 
 .formulaire input{
     width: 320px;
-    height: 36px;
     padding: 10px;
     font-family: Roboto;
     border: none;
@@ -748,8 +762,16 @@ h2{
 }
 
 .btn-right input{
-    width: 320px;
-    padding: 10px 0 10px 0;
+    width: auto;
+    position: initial;
+    color: #E6E6E6;
+    text-transform: uppercase;
+    font-size: 16px;
+    padding: 15px;
+    font-family: Qualy;
+    letter-spacing: 2px;
+    border: 2px #E6E6E6 solid;
+    font-weight: 500;
     cursor: pointer;
 }
 
@@ -871,9 +893,9 @@ footer{
 }
 
 #savoir-faire .logoslide{
-    width: 60%;
+    width: 50%;
     display: block;
-    margin: 120px auto 20px auto;
+    margin: 140px auto 20px auto;
     transition: margin ease-in 0.4s;
 }
 
