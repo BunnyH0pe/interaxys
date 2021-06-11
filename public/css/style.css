@@ -163,32 +163,9 @@ nav img{
 
 .sliderslide{
     position: relative;
-}
-
-#synergieslide{
     width: 100vw;
-    background-image: url("../img/banheader.jpg");
     background-size: cover;
     height: 100%;
-    float: left;
-    display: inline-block;
-}
-
-#interactionslide{
-    width: 100vw;
-    background-image: url("../img/banheader2.jpg");
-    background-size: cover;
-    height: 100%;
-    float: left;
-    display: inline-block;
-}
-
-#syntheseslide{
-    width: 100vw;
-    background-image: url("../img/banheader3.jpg");
-    background-size: cover;    height: 100%;
-    float: left;
-    display: inline-block;
 }
 
 .centerslider{
@@ -210,7 +187,7 @@ nav img{
     animation: textslideanimated1 infinite 10s;
 }
 
-.sliderdiv p{
+.sliderundertitle div {
     text-align: center;
     font-size: 22px;
     font-family: Roboto;
@@ -494,7 +471,7 @@ h2{
     margin-bottom: 20px;
 }
 
-.cardsol p {
+.cardsol div {
     font-size: 16px;
     font-family: Roboto;
     line-height: 28px;

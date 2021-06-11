@@ -41,7 +41,17 @@
         <div class="swiper-container">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
-                <!-- Slides -->
+                {% for slide in slider %}
+                    <div class="swiper-slide">
+                        <div class="sliderslide" style="background-image: url('{{ asset('img/') }}{{ slide.image }}');">
+                            <div class="centerslider">
+                                <h1 class="slidertitre" data-glitch="{{ slide.titre }}">{{ slide.titre }}</h1>
+                                <div class="sliderundertitle">{{ slide.soustitre|raw }}</div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+                {#<!-- Slides -->
                 <div class="swiper-slide">
                     <div id="synergieslide" class="sliderslide">
                         <div class="centerslider">
@@ -65,7 +75,7 @@
                             <p class="sliderundertitle">« Un système d'information interactionnel pour piloter l'activité et synchroniser les décisions » </p>
                         </div>
                     </div>
-                </div>
+                </div>#}
             </div>
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
@@ -121,48 +131,36 @@
         <h2>Notre approche</h2>
         <div class="flex-solution">
             <div class="flexcolumncat">
-                <div id="philo"><p>Éthique</p></div>
-                <div id="strat"><p>Stratégique</p></div>
-                <div id="tact"><p>Tactique</p></div>
-                <div id="ope"><p>Opérationnel</p></div>
+                <div id="philo"><p>{{ approche.0.texte_bouton }}</p></div>
+                <div id="strat"><p>{{ approche.1.texte_bouton }}</p></div>
+                <div id="tact"><p>{{ approche.2.texte_bouton }}</p></div>
+                <div id="ope"><p>{{ approche.3.texte_bouton }}</p></div>
             </div>
             <div class="safecard">
             <div class="cardsol" id="cardphilo">
                 <article>
-                    <h3>Engagement</h3>
-                    <p>À ce premier niveau essentiel, mais pourtant le plus souvent oublié, il s’agit de se questionner sur la raison d’être de l’entreprise et de
-                        formaliser une vision, une raison d’être et un projet global en considérant son impact sur l’environnement et la société, et ce à un horizon infini.
-                        Cet impact, ce niveau de responsabilité sociétale et environnementale doit bien évidemment être évaluer et il convient donc d’identifier les signaux
-                        qui seront collectés et agrégés afin de suivre son évolution. C’est cette vision, mais surtout sa concrétisation dans un indicateur suivi et partagé
-                        au même titre que les autres dimensions plus traditionnelles de la performance, qui permettra de donner du sens à l’action de chacun et qui favorisera
-                        l’engagement de tous dans un projet collectif. </p>
-                    <h4>Performance Globale</h4>
+                    <h3>{{ approche.0.titre }}</h3>
+                    <p>{{ approche.0.description|raw }} </p>
+                    <h4>{{ approche.0.mot_clef }}</h4>
                     <ul>
-                        <li><h5>Horizon</h5><h6>Éternité</h6></li>
-                        <li><h5>Objet</h5><h6>Planète</h6></li>
-                        <li><h5>Finalité</h5><h6>Sens</h6></li>
-                        <li><h5>Résultat</h5><h6>Éternité</h6></li>
+                        <li><h5>Horizon</h5><h6>{{ approche.0.horizon }}</h6></li>
+                        <li><h5>Objet</h5><h6>{{ approche.0.objet }}</h6></li>
+                        <li><h5>Finalité</h5><h6>{{ approche.0.finalite }}</h6></li>
+                        <li><h5>Résultat</h5><h6>{{ approche.0.resultat }}</h6></li>
                     </ul>
                 </article>
             </div>
 
            <div  class="cardsol" id="cardstrat">
                 <article>
-                    <h3>Alignement</h3>
-                    <p>Il s’agit à ce niveau de basculer d’une approche en silo dans laquelle chaque acteur de l’organisation
-                        est objectivé sur sa performance individuelle, le plus souvent son efficience, vers une approche systémique
-                        interactionnelle focalisée sur la finalité de l’entreprise. Ici chacun doit prendre conscience de sa
-                        contribution quotidienne à la proposition de valeur globale de l’entreprise et pouvoir participer à son
-                        amélioration. L’obsession de la satisfaction client devient primordiale et passe devant l’obsession des résultats
-                        individuels. Cette satisfaction client doit ainsi être mesurée et monitorée afin de suivre l’amélioration
-                        de ce résultat collectif, de célébrer les succès et d’entretenir une dynamique enthousiasmante de transformation
-                        et de progrès.</p>
-                    <h4>Excellence Compétitive</h4>
+                    <h3>{{ approche.1.titre }}</h3>
+                    <p>{{ approche.1.description|raw }}</p>
+                    <h4>{{ approche.1.mot_clef }}</h4>
                     <ul>
-                        <li><h5>Horizon</h5><h6>Long terme</h6></li>
-                        <li><h5>Objet</h5><h6>Marché</h6></li>
-                        <li><h5>Finalité</h5><h6>Pérennité</h6></li>
-                        <li><h5>Résultat</h5><h6>Perfection</h6></li>
+                        <li><h5>Horizon</h5><h6>{{ approche.1.horizon }}</h6></li>
+                        <li><h5>Objet</h5><h6>{{ approche.1.objet }}</h6></li>
+                        <li><h5>Finalité</h5><h6>{{ approche.1.finalite }}</h6></li>
+                        <li><h5>Résultat</h5><h6>{{ approche.1.resultat }}</h6></li>
                     </ul>
                 </article>
 
@@ -170,21 +168,14 @@
 
             <div  class="cardsol" id="cardtact">
                 <article>
-                    <h3>Coordination</h3>
-                    <p>A ce niveau, le mouvement de transformation continue est abordé globalement. Il ne s’agit plus pour
-                        chaque chef de service de défendre son projet au détriment des autres mais plutôt de faire émerger
-                        collectivement les projets qui vont permettre d’améliorer significativement la proposition de valeur
-                        globale dans le respect de la vision et de la raison d’être de l’entreprise. Le principe est de faire
-                        émerger les différentes opportunités de transformation (investissement matériel ou logiciel, recrutement
-                        de nouvelle compétence, chantier d’amélioration continue) et d’évaluer l’impact de ces transformations
-                        sur la valeur ressentie par le client et sur performance globale. Cette évaluation est principalement
-                        qualitative et réalisée de façon collégiale</p>
-                    <h4>Transformation Continue</h4>
+                    <h3>{{ approche.2.titre }}</h3>
+                    <p>{{ approche.2.description|raw }}</p>
+                    <h4>{{ approche.2.mot_clef }}</h4>
                     <ul>
-                        <li><h5>Horizon</h5><h6>Moyen terme</h6></li>
-                        <li><h5>Objet</h5><h6>Organisation</h6></li>
-                        <li><h5>Finalité</h5><h6>Santé</h6></li>
-                        <li><h5>Résultat</h5><h6>Agilité</h6></li>
+                        <li><h5>Horizon</h5><h6>{{ approche.2.horizon }}</h6></li>
+                        <li><h5>Objet</h5><h6>{{ approche.2.objet }}</h6></li>
+                        <li><h5>Finalité</h5><h6>{{ approche.2.finalite }}</h6></li>
+                        <li><h5>Résultat</h5><h6>{{ approche.2.resultat }}</h6></li>
                     </ul>
                 </article>
 
@@ -192,21 +183,14 @@
 
             <div class="cardsol" id="cardope">
                 <article>
-                    <h3>Synchronisation</h3>
-                    <p>A ce dernier niveau opérationnel, chaque collaborateur inscrit ses décisions et actions
-                        dans un mouvement collectif visant un objectif commun, un peu comme un musicien dans son
-                        orchestre. Pour cela chacun doit avoir de la visibilité sur le contexte global instantané afin
-                        de prendre localement les décisions optimales globalement, en abandonnant donc le plus souvent
-                        ses résultats individuels. Dans cette dynamique temps-réel, l’importance du système d’information
-                        est crucial, celui-ci doit donc être abordé avec la volonté de mettre à disposition de chacun des
-                        informations robustes et fiables pour lui permettre de prendre la meilleure décision qu’il soit.
-                        Au niveau tactique, les projets de digitalisation allant dans ce sens seront donc à privilégier</p>
-                    <h4>Virtuosité Collective</h4>
+                    <h3>{{ approche.3.titre }}</h3>
+                    <p>{{ approche.3.description|raw }}</p>
+                    <h4>{{ approche.3.mot_clef }}</h4>
                     <ul>
-                        <li><h5>Horizon</h5><h6>Court terme</h6></li>
-                        <li><h5>Objet</h5><h6>Produit</h6></li>
-                        <li><h5>Finalité</h5><h6>Survie</h6></li>
-                        <li><h5>Résultat</h5><h6>Efficience</h6></li>
+                        <li><h5>Horizon</h5><h6>{{ approche.3.horizon }}</h6></li>
+                        <li><h5>Objet</h5><h6>{{ approche.3.objet }}</h6></li>
+                        <li><h5>Finalité</h5><h6>{{ approche.3.finalite }}</h6></li>
+                        <li><h5>Résultat</h5><h6>{{ approche.3.resultat }}</h6></li>
                     </ul>
                 </article>
             </div>
@@ -717,6 +701,10 @@
         direction: 'horizontal',
         effect:'coverflow',
         on: {
+            afterInit: function (){
+                $('#savoir-faire .swiper-slide-active, #savoir-faire .swiper-slide-duplicate-active').find('.logoslide').css('margin','20px auto 20px auto');
+                $('#savoir-faire .swiper-slide-active, #savoir-faire .swiper-slide-duplicate-active').find('.invisible-text').slideDown(500);
+            },
             slideChangeTransitionStart: function () {
                 $('#savoir-faire .swiper-slide-active, #savoir-faire .swiper-slide-duplicate-active').find('.logoslide').css('margin','20px auto 20px auto');
                 $('#savoir-faire .swiper-slide-active, #savoir-faire .swiper-slide-duplicate-active').find('.invisible-text').slideDown(500);

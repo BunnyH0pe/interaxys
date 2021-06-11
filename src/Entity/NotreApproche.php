@@ -72,6 +72,14 @@ class NotreApproche
     }
 
     /**
+     * @return mixed
+     */
+    public function gettexte_bouton()
+    {
+        return $this->texte_bouton;
+    }
+
+    /**
      * @param mixed $texte_bouton
      */
     public function setTexteBouton($texte_bouton): void
@@ -107,6 +115,14 @@ class NotreApproche
      * @return mixed
      */
     public function getMotClef()
+    {
+        return $this->mot_clef;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getmot_clef()
     {
         return $this->mot_clef;
     }
