@@ -21,6 +21,10 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
+<div id="preloader">
+    <h1>INTERAXYS</h1>
+    <div id="loader"></div>
+</div>
 <header>
     <div class="flex-key">
         <p></p><p>Performance Globale</p> <p>Excellence Compétitive</p> <p>Transformation Continue</p> <p>Virtuosité Collective</p>
@@ -51,31 +55,6 @@
                         </div>
                     </div>
                 {% endfor %}
-                {#<!-- Slides -->
-                <div class="swiper-slide">
-                    <div id="synergieslide" class="sliderslide">
-                        <div class="centerslider">
-                            <h1 class="slidertitre" data-glitch="SYNERGIE">SYNERGIE</h1>
-                            <p class="sliderundertitle">« Un système d'information interactionnel pour piloter l'activité et synchroniser les décisions » </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div id="interactionslide" class="sliderslide">
-                        <div class="centerslider">
-                            <h1 class="slidertitre" data-glitch="INTERACTION">INTERACTION</h1>
-                            <p class="sliderundertitle">« Un système d'information interactionnel pour piloter l'activité et synchroniser les décisions » </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div id="syntheseslide" class="sliderslide">
-                        <div class="centerslider">
-                            <h1 class="slidertitre" data-glitch="synthèse">SYNTHèSE</h1>
-                            <p class="sliderundertitle">« Un système d'information interactionnel pour piloter l'activité et synchroniser les décisions » </p>
-                        </div>
-                    </div>
-                </div>#}
             </div>
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
@@ -85,12 +64,6 @@
             <div class="swiper-button-next"></div>
         </div>
     </div>
-    <!--<a class="linkdown" href="#presentation">
-        <div class="scrollicon">
-            <img id="scrollb" src="{{ asset('img/scroll_blanc.png') }}" alt="scroll_blanc">
-            <img id="scrollj" src="{{ asset('img/scroll_jaune.png') }}" alt="scroll_jaune">
-        </div>
-    </a> -->
 </section>
 
 <section id="presentation">
@@ -112,9 +85,20 @@
         </div>
 
         <div class="bgcitation">
-            <strong id="citation1">« Le modèle de la réduction des coûts</strong>
-            <strong id="citation2"> nous envoie droit dans le mur ! »</strong>
-            <strong id="nommage">José Gramdi</strong>
+            <div class="citations">
+                <div style="display: none">
+                    <p>« Le modèle de la réduction des coûts nous envoie droit dans le mur ! »</p>
+                    <strong id="nommage">José Gramdi</strong>
+                </div>
+                <div  style="display: none">
+                    <p>« Interaxys c'est donner du pouvoir à la valeur ajoutée ! »</p>
+                    <strong id="nommage">José Gramdi</strong>
+                </div>
+                <div  style="display: none">
+                    <p>« Réinventez l'industrie avec Interaxys ! »</p>
+                    <strong id="nommage">José Gramdi</strong>
+                </div>
+            </div>
         </div>
 
 
@@ -220,11 +204,12 @@
                         <div>
                             <div class="relative-logo">
                                 <img class="logoslide" src="{{ asset('img/orientation.png') }}" alt="picto orientation">
-                                <h3>Orientation des modèles d'affaire</h3>
+                                <h3 id="firsth3">Orientation des modèles d'affaire</h3>
                             </div>
                             <div class="invisible-text">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa cumque dolor ducimus illum, molestias necessitatibus nisi perspiciatis possimus quas quibusdam quisquam reiciendis rerum sed totam velit veniam! Perferendis, quis.</p>
-                                <button id="buttonorient">Plus d'infos</button>
+                                <button id="button1">Plus d'infos</button>
+                                <input type="hidden" id="hidden1" value="{{ formulaire.0.Message }}">
                             </div>
                         </div>
                     </div>
@@ -232,11 +217,12 @@
                         <div>
                             <div class="relative-logo">
                                 <img class="logoslide" src="{{ asset('img/gestion.png') }}" alt="picto orientation">
-                                <h3>Gestion de la performance</h3>
+                                <h3 id="secondh3">Gestion de la performance</h3>
                             </div>
                             <div class="invisible-text">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa cumque dolor ducimus illum, molestias necessitatibus nisi perspiciatis possimus quas quibusdam quisquam reiciendis rerum sed totam velit veniam! Perferendis, quis.</p>
-                                <button id="buttongestion">Plus d'infos</button>
+                                <button id="button2">Plus d'infos</button>
+                                <input type="hidden" id="hidden2" value="{{ formulaire.1.Message }}">
                             </div>
                         </div>
                     </div>
@@ -244,11 +230,12 @@
                         <div>
                             <div class="relative-logo">
                                 <img class="logoslide" src="{{ asset('img/manage.png') }}" alt="picto orientation">
-                                <h3>Management des opérations</h3>
+                                <h3 id="thirdh3">Management des opérations</h3>
                             </div>
                             <div class="invisible-text">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa cumque dolor ducimus illum, molestias necessitatibus nisi perspiciatis possimus quas quibusdam quisquam reiciendis rerum sed totam velit veniam! Perferendis, quis.</p>
-                                <button id="buttonmanage">Plus d'infos</button>
+                                <button id="button3">Plus d'infos</button>
+                                <input type="hidden" id="hidden3" value="{{ formulaire.2.Message }}">
                             </div>
                         </div>
                     </div>
@@ -256,11 +243,12 @@
                         <div>
                             <div class="relative-logo">
                                 <img class="logoslide" src="{{ asset('img/pilotage.png') }}" alt="picto orientation">
-                                <h3>Pilotage de l'activité</h3>
+                                <h3 id="lasth3">Pilotage de l'activité</h3>
                             </div>
                             <div class="invisible-text">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa cumque dolor ducimus illum, molestias necessitatibus nisi perspiciatis possimus quas quibusdam quisquam reiciendis rerum sed totam velit veniam! Perferendis, quis.</p>
-                                <button id="buttonpilote">Plus d'infos</button>
+                                <button id="button4">Plus d'infos</button>
+                                <input type="hidden" id="hidden4" value="{{ formulaire.3.Message }}">
                             </div>
                         </div>
                     </div>
@@ -307,27 +295,27 @@
                 <div class="flexline">
                     <div class="firstflexform">
                         <div class="geometrieconteneur">
-                            <input type="text" nom="nom" placeholder="NOM">
+                            <input id="nom" type="text" nom="nom" placeholder="NOM" required>
                         </div>
                         <div class="geometrieconteneur">
-                            <input id="email" type="text" name="prenom" placeholder="PRENOM">
+                            <input id="prenom" type="text" name="prenom" placeholder="PRENOM" required>
                         </div>
                     </div>
                     <div class="secondflexform">
                         <div class="geometrieconteneur">
-                            <input type="text" name="prenom" placeholder="EMAIL">
+                            <input id="email" type="email" name="email" placeholder="EMAIL" required>
                         </div>
                         <div class="geometrieconteneur">
-                            <input type="text" name="tel" placeholder="TEL">
+                            <input id="tel" type="text" name="tel" placeholder="TEL" required>
                         </div>
                     </div>
                 </div>
                 <div class="geometrieconteneur geometrieconteneurobjet">
-                    <input type="text" name="objet" placeholder="OBJET">
+                    <input id="objet" type="text" name="objet" placeholder="OBJET" required>
                 </div>
 
                 <div class="geometrieconteneur geometrieconteneurarea">
-                    <textarea style="resize: none" name="" id="" cols="30" rows="10" placeholder="Votre message..."></textarea>
+                    <textarea style="resize: none" name="" id="message" cols="30" rows="10" required placeholder="Votre message..."></textarea>
                 </div>
                 <div class="btn-right">
                         <input type="submit" value="VALIDER">
@@ -339,412 +327,19 @@
 </section>
 <footer>
     <section id="footer">
-        <div class="tel"><img src="{{ asset('img/call.svg') }}" alt="Tel picto"><p>+ 33 680 230 239</p></div>
-        <div class="mail"><img src="{{ asset('img/email.svg') }}" alt="Mail picto"><p>contact@interaxys.fr</p></div>
+        <div class="tel"><img src="{{ asset('img/call.svg') }}" alt="Tel picto"><p>{{ contact.tel }}</p></div>
+        <div class="mail"><img src="{{ asset('img/email.svg') }}" alt="Mail picto"><p>{{ contact.email }}</p></div>
         <div class="reseaux-sociaux">
-            <a href="https://www.facebook.com/"><img id="facebook" src="{{ asset('img/001-facebook.svg') }}" alt="logo facebook"></a>
-            <a href="https://www.linkedin.com"><img id="linkedin" src="{{ asset('img/010-linkedin.svg') }}" alt="logo linkedin"></a>
-            <a href="https://www.twitter.com"><img id="twitter" src="{{ asset('img/013-twitter.svg') }}" alt="logo twitter"></a></div>
+            <a href="{{ contact.lien_facebook }}"><img id="facebook" src="{{ asset('img/001-facebook.svg') }}" alt="logo facebook"></a>
+            <a href="{{ contact.lien_linkedin }}"><img id="linkedin" src="{{ asset('img/010-linkedin.svg') }}" alt="logo linkedin"></a>
+            <a href="{{ contact.lien_twitter }}"><img id="twitter" src="{{ asset('img/013-twitter.svg') }}" alt="logo twitter"></a></div>
         <a class="mentions-legales" href=""><p >Mentions Légales</p></a>
         <p class="copyright">© Interaxys 2021</p>
     </section>
 </footer>
 
-<script>
-    $(document).ready(function (){
-        $('.cardsol').hide();
-        $('#cardphilo').show();
-
-        //SCROLL TO
-
-        $('nav a, .linkdown').click(function(){
-            $('html, body').animate({
-                scrollTop: $( $(this).attr('href') ).offset().top - 20
-            }, 500);
-            return false;
-        });
-
-        //HOVER FOOTER
-
-        $("#facebook").mouseover(function() {
-            $(this).attr('src','{{ asset('img/001-facebook-hover.svg') }}')
-        }).mouseout(function (){
-            $(this).attr('src','{{ asset('img/001-facebook.svg') }}')
-        });
-
-        $("#linkedin").mouseover(function() {
-            $(this).attr('src','{{ asset('img/010-linkedin-hover.svg') }}')
-        }).mouseout(function (){
-            $(this).attr('src','{{ asset('img/010-linkedin.svg') }}')
-        });
-
-        $("#twitter").mouseover(function() {
-            $(this).attr('src','{{ asset('img/013-twitter-hover.svg') }}')
-        }).mouseout(function (){
-            $(this).attr('src','{{ asset('img/013-twitter.svg') }}')
-        });
-
-        // NAVBAR
-
-        var positionscroll = $(document).scrollTop();
-        var limitnav = 40;
-
-        if( positionscroll > 40){
-            if (positionscroll < 650){
-                $('nav a').css('border-bottom','0');
-                $('nav a p').css('margin-bottom','0').css('color','#E6E6E6').css('font-size','18px');
-            }
-            if ( positionscroll > 650 && positionscroll < 2400 ){
-                $('#presentationlink').css('border-bottom','#94C8EE solid 5px');
-                $('#presentationlink p').css('margin-bottom','-5px').css('color','#94C8EE').css('font-size','20px');
-                $('nav a').not('#presentationlink').css('border-bottom','#94C8EE solid 0');
-                $('nav p').not('#presentationlink p').css('margin-bottom','0').css('color','#E6E6E6').css('font-size','18px');
-            }
-            if ( positionscroll > 2400 && positionscroll < 3500  ){
-                $('#solutionslink').css('border-bottom','#94C8EE solid 5px');
-                $('#solutionslink p').css('margin-bottom','-5px').css('color','#94C8EE').css('font-size','20px');
-                $('nav a').not('#solutionslink').css('border-bottom','#94C8EE solid 0');
-                $('nav p').not('#solutionslink p').css('margin-bottom','0').css('color','#E6E6E6').css('font-size','18px');
-            }
-            if ( positionscroll > 3500 && positionscroll < 4400  ){
-                $('#savoir-fairelink').css('border-bottom','#94C8EE solid 5px');
-                $('#savoir-fairelink p').css('margin-bottom','-5px').css('color','#94C8EE').css('font-size','20px');
-                $('nav a').not('#savoir-fairelink').css('border-bottom','#94C8EE solid 0');
-                $('nav p').not('#savoir-fairelink p').css('margin-bottom','0').css('color','#E6E6E6').css('font-size','18px');
-            }
-            if ( positionscroll > 4400){
-                $('#contactlink').css('border-bottom','#94C8EE solid 5px');
-                $('#contactlink p').css('margin-bottom','-5px').css('color','#94C8EE').css('font-size','20px');
-                $('nav a').not('#contactlink').css('border-bottom','#94C8EE solid 0');
-                $('nav p').not('#contactlink p').css('margin-bottom','0').css('color','#E6E6E6').css('font-size','18px');
-            }
-            $(".logo-nav").css('transform','scale(1) translate(-14%)');
-            $("nav a").mouseover(function() {
-                $(this).css("color","#94C8EE")
-                $(this).not('.logo-nav-link').css('border-bottom','#94C8EE solid 5px')
-            }).mouseout(function (){
-                $(this).css("color","#E6E6E6")
-                $(this).not('.logo-nav-link').css('border-bottom','#94C8EE solid 0px')
-            });
-        }else{
-            $(".logo-nav").css('transform','scale(1.65) translate(-14%,-25%)');
-            $("nav a").mouseover(function() {
-                $(this).css("color","#94C8EE")
-                $(this).not('.logo-nav-link').css('border-bottom','#94C8EE solid 5px')
-                $(this).find('p').css('margin-bottom','-5px');
-            }).mouseout(function (){
-                $(this).css("color","#E6E6E6")
-                $(this).not('.logo-nav-link').css('border-bottom','#94C8EE solid 0px')
-                $(this).find('p').css('margin-bottom','0px');
-            });
-        }
-
-        var i = 0;
-        var rotation = 0;
-        var oldpositionscroll = 0;
-        var positionscroll = $(document).scrollTop();
-        var upscroll = 1;
-        setInterval(function (){
-            oldpositionscroll = positionscroll;
-            positionscroll = $(document).scrollTop();
-            if (oldpositionscroll > positionscroll){
-                if (upscroll == 1){
-                    upscroll = 1;
-                }else {
-                    upscroll = 1;
-                    i = 0 ;
-                }
-            }else if(oldpositionscroll < positionscroll){
-                if (upscroll == 0){
-                    upscroll = 0;
-                    i += 0.5;
-                }else {
-                    upscroll = 0;
-                    i = 0;
-                    i += 0.5;
-                }
-                rotation = positionscroll + i;
-            }
-            if (upscroll == 1){
-                i+= 0.5;
-                rotation = positionscroll - i;
-            }else{
-                i += 0.5;
-                rotation = positionscroll + i;
-            }
-            console.log(upscroll)
-            $('#imgtourne').css('transform','rotate('+ rotation +'deg)');
-        }, 20)
-
-        // ANIMATION BOULE
-
-        $(document).scroll(function (){
-            var positionscroll = $(document).scrollTop();
-            console.log(positionscroll);
-            var limitnav = 40;
-
-            if( positionscroll > 40){
-                if (positionscroll < 650){
-                    $('nav a').css('border-bottom','0');
-                    $('nav a p').css('margin-bottom','0').css('color','#E6E6E6').css('font-size','18px');
-                }
-                if ( positionscroll > 650 && positionscroll < 2400 ){
-                    $('#presentationlink').css('border-bottom','#94C8EE solid 5px');
-                    $('#presentationlink p').css('color','#94C8EE').css('font-size','20px');
-                    $('nav a').not('#presentationlink').css('border-bottom','#94C8EE solid 0');
-                    $('nav p').not('#presentationlink p').css('margin-bottom','0').css('color','#E6E6E6').css('font-size','18px');
-                }
-                if ( positionscroll > 2400 && positionscroll < 3500  ){
-                    $('#solutionslink').css('border-bottom','#94C8EE solid 5px');
-                    $('#solutionslink p').css('color','#94C8EE').css('font-size','20px');
-                    $('nav a').not('#solutionslink').css('border-bottom','#94C8EE solid 0');
-                    $('nav p').not('#solutionslink p').css('margin-bottom','0').css('color','#E6E6E6').css('font-size','18px');
-                }
-                if ( positionscroll > 3500 && positionscroll < 4400  ){
-                    $('#savoir-fairelink').css('border-bottom','#94C8EE solid 5px');
-                    $('#savoir-fairelink p').css('color','#94C8EE').css('font-size','20px');
-                    $('nav a').not('#savoir-fairelink').css('border-bottom','#94C8EE solid 0');
-                    $('nav p').not('#savoir-fairelink p').css('margin-bottom','0').css('color','#E6E6E6').css('font-size','18px');
-                }
-                if ( positionscroll > 4400){
-                    $('#contactlink').css('border-bottom','#94C8EE solid 5px');
-                    $('#contactlink p').css('color','#94C8EE').css('font-size','20px');
-                    $('nav a').not('#contactlink').css('border-bottom','#94C8EE solid 0');
-                    $('nav p').not('#contactlink p').css('margin-bottom','0').css('color','#E6E6E6').css('font-size','18px');
-                }
-                $(".logo-nav").css('transform','scale(1) translate(-14%)');
-                $("nav a").mouseover(function() {
-                    $(this).css("color","#94C8EE")
-                    $(this).not('.logo-nav-link').css('border-bottom','#94C8EE solid 5px')
-                    $(this).find('p').css('margin-bottom','-5px');
-                }).mouseout(function (){
-                    $(this).css("color","#E6E6E6")
-                    $(this).not('.logo-nav-link').css('border-bottom','#94C8EE solid 0px')
-                    $(this).find('p').css('margin-bottom','0px');
-                });
-            }else{
-                $(".logo-nav").css('transform','scale(1.65) translate(-14%,-25%)');
-                $("nav a").mouseover(function() {
-                    $(this).css("color","#94C8EE")
-                    $(this).not('.logo-nav-link').css('border-bottom','#94C8EE solid 5px')
-                    $(this).find('p').css('margin-bottom','-5px');
-                }).mouseout(function (){
-                    $(this).css("color","#E6E6E6")
-                    $(this).not('.logo-nav-link').css('border-bottom','#94C8EE solid 0px')
-                    $(this).find('p').css('margin-bottom','0px');
-                });
-            }
-        })
-
-        $('#philo').on('click', function (){
-            $('#philo').css('background-color','#E6E6E6').css('color','#1e1e1e');
-            $('.flexcolumncat div').not('#philo').css('background-color','#1e1e1e').css('color','#E6E6E6');
-            $('#cardtact').fadeOut('fast');
-            $('#cardope').fadeOut('fast');
-            $('#cardstrat').fadeOut('fast');
-            setTimeout(function (){
-                $('#cardphilo').fadeIn('fast');
-            },200)
-        })
-
-        $('#tact').on('click', function (){
-            $('#tact').css('background-color','#E6E6E6').css('color','#1e1e1e');
-            $('.flexcolumncat div').not('#tact').css('background-color','#1e1e1e').css('color','#E6E6E6');
-            $('#cardphilo').fadeOut('fast');
-            $('#cardope').fadeOut('fast');
-            $('#cardstrat').fadeOut('fast');
-            setTimeout(function (){
-                $('#cardtact').fadeIn('fast');
-            },200)
-        })
-
-        $('#ope').on('click', function (){
-            $('#ope').css('background-color','#E6E6E6').css('color','#1e1e1e');
-            $('.flexcolumncat div').not('#ope').css('background-color','#1e1e1e').css('color','#E6E6E6');
-            $('#cardtact').fadeOut('fast');
-            $('#cardphilo').fadeOut('fast');
-            $('#cardstrat').fadeOut('fast');
-            setTimeout(function (){
-                $('#cardope').fadeIn('fast');
-            },200)
-        })
-
-        $('#strat').on('click', function (){
-            $('#strat').css('background-color','#E6E6E6').css('color','#1e1e1e');
-            $('.flexcolumncat div').not('#strat').css('background-color','#1e1e1e').css('color','#E6E6E6');
-            $('#cardtact').fadeOut('fast');
-            $('#cardope').fadeOut('fast');
-            $('#cardphilo').fadeOut('fast');
-            setTimeout(function (){
-                $('#cardstrat').fadeIn('fast');
-            },200)
-        })
-    })
-</script>
-<script>
-    let scene = new THREE.Scene();
-
-    let camera = new THREE.PerspectiveCamera(
-        75,
-        1,
-        0.1,
-        1000
-    );
-
-    let renderer = new THREE.WebGLRenderer({
-        canvas: document.getElementById("canvas")
-    });
-
-    renderer.setClearColor(0x1e1e1e, 1);
-
-    let opaqueGeo = new THREE.SphereGeometry(5, 24, 24);
-
-    let opaqueMat = new THREE.MeshBasicMaterial({
-        color: 0x1e1e1e,
-        polygonOffset: true,
-        polygonOffsetFactor: 1,
-        polygonOffsetUnits: 1
-    });
-
-    let opaqueSphere = new THREE.Mesh(opaqueGeo, opaqueMat);
-
-    scene.add(opaqueSphere);
-
-    var wireframeGeo = new THREE.EdgesGeometry(opaqueSphere.geometry);
-
-    var wireframeMat = new THREE.LineBasicMaterial({
-        color: 0x94C8EE,
-        linewidth: 1
-    });
-
-    var wireframeSphere = new THREE.LineSegments(wireframeGeo, wireframeMat);
-
-    opaqueSphere.add(wireframeSphere);
-
-    camera.position.z = 8.5;
-
-    function animate(t) {
-        requestAnimationFrame(animate);
-
-        opaqueSphere.rotation.y += 0.01;
-
-        renderer.render(scene, camera);
-    }
-
-    animate();
-</script>
-<script>
-    const swiper = new Swiper('.swiper-container', {
-        autoplay: {
-            delay: 5000,
-        },
-        keyboard: {
-            enabled: true,
-            onlyInViewport: true,
-        },
-        speed:400,
-        spaceBetween: 0,
-        slidesPerView: 1,
-        loopedSlides: 3,
-        // Optional parameters
-        direction: 'horizontal',
-        effect:'slide',
-        loop: true,
-        loopPreventsSlide : false,
-
-        // If we need pagination
-        pagination: {
-            el: '.swiper-pagination',
-            clickable : true,
-        },
-
-        // Navigation arrows
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        on: {
-            slideChangeTransitionEnd: function () {
-                    $('.slidertitre').addClass('glitch');
-                    setTimeout(function (){
-                        $('.slidertitre').removeClass('glitch');
-                    },1000);
-
-            },
-        },
-    });
-
-</script>
-
-<script>
-    const swiper2 = new Swiper('.swiper-container2', {
-        autoplay: {
-            delay: 5000,
-        },
-        keyboard: {
-            enabled: true,
-            onlyInViewport: true,
-        },
-        coverflowEffect: {
-            slideShadows: false,
-            //rotate: 30,
-            //depth : 200,
-            //stretch :300,
-        },
-        noSwiping: true,
-        allowTouchMove:false,
-        speed:400,
-        spaceBetween: -100,
-        slidesPerView: 'auto',
-        centeredSlides:true,
-        // Optional parameters
-        direction: 'horizontal',
-        effect:'coverflow',
-        on: {
-            afterInit: function (){
-                $('#savoir-faire .swiper-slide-active, #savoir-faire .swiper-slide-duplicate-active').find('.logoslide').css('margin','20px auto 20px auto');
-                $('#savoir-faire .swiper-slide-active, #savoir-faire .swiper-slide-duplicate-active').find('.invisible-text').slideDown(500);
-            },
-            slideChangeTransitionStart: function () {
-                $('#savoir-faire .swiper-slide-active, #savoir-faire .swiper-slide-duplicate-active').find('.logoslide').css('margin','20px auto 20px auto');
-                $('#savoir-faire .swiper-slide-active, #savoir-faire .swiper-slide-duplicate-active').find('.invisible-text').slideDown(500);
-                $('#savoir-faire .swiper-slide-next, #savoir-faire .swiper-slide-duplicate-next').find('.invisible-text').slideUp(400);
-                $('#savoir-faire .swiper-slide-prev, #savoir-faire .swiper-slide-duplicate-prev').find('.invisible-text').slideUp(400);
-                $('#savoir-faire .swiper-slide-next, #savoir-faire .swiper-slide-duplicate-next').find('.logoslide').css('margin','140px auto 20px auto');
-                $('#savoir-faire .swiper-slide-prev, #savoir-faire .swiper-slide-duplicate-prev').find('.logoslide').css('margin','140px auto 20px auto');
-            },
-        },
-    });
-</script>
-<script>
-    const swiper3 = new Swiper('.swiper-container3', {
-        autoplay: {
-            delay: 3000,
-        },
-        keyboard: {
-            enabled: false,
-        },
-        speed:400,
-        spaceBetween: 160,
-        loopedSlides: 4,
-        slidesPerView: 4,
-        // Optional parameters
-        direction: 'horizontal',
-        effect:'slide',
-        loop: true,
-
-    });
-
-</script>
-<script>
-
-    $(document).ready(function() {
-        $('#solutions').parallax("50%", 0.1);
-        $('#savoir-faire').parallax("50%", 0.1);
-        $('#contact').parallax("50%", 0.1);
-        $('.premierepresentation').parallax("50%", 0.1);
-    })
-
-</script>
+<script src="{{ asset('js/script.js') }}"></script>
+<script src="{{ asset('js/animatedball.js') }}"></script>
+<script src="{{ asset('js/swiperslider.js') }}"></script>
 </body>
 </html>

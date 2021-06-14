@@ -177,7 +177,7 @@ nav img{
 }
 
 .sliderdiv h1 {
-    text-shadow: 6px -8px 0 #94C8EE;
+    text-shadow: 4px -4px 0 #94C8EE;
     color: #E6E6E6;
     font-family: Qualy;
     font-size: 100px;
@@ -189,11 +189,14 @@ nav img{
 
 .sliderundertitle div {
     text-align: center;
-    font-size: 22px;
+    font-size: 26px;
     font-family: Roboto;
     font-style: italic;
     color: #E6E6E6;
     text-shadow: 0px 2px 2px black;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .scrollicon{
@@ -264,6 +267,7 @@ h2{
     font-family: Roboto;
     justify-content: space-between;
     align-items: center;
+    text-align: justify;
 }
 
 .textpresentation{
@@ -296,18 +300,6 @@ h2{
     position: relative;
 }
 
-#citation1{
-    position: absolute;
-    top: 32%;
-    left: 10%;
-}
-
-#citation2{
-    position: absolute;
-    bottom: 32%;
-    right: 10%;
-}
-
 #nommage{
     position: absolute;
     font-family: Qualy;
@@ -316,6 +308,16 @@ h2{
     right: 10%;
     font-size:2vw;
     font-style: normal;
+}
+
+.bgcitation p{
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 5vw;
+    text-align: center;
 }
 
 .text{
@@ -348,7 +350,7 @@ h2{
     padding-top: 80px;
     padding-bottom: 80px;
     height: 100%;
-    width: 75%;
+    width: 85%;
     box-sizing: border-box;
     min-height: 700px;
 }
@@ -462,19 +464,20 @@ h2{
     font-family: Roboto;
     font-size: 20px;
     font-weight: 500;
+    font-style: italic;
 }
 
 .cardsol h3{
     text-align: center;
     font-family: Qualy;
-    font-size: 36px;
+    font-size: 38px;
     margin-bottom: 20px;
 }
 
 .cardsol div {
-    font-size: 16px;
+    font-size: 18px;
     font-family: Roboto;
-    line-height: 28px;
+    line-height: 30px;
 }
 
 .ban-etoile{
@@ -503,15 +506,20 @@ h2{
 
 .ban-etoile strong {
     color: #E6E6E6;
-    font-family: Qualy;
-    font-size: 28px;
+    font-family: Roboto;
+    font-style: italic;
+    font-size: 32px;
     letter-spacing: 2px;
     text-align: right;
+    font-weight: 500;
+    line-height: 60px;
 }
 
 .titreinteraxys{
     font-size: 64px !important;
     letter-spacing: 5px !important;
+    font-family: Qualy !important;
+    font-style: initial !important;
 }
 
 #savoir-faire{
@@ -541,7 +549,7 @@ h2{
 }
 
 #savoir-faire button{
-    color: #E6E6E6;
+    color: #1e1e1e;
     text-transform: uppercase;
     font-size: 16px;
     padding: 15px;
@@ -553,6 +561,14 @@ h2{
     margin-left: auto;
     margin-right: auto;
     cursor: pointer;
+    background-color: #E6E6E6;
+    transition: background-color 0.5s ease-in;
+}
+
+#savoir-faire button:hover{
+    background-color: #1e1e1e;
+    color: #E6E6E6;
+    transition: background-color 0.5s ease-out;
 }
 
 #savoir-faire .sectionlimit{
@@ -571,7 +587,7 @@ h2{
     top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 30%;
+    width: 34%;
     text-align: center;
     font-family: Qualy;
     font-size: 1.6vw;
@@ -704,6 +720,11 @@ h2{
     color: #E6E6E6;
 }
 
+.formulaire input:focus{
+    border: #FFD433 2px solid !important;
+    outline: none !important;
+}
+
 .formulaire input::placeholder{
     color: #E6E6E6;
 }
@@ -741,7 +762,7 @@ h2{
 .btn-right input{
     width: auto;
     position: initial;
-    color: #E6E6E6;
+    color: #1e1e1e;
     text-transform: uppercase;
     font-size: 16px;
     padding: 15px;
@@ -750,6 +771,14 @@ h2{
     border: 2px #E6E6E6 solid;
     font-weight: 500;
     cursor: pointer;
+    background-color: #E6E6E6;
+    transition: background-color 0.5s ease-in;
+}
+
+.btn-right input:hover{
+    background-color: #1e1e1e;
+    color: #E6E6E6;
+    transition: background-color 0.5s ease-out;
 }
 
 .btn-right .backgroundform{
@@ -872,13 +901,13 @@ footer{
 #savoir-faire .logoslide{
     width: 50%;
     display: block;
-    margin: 140px auto 20px auto;
+    margin: 112px auto 20px auto;
     transition: margin ease-in 0.4s;
 }
 
 .flexswipe > div{
     padding: 30px;
-    min-height: 400px;
+    min-height: 350px;
     background-color: #1e1e1e ;
     border:#E6E6E6 2px solid ;
     color: #E6E6E6;
@@ -963,6 +992,91 @@ footer{
 
 /* CSS ANIMATIONS */
 
+#preloader {
+    background-color: #1e1e1e;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+}
+
+#preloader h1{
+    font-family: Qualy;
+    color: #E6E6E6;
+    position: absolute;
+    font-size: 124px;
+    letter-spacing: 10px;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #FFD433;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+#loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #94C8EE;
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+}
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #E6E6E6;
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+}
+@-webkit-keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
 
 
 

@@ -4,6 +4,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\Clients;
 use App\Entity\Contact;
+use App\Entity\ContactForm;
 use App\Entity\NotreApproche;
 use App\Entity\NotreOffre;
 use App\Entity\NotreVision;
@@ -37,12 +38,21 @@ class DashboardController extends AbstractDashboardController
 
     public function configureMenuItems(): iterable
     {
-        yield MenuItem::linktoDashboard('Administration', 'fa fa-home');
-        yield MenuItem::linkToCrud('Bannière', 'fas fa-arrows-alt-h', SliderBanniere::class);
-        yield MenuItem::linkToCrud('Vision', 'fas fa-eye', NotreVision::class);
-        yield MenuItem::linkToCrud('Approche', 'fas fa-map-signs', NotreApproche::class);
-        yield MenuItem::linkToCrud('Offre', 'fas fa-gift', NotreOffre::class);
-        yield MenuItem::linkToCrud('Clients', 'fas fa-user-friends', Clients::class);
-        yield MenuItem::linkToCrud('Contact', 'fas fa-address-card', Contact::class);
+        return[
+            MenuItem::linktoDashboard('Administration', 'fa fa-home'),
+            MenuItem::section('Bannière principale'),
+            MenuItem::linkToCrud('Slider', 'fas fa-arrows-alt-h', SliderBanniere::class),
+            MenuItem::section('Section Vision'),
+            MenuItem::linkToCrud('Contenu texte et vidéo', 'fas fa-eye', NotreVision::class),
+            MenuItem::section('Section Approche'),
+            MenuItem::linkToCrud('Menu d\'approche', 'fas fa-map-signs', NotreApproche::class),
+            MenuItem::section('Section Offre'),
+            MenuItem::linkToCrud('Slider Offre', 'fas fa-gift', NotreOffre::class),
+            MenuItem::linkToCrud('Pré-Remplissage Formulaire', 'fas fa-address-card', ContactForm::class),
+            MenuItem::section('Section Client'),
+            MenuItem::linkToCrud('Clients', 'fas fa-user-friends', Clients::class),
+            MenuItem::section('Bas de page'),
+            MenuItem::linkToCrud('Informations de contact', 'fas fa-address-card', Contact::class),
+        ];
     }
 }

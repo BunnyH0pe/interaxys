@@ -3,6 +3,7 @@
 
 namespace App\Controller;
 use App\Repository\ClientsRepository;
+use App\Repository\ContactFormRepository;
 use App\Repository\ContactRepository;
 use App\Repository\NotreApprocheRepository;
 use App\Repository\NotreOffreRepository;
@@ -22,7 +23,8 @@ class DefaultController extends AbstractController
                           NotreApprocheRepository $notreApprocheRepository,
                           NotreOffreRepository $notreOffreRepository,
                           ClientsRepository $clientsRepository,
-                          ContactRepository $contactRepository ): Response
+                          ContactRepository $contactRepository,
+                          ContactFormRepository $contactFormRepository): Response
     {
         $slider = $sliderBanniereRepository->findAll();
         $vision = $notreVisionRepository->find(1);
@@ -30,6 +32,7 @@ class DefaultController extends AbstractController
         $offre = $notreOffreRepository->findAll();
         $clients = $clientsRepository->findAll();
         $contact = $contactRepository->find(1);
+        $contactform = $contactFormRepository->findAll();
 
         return $this->render('defaultpage.html.twig', [
             'slider' => $slider,
@@ -37,7 +40,8 @@ class DefaultController extends AbstractController
             'approche' => $approche,
             'offre' => $offre,
             'clients' => $clients,
-            'contact' => $contact
+            'contact' => $contact,
+            'formulaire' => $contactform,
         ]);
 
        /* return $this->render('user/index.html.twig', [

@@ -77,6 +77,13 @@ class Contact
         return $this->lien_twitter;
     }
 
+    public function getlien_twitter(): ?string
+    {
+        return $this->lien_twitter;
+    }
+
+
+
     public function setLienTwitter(string $lien_twitter): self
     {
         $this->lien_twitter = $lien_twitter;
@@ -85,6 +92,11 @@ class Contact
     }
 
     public function getLienLinkedin(): ?string
+    {
+        return $this->lien_linkedin;
+    }
+
+    public function getlien_linkedin(): ?string
     {
         return $this->lien_linkedin;
     }
@@ -100,6 +112,11 @@ class Contact
      * @return mixed
      */
     public function getLienFacebook()
+    {
+        return $this->lien_facebook;
+    }
+
+    public function getlien_facebook()
     {
         return $this->lien_facebook;
     }
