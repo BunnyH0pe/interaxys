@@ -9,7 +9,7 @@ $(document).ready(function (){
     $('.cardsol').hide();
     $('#cardphilo').show();
     CitationMaker();
-    setInterval(CitationMaker,6500);
+    setInterval(CitationMaker,7000);
 
 
     //ANIMATION CITATION

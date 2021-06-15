@@ -41,22 +41,22 @@ class NotreApproche
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $horizon;
+    private $motcle1;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $objet;
+    private $motcle2;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $finalite;
+    private $motcle3;
 
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $resultat;
+    private $motcle4;
 
     public function getId(): ?int
     {
@@ -138,64 +138,64 @@ class NotreApproche
     /**
      * @return mixed
      */
-    public function getHorizon()
+    public function getmotcle1()
     {
-        return $this->horizon;
+        return $this->motcle1;
     }
 
     /**
-     * @param mixed $horizon
+     * @param mixed $motcle1
      */
-    public function setHorizon($horizon): void
+    public function setmotcle1($motcle1): void
     {
-        $this->horizon = $horizon;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getObjet()
-    {
-        return $this->objet;
-    }
-
-    /**
-     * @param mixed $objet
-     */
-    public function setObjet($objet): void
-    {
-        $this->objet = $objet;
+        $this->motcle1 = $motcle1;
     }
 
     /**
      * @return mixed
      */
-    public function getFinalite()
+    public function getmotcle2()
     {
-        return $this->finalite;
+        return $this->motcle2;
     }
 
     /**
-     * @param mixed $finalite
+     * @param mixed $motcle2
      */
-    public function setFinalite($finalite): void
+    public function setmotcle2($motcle2): void
     {
-        $this->finalite = $finalite;
+        $this->motcle2 = $motcle2;
     }
 
     /**
      * @return mixed
      */
-    public function getResultat()
+    public function getmotcle3()
     {
-        return $this->resultat;
+        return $this->motcle3;
     }
 
     /**
-     * @param mixed $resultat
+     * @param mixed $motcle3
      */
-    public function setResultat($resultat): void
+    public function setmotcle3($motcle3): void
     {
-        $this->resultat = $resultat;
+        $this->motcle3 = $motcle3;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getmotcle4()
+    {
+        return $this->motcle4;
+    }
+
+    /**
+     * @param mixed $motcle4
+     */
+    public function setmotcle4($motcle4): void
+    {
+        $this->motcle4 = $motcle4;
     }
 }

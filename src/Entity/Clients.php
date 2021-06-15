@@ -54,6 +54,11 @@ class Clients
         return $this->attr_alt;
     }
 
+    public function getattr_Alt(): ?string
+    {
+        return $this->attr_alt;
+    }
+
     public function setAttrAlt(string $attr_alt): self
     {
         $this->attr_alt = $attr_alt;

@@ -2,9 +2,14 @@
 
 
 namespace App\Controller;
+use App\Repository\BanApprocheRepository;
+use App\Repository\CitationsRepository;
 use App\Repository\ClientsRepository;
 use App\Repository\ContactFormRepository;
 use App\Repository\ContactRepository;
+use App\Repository\LienMenuRepository;
+use App\Repository\MotCleApprocheRepository;
+use App\Repository\MotClefMenuRepository;
 use App\Repository\NotreApprocheRepository;
 use App\Repository\NotreOffreRepository;
 use App\Repository\SliderBanniereRepository;
@@ -24,7 +29,12 @@ class DefaultController extends AbstractController
                           NotreOffreRepository $notreOffreRepository,
                           ClientsRepository $clientsRepository,
                           ContactRepository $contactRepository,
-                          ContactFormRepository $contactFormRepository): Response
+                          ContactFormRepository $contactFormRepository,
+                          BanApprocheRepository $banApprocheRepository,
+                          LienMenuRepository $lienMenuRepository,
+                          MotCleApprocheRepository $motCleApprocheRepository,
+                          MotClefMenuRepository $motClefMenuRepository,
+                          CitationsRepository $citationsRepository): Response
     {
         $slider = $sliderBanniereRepository->findAll();
         $vision = $notreVisionRepository->find(1);
@@ -33,6 +43,11 @@ class DefaultController extends AbstractController
         $clients = $clientsRepository->findAll();
         $contact = $contactRepository->find(1);
         $contactform = $contactFormRepository->findAll();
+        $banapproche = $banApprocheRepository->find(1);
+        $lienmenu = $lienMenuRepository->find(1);
+        $motcleapproche = $motCleApprocheRepository->find(1);
+        $motclemenu = $motClefMenuRepository->find(1);
+        $citations = $citationsRepository->findAll();
 
         return $this->render('defaultpage.html.twig', [
             'slider' => $slider,
@@ -42,11 +57,11 @@ class DefaultController extends AbstractController
             'clients' => $clients,
             'contact' => $contact,
             'formulaire' => $contactform,
+            'banapproche' => $banapproche,
+            'lienmenu' => $lienmenu,
+            'motcleapproche' => $motcleapproche,
+            'motclemenu' => $motclemenu,
+            'citations' => $citations,
         ]);
-
-       /* return $this->render('user/index.html.twig', [
-            'user' => $this->getUser(),
-            'playedgames' => $gameofuser
-        ]); */
     }
 }

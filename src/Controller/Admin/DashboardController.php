@@ -2,9 +2,14 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\BanApproche;
+use App\Entity\Citations;
 use App\Entity\Clients;
 use App\Entity\Contact;
 use App\Entity\ContactForm;
+use App\Entity\LienMenu;
+use App\Entity\MotCleApproche;
+use App\Entity\MotClefMenu;
 use App\Entity\NotreApproche;
 use App\Entity\NotreOffre;
 use App\Entity\NotreVision;
@@ -40,12 +45,17 @@ class DashboardController extends AbstractDashboardController
     {
         return[
             MenuItem::linktoDashboard('Administration', 'fa fa-home'),
-            MenuItem::section('Bannière principale'),
+            MenuItem::section('Haut de page'),
+            MenuItem::linkToCrud('Mots clés du menu', 'fas fa-arrows-alt-h', MotClefMenu::class),
+            MenuItem::linkToCrud('Liens du menu', 'fas fa-arrows-alt-h', LienMenu::class),
             MenuItem::linkToCrud('Slider', 'fas fa-arrows-alt-h', SliderBanniere::class),
             MenuItem::section('Section Vision'),
             MenuItem::linkToCrud('Contenu texte et vidéo', 'fas fa-eye', NotreVision::class),
+            MenuItem::linkToCrud('Citations', 'fas fa-map-signs', Citations::class),
             MenuItem::section('Section Approche'),
             MenuItem::linkToCrud('Menu d\'approche', 'fas fa-map-signs', NotreApproche::class),
+            MenuItem::linkToCrud('Mots clés secondaires d\'approche', 'fas fa-map-signs', MotCleApproche::class),
+            MenuItem::linkToCrud('Bannière d\'approche', 'fas fa-map-signs', BanApproche::class),
             MenuItem::section('Section Offre'),
             MenuItem::linkToCrud('Slider Offre', 'fas fa-gift', NotreOffre::class),
             MenuItem::linkToCrud('Pré-Remplissage Formulaire', 'fas fa-address-card', ContactForm::class),

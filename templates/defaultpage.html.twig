@@ -28,16 +28,16 @@
 </div>
 <header>
     <div class="flex-key">
-        <p></p><p>Performance Globale</p> <p>Excellence Compétitive</p> <p>Transformation Continue</p> <p>Virtuosité Collective</p>
+        <p></p><p>{{ motclemenu.motcle1 }}</p> <p>{{ motclemenu.motcle2 }}</p> <p>{{ motclemenu.motcle3 }}</p> <p>{{ motclemenu.motcle4 }}</p>
     </div>
 </header>
 <nav>
     <ul>
         <li><a class="logo-nav-link"><img class="logo-nav" src="{{ asset('img/interaxys.png') }}" alt="logo"></a></li>
-        <li><a id="presentationlink" href="#presentation"><p>vision</p></a></li>
-        <li><a id="solutionslink" href="#solutions"><p>approche</p></a></li>
-        <li><a id="savoir-fairelink" href="#savoir-faire"><p>offre</p></a></li>
-        <li><a id="contactlink" href="#contact"><p>contact</p></a></li>
+        <li><a id="presentationlink" href="#presentation"><p>{{ lienmenu.lien1 }}</p></a></li>
+        <li><a id="solutionslink" href="#solutions"><p>{{ lienmenu.lien2 }}</p></a></li>
+        <li><a id="savoir-fairelink" href="#savoir-faire"><p>{{ lienmenu.lien3 }}</p></a></li>
+        <li><a id="contactlink" href="#contact"><p>{{ lienmenu.lien4 }}</p></a></li>
     </ul>
 </nav>
 <section id="headerbg">
@@ -81,24 +81,18 @@
                 <div class="pflex">
                     {{ vision.paragraphe2|raw }}
                 </div>
-
-                </div>
+            </div>
         </div>
 
         <div class="bgcitation">
+
             <div class="citations">
+                {% for citation in citations %}
                 <div style="display: none">
-                    <p>« Le modèle de la réduction des coûts nous envoie droit dans le mur ! »</p>
-                    <strong id="nommage">José Gramdi</strong>
+                    <p>« {{ citation.citation|striptags('div') }} »</p>
+                    <strong id="nommage">{{ citation.auteur }}</strong>
                 </div>
-                <div  style="display: none">
-                    <p>« Interaxys c'est donner du pouvoir à la valeur ajoutée ! »</p>
-                    <strong id="nommage">José Gramdi</strong>
-                </div>
-                <div  style="display: none">
-                    <p>« Réinventez l'industrie avec Interaxys ! »</p>
-                    <strong id="nommage">José Gramdi</strong>
-                </div>
+                {% endfor %}
             </div>
         </div>
 
@@ -128,27 +122,26 @@
                     <p>{{ approche.0.description|raw }} </p>
                     <h4>{{ approche.0.mot_clef }}</h4>
                     <ul>
-                        <li><h5>Horizon</h5><h6>{{ approche.0.horizon }}</h6></li>
-                        <li><h5>Objet</h5><h6>{{ approche.0.objet }}</h6></li>
-                        <li><h5>Finalité</h5><h6>{{ approche.0.finalite }}</h6></li>
-                        <li><h5>Résultat</h5><h6>{{ approche.0.resultat }}</h6></li>
+                        <li><h5>{{ motcleapproche.motcle1 }}</h5><h6>{{ approche.0.motcle1 }}</h6></li>
+                        <li><h5>{{ motcleapproche.motcle2 }}</h5><h6>{{ approche.0.motcle2 }}</h6></li>
+                        <li><h5>{{ motcleapproche.motcle3 }}</h5><h6>{{ approche.0.motcle3 }}</h6></li>
+                        <li><h5>{{ motcleapproche.motcle4 }}</h5><h6>{{ approche.0.motcle4 }}</h6></li>
                     </ul>
                 </article>
             </div>
 
-           <div  class="cardsol" id="cardstrat">
+           <div class="cardsol" id="cardstrat">
                 <article>
                     <h3>{{ approche.1.titre }}</h3>
                     <p>{{ approche.1.description|raw }}</p>
                     <h4>{{ approche.1.mot_clef }}</h4>
                     <ul>
-                        <li><h5>Horizon</h5><h6>{{ approche.1.horizon }}</h6></li>
-                        <li><h5>Objet</h5><h6>{{ approche.1.objet }}</h6></li>
-                        <li><h5>Finalité</h5><h6>{{ approche.1.finalite }}</h6></li>
-                        <li><h5>Résultat</h5><h6>{{ approche.1.resultat }}</h6></li>
+                        <li><h5>{{ motcleapproche.motcle1 }}</h5><h6>{{ approche.1.motcle1 }}</h6></li>
+                        <li><h5>{{ motcleapproche.motcle2 }}</h5><h6>{{ approche.1.motcle2 }}</h6></li>
+                        <li><h5>{{ motcleapproche.motcle3 }}</h5><h6>{{ approche.1.motcle3 }}</h6></li>
+                        <li><h5>{{ motcleapproche.motcle4 }}</h5><h6>{{ approche.1.motcle4 }}</h6></li>
                     </ul>
                 </article>
-
             </div>
 
             <div  class="cardsol" id="cardtact">
@@ -157,13 +150,12 @@
                     <p>{{ approche.2.description|raw }}</p>
                     <h4>{{ approche.2.mot_clef }}</h4>
                     <ul>
-                        <li><h5>Horizon</h5><h6>{{ approche.2.horizon }}</h6></li>
-                        <li><h5>Objet</h5><h6>{{ approche.2.objet }}</h6></li>
-                        <li><h5>Finalité</h5><h6>{{ approche.2.finalite }}</h6></li>
-                        <li><h5>Résultat</h5><h6>{{ approche.2.resultat }}</h6></li>
+                        <li><h5>{{ motcleapproche.motcle1 }}</h5><h6>{{ approche.2.motcle1 }}</h6></li>
+                        <li><h5>{{ motcleapproche.motcle2 }}</h5><h6>{{ approche.2.motcle2 }}</h6></li>
+                        <li><h5>{{ motcleapproche.motcle3 }}</h5><h6>{{ approche.2.motcle3 }}</h6></li>
+                        <li><h5>{{ motcleapproche.motcle4 }}</h5><h6>{{ approche.2.motcle4 }}</h6></li>
                     </ul>
                 </article>
-
             </div>
 
             <div class="cardsol" id="cardope">
@@ -172,14 +164,14 @@
                     <p>{{ approche.3.description|raw }}</p>
                     <h4>{{ approche.3.mot_clef }}</h4>
                     <ul>
-                        <li><h5>Horizon</h5><h6>{{ approche.3.horizon }}</h6></li>
-                        <li><h5>Objet</h5><h6>{{ approche.3.objet }}</h6></li>
-                        <li><h5>Finalité</h5><h6>{{ approche.3.finalite }}</h6></li>
-                        <li><h5>Résultat</h5><h6>{{ approche.3.resultat }}</h6></li>
+                        <li><h5>{{ motcleapproche.motcle1 }}</h5><h6>{{ approche.3.motcle1 }}</h6></li>
+                        <li><h5>{{ motcleapproche.motcle2 }}</h5><h6>{{ approche.3.motcle2 }}</h6></li>
+                        <li><h5>{{ motcleapproche.motcle3 }}</h5><h6>{{ approche.3.motcle3 }}</h6></li>
+                        <li><h5>{{ motcleapproche.motcle4 }}</h5><h6>{{ approche.3.motcle4 }}</h6></li>
                     </ul>
                 </article>
             </div>
-            </div>
+        </div>
     </div>
     </div>
 </section>
@@ -187,8 +179,8 @@
 <div class="ban-etoile">
     <canvas id="canvas" height="350" width="350"></canvas>
     <div>
-        <strong class="titreinteraxys">INTERAXYS</strong> <br> <br>
-        <strong>Nouvelles perspectives industrielles</strong>
+        <strong class="titreinteraxys">{{ banapproche.titre }}</strong> <br> <br>
+        <strong>{{ banapproche.soustitre|striptags('div') }}</strong>
     </div>
 </div>
 
@@ -268,20 +260,9 @@
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
-                <div class="swiper-slide"><img src="{{ asset('img/logo-seb.jpg') }}" alt="LOGO1"></div>
-                <div class="swiper-slide"><img src="{{ asset('img/banquefrance.jpg') }}" alt="LOGO2"></div>
-                <div class="swiper-slide"><img src="{{ asset('img/Alcatel.png') }}" alt="LOGO3"></div>
-                <div class="swiper-slide"><img src="{{ asset('img/logoacome.jpg') }}" alt="LOGO4"></div>
-                <div class="swiper-slide"><img src="{{ asset('img/bel.png') }}" alt="LOGO5"></div>
-                <div class="swiper-slide"><img src="{{ asset('img/cma.png') }}" alt="LOGO6"></div>
-                <div class="swiper-slide"><img src="{{ asset('img/ert.png') }}" alt="LOGO7"></div>
-                <div class="swiper-slide"><img src="{{ asset('img/hutchinson.png') }}" alt="LOGO8"></div>
-                <div class="swiper-slide"><img src="{{ asset('img/iconics.png') }}" alt="LOGO9"></div>
-                <div class="swiper-slide"><img src="{{ asset('img/petitjean.png') }}" alt="LOGO10"></div>
-                <div class="swiper-slide"><img src="{{ asset('img/sedis.png') }}" alt="LOGO11"></div>
-                <div class="swiper-slide"><img src="{{ asset('img/sew.png') }}" alt="LOGO12"></div>
-                <div class="swiper-slide"><img src="{{ asset('img/diagoris.jpg') }}" alt="LOGO13"></div>
-                <div class="swiper-slide"><img src="{{ asset('img/UPMC.png') }}" alt="LOGO14"></div>
+                {% for client in clients %}
+                    <div class="swiper-slide"><img src="{{ asset('img/clients/') }}{{ client.image }}" alt="{{ client.attr_alt }}"></div>
+                {% endfor %}
             </div>
         </div>
         </div>
