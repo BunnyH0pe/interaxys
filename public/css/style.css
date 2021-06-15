@@ -39,7 +39,7 @@ body{
 }
 ::-webkit-scrollbar-track {
     background: #1e1e1e;
-    border-left: #E6E6E6 solid 1px ;
+    border-left: #E6E6E6 solid 1px;
 }
 
 /* HEADER */
@@ -283,6 +283,7 @@ h2{
     line-height: 28px;
     color: #E6E6E6;
     font-family: Roboto;
+    text-align: justify;
 }
 
 .bgcitation{
@@ -889,12 +890,16 @@ footer{
 
 }
 
-@media screen and (max-width: 1080px) {
-    nav{
-        width: 100%;
-        left: 0;
+@media screen and (max-width: 1480px) {
+    .cardsol div{
+        font-size: 15px;
     }
+}
 
+@media screen and (max-width: 1200px) {
+    .cardsol div{
+        font-size: 13px;
+    }
 }
 
 #savoir-faire .logoslide{
