@@ -11,7 +11,6 @@ $(document).ready(function (){
     CitationMaker();
     setInterval(CitationMaker,7000);
 
-
     //ANIMATION CITATION
 
     var citation = 1;
