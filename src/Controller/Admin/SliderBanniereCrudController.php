@@ -5,6 +5,7 @@ namespace App\Controller\Admin;
 use App\Entity\SliderBanniere;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
+use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 
@@ -28,7 +29,10 @@ class SliderBanniereCrudController extends AbstractCrudController
         return [
             TextField::new('titre','Titre'),
             TextEditorField::new('soustitre', 'Sous-titre'),
-            TextField::new('image', 'Image'),
+            ImageField::new('image','Image de fond')
+                ->setBasePath('uploads/images/headslider')
+                ->setUploadedFileNamePattern('[randomhash].[extension]')
+                ->setUploadDir('public/uploads/images/headslider')
         ];
     }
 }

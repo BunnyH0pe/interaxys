@@ -32,7 +32,10 @@ class ClientsCrudController extends AbstractCrudController
         return [
             TextField::new('nom_client', 'Nom du client'),
             TextField::new('attr_alt', 'Description de l\'image'),
-            TextareaField::new('imageFile')->setFormType(VichImageType::class),
+            ImageField::new('imageFile','Logo du client')
+                ->setBasePath('uploads/images/clients')
+                ->setUploadedFileNamePattern('[randomhash].[extension]')
+                ->setUploadDir('public/uploads/images/clients'),
             ];
     }
 

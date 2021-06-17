@@ -33,7 +33,7 @@
 </header>
 <nav>
     <ul>
-        <li><a class="logo-nav-link"><img class="logo-nav" src="{{ asset('img/interaxys.png') }}" alt="logo"></a></li>
+        <li><a class="logo-nav-link"><img class="logo-nav" src="{{ asset('uploads/images/menu/' ~ lienmenu.logoImg ) }}" alt="logo"></a></li>
         <li><a id="presentationlink" href="#presentation"><p>{{ lienmenu.lien1 }}</p></a></li>
         <li><a id="solutionslink" href="#solutions"><p>{{ lienmenu.lien2 }}</p></a></li>
         <li><a id="savoir-fairelink" href="#savoir-faire"><p>{{ lienmenu.lien3 }}</p></a></li>
@@ -48,7 +48,7 @@
             <div class="swiper-wrapper">
                 {% for slide in slider %}
                     <div class="swiper-slide">
-                        <div class="sliderslide" style="background-image: url('{{ asset('img/') }}{{ slide.image }}');">
+                        <div class="sliderslide" style="background-image: url('{{ asset('uploads/images/headslider/' ~ slide.image) }}');">
                             <div class="centerslider">
                                 <h1 class="slidertitre" data-glitch="{{ slide.titre }}">{{ slide.titre }}</h1>
                                 <div class="sliderundertitle">{{ slide.soustitre|raw }}</div>
@@ -261,7 +261,7 @@
             <div class="swiper-wrapper">
                 <!-- Slides -->
                 {% for client in clients %}
-                    <div class="swiper-slide"><img src="{{ asset('img/clients/') }}{{ client.image }}" alt="{{ client.attr_alt }}"></div>
+                    <div class="swiper-slide"><img src="{{ asset('uploads/images/clients/' ~ client.imageFile) }}" alt="{{ client.attr_alt }}"></div>
                 {% endfor %}
             </div>
         </div>

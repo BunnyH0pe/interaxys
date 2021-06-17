@@ -38,7 +38,7 @@ class LienMenu
     private $lien4;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $logoImg;
 
