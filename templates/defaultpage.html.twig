@@ -50,7 +50,7 @@
                     <div class="swiper-slide">
                         <div class="sliderslide" style="background-image: url('{{ asset('uploads/images/headslider/' ~ slide.image) }}');">
                             <div class="centerslider">
-                                <h1 class="slidertitre" data-glitch="{{ slide.titre }}">{{ slide.titre }}</h1>
+                                <h2 class="slidertitre" data-glitch="{{ slide.titre }}">{{ slide.titre }}</h2>
                                 <div class="sliderundertitle">{{ slide.soustitre|raw }}</div>
                             </div>
                         </div>
@@ -147,7 +147,7 @@
             <div  class="cardsol" id="cardtact">
                 <article>
                     <h3>{{ approche.2.titre }}</h3>
-                    <p>{{ approche.2.description|raw }}</p>
+                    <p>{{ approche.2.description|striptags('div') }}</p>
                     <h4>{{ approche.2.mot_clef }}</h4>
                     <ul>
                         <li><h5>{{ motcleapproche.motcle1 }}</h5><h6>{{ approche.2.motcle1 }}</h6></li>
@@ -196,11 +196,11 @@
                     <div class="swiper-slide flexswipe">
                         <div>
                             <div class="relative-logo">
-                                <img class="logoslide" src="{{ asset('img/orientation.png') }}" alt="picto orientation">
-                                <h3 id="firsth3">Orientation des modèles d'affaire</h3>
+                                <img class="logoslide" src="{{ asset('uploads/images/slideroffre/' ~ offre.0.image_titre) }}" alt="{{ offre.0.titre }}">
+                                <h3 id="firsth3">{{ offre.0.titre }}</h3>
                             </div>
                             <div class="invisible-text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa cumque dolor ducimus illum, molestias necessitatibus nisi perspiciatis possimus quas quibusdam quisquam reiciendis rerum sed totam velit veniam! Perferendis, quis.</p>
+                                <p>{{ offre.0.description|striptags('div') }}</p>
                                 <button id="button1">Plus d'infos</button>
                                 <input type="hidden" id="hidden1" value="{{ formulaire.0.Message }}">
                             </div>
@@ -209,11 +209,11 @@
                     <div class="swiper-slide flexswipe">
                         <div>
                             <div class="relative-logo">
-                                <img class="logoslide" src="{{ asset('img/gestion.png') }}" alt="picto orientation">
-                                <h3 id="secondh3">Gestion de la performance</h3>
+                                <img class="logoslide" src="{{ asset('uploads/images/slideroffre/' ~ offre.1.image_titre) }}" alt="{{ offre.1.titre }}">
+                                <h3 id="secondh3">{{ offre.1.titre }}</h3>
                             </div>
                             <div class="invisible-text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa cumque dolor ducimus illum, molestias necessitatibus nisi perspiciatis possimus quas quibusdam quisquam reiciendis rerum sed totam velit veniam! Perferendis, quis.</p>
+                                <p>{{ offre.1.description|striptags('div') }}</p>
                                 <button id="button2">Plus d'infos</button>
                                 <input type="hidden" id="hidden2" value="{{ formulaire.1.Message }}">
                             </div>
@@ -222,11 +222,11 @@
                     <div class="swiper-slide flexswipe">
                         <div>
                             <div class="relative-logo">
-                                <img class="logoslide" src="{{ asset('img/manage.png') }}" alt="picto orientation">
-                                <h3 id="thirdh3">Management des opérations</h3>
+                                <img class="logoslide" src="{{ asset('uploads/images/slideroffre/' ~ offre.2.image_titre) }}" alt="{{ offre.2.titre }}">
+                                <h3 id="thirdh3">{{ offre.2.titre }}</h3>
                             </div>
                             <div class="invisible-text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa cumque dolor ducimus illum, molestias necessitatibus nisi perspiciatis possimus quas quibusdam quisquam reiciendis rerum sed totam velit veniam! Perferendis, quis.</p>
+                                <p>{{ offre.2.description|striptags('div') }}</p>
                                 <button id="button3">Plus d'infos</button>
                                 <input type="hidden" id="hidden3" value="{{ formulaire.2.Message }}">
                             </div>
@@ -235,11 +235,11 @@
                     <div class="swiper-slide flexswipe">
                         <div>
                             <div class="relative-logo">
-                                <img class="logoslide" src="{{ asset('img/pilotage.png') }}" alt="picto orientation">
-                                <h3 id="lasth3">Pilotage de l'activité</h3>
+                                <img class="logoslide" src="{{ asset('uploads/images/slideroffre/' ~ offre.3.image_titre) }}" alt="{{ offre.3.titre }}">
+                                <h3 id="lasth3">{{ offre.3.titre }}</h3>
                             </div>
                             <div class="invisible-text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores culpa cumque dolor ducimus illum, molestias necessitatibus nisi perspiciatis possimus quas quibusdam quisquam reiciendis rerum sed totam velit veniam! Perferendis, quis.</p>
+                                <p>{{ offre.3.description|striptags('div') }}</p>
                                 <button id="button4">Plus d'infos</button>
                                 <input type="hidden" id="hidden4" value="{{ formulaire.3.Message }}">
                             </div>
@@ -315,7 +315,7 @@
             <a href="{{ contact.lien_facebook }}"><img id="facebook" src="{{ asset('img/001-facebook.svg') }}" alt="logo facebook"></a>
             <a href="{{ contact.lien_linkedin }}"><img id="linkedin" src="{{ asset('img/010-linkedin.svg') }}" alt="logo linkedin"></a>
             <a href="{{ contact.lien_twitter }}"><img id="twitter" src="{{ asset('img/013-twitter.svg') }}" alt="logo twitter"></a></div>
-        <a class="mentions-legales" href=""><p >Mentions Légales</p></a>
+        <a class="mentions-legales" href="{{ path('mentionslegales') }}"><p >Mentions Légales</p></a>
         <p class="copyright">© Interaxys 2021</p>
     </section>
 </footer>

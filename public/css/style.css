@@ -175,7 +175,7 @@ nav img{
     width: 80%;
 }
 
-.sliderdiv h1 {
+.sliderdiv h2 {
     text-shadow: 4px -4px 0 #94C8EE;
     color: #E6E6E6;
     font-family: Qualy;
@@ -183,7 +183,10 @@ nav img{
     text-align: center;
     letter-spacing: 15px;
     margin-bottom: 10px;
-    animation: textslideanimated1 infinite 10s;
+    text-orientation: initial;
+    writing-mode: initial;
+    position: initial;
+    opacity: 1;
 }
 
 .sliderundertitle div {
@@ -913,7 +916,7 @@ footer{
 
 .flexswipe > div{
     padding: 30px;
-    min-height: 350px;
+    min-height: 300px;
     background-color: #1e1e1e ;
     border:#E6E6E6 2px solid ;
     color: #E6E6E6;
@@ -927,10 +930,6 @@ footer{
     background-color: #E6E6E6;
 }
 
-
-.swiper-container2 .swiper-slide{
-    width: 52% !important;
-}
 
 .invisible-text{
     display: none;
@@ -960,6 +959,10 @@ footer{
     background-position: center;
     background-size: cover;
     height: auto !important;
+}
+
+.swiper-container2 .swiper-slide{
+    transition: opacity 0.6s ease-out;
 }
 
 .swiper-container2 .swiper-button-next,.swiper-container2 .swiper-button-prev {
@@ -996,6 +999,26 @@ footer{
     opacity: 1 !important;
 }
 
+/* Mentions légales */
+
+
+.mention-container{
+    width: 80%;
+    background-color: #1e1e1e;
+    border: solid 2px #E6E6E6;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #E6E6E6;
+    font-family: Roboto;
+    line-height: 36px;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+.mention-container a{
+    color: #94C8EE;
+}
 /* CSS ANIMATIONS */
 
 #preloader {

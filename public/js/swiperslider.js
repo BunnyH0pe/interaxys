@@ -49,16 +49,13 @@ const swiper2 = new Swiper('.swiper-container2', {
     },
     coverflowEffect: {
         slideShadows: false,
-        //rotate: 30,
-        //depth : 200,
-        //stretch :300,
     },
     slideToClickedSlide : true,
     noSwiping: true,
     allowTouchMove:false,
-    speed:400,
-    spaceBetween: -100,
-    slidesPerView: 'auto',
+    speed:600,
+    spaceBetween: 0,
+    slidesPerView: '3',
     centeredSlides:true,
     // Optional parameters
     direction: 'horizontal',
@@ -68,16 +65,22 @@ const swiper2 = new Swiper('.swiper-container2', {
             swiper2.autoplay.stop();
         },
         afterInit: function (){
-            $('#savoir-faire .swiper-slide-active, #savoir-faire .swiper-slide-duplicate-active').find('.logoslide').css('margin','20px auto 20px auto');
-            $('#savoir-faire .swiper-slide-active, #savoir-faire .swiper-slide-duplicate-active').find('.invisible-text').slideDown(500);
+            //$('#savoir-faire .swiper-slide-active, #savoir-faire .swiper-slide-duplicate-active').find('.logoslide').css('margin','20px auto 20px auto');
+            //$('#savoir-faire .swiper-slide-active, #savoir-faire .swiper-slide-duplicate-active').find('.invisible-text').slideDown(500);
+            //$('#savoir-faire .swiper-slide').not('#savoir-faire .swiper-slide-active, #savoir-faire .swiper-slide-duplicate-active, #savoir-faire .swiper-slide-next, #savoir-faire .swiper-slide-duplicate-next, #savoir-faire .swiper-slide-prev, #savoir-faire .swiper-slide-duplicate-prev ').css('opacity','0');
+
         },
         slideChangeTransitionStart: function () {
-            $('#savoir-faire .swiper-slide-active, #savoir-faire .swiper-slide-duplicate-active').find('.logoslide').css('margin','20px auto 20px auto');
-            $('#savoir-faire .swiper-slide-active, #savoir-faire .swiper-slide-duplicate-active').find('.invisible-text').slideDown(500);
-            $('#savoir-faire .swiper-slide-next, #savoir-faire .swiper-slide-duplicate-next').find('.invisible-text').slideUp(400);
-            $('#savoir-faire .swiper-slide-prev, #savoir-faire .swiper-slide-duplicate-prev').find('.invisible-text').slideUp(400);
-            $('#savoir-faire .swiper-slide-next, #savoir-faire .swiper-slide-duplicate-next').find('.logoslide').css('margin','112px auto 20px auto');
-            $('#savoir-faire .swiper-slide-prev, #savoir-faire .swiper-slide-duplicate-prev').find('.logoslide').css('margin','112px auto 20px auto');
+           // $('#savoir-faire .swiper-slide-active, #savoir-faire .swiper-slide-duplicate-active').css('opacity','1');
+            //$('#savoir-faire .swiper-slide-prev, #savoir-faire .swiper-slide-duplicate-prev').css('opacity','1');
+            //$('#savoir-faire .swiper-slide-next, #savoir-faire .swiper-slide-duplicate-next').css('opacity','1');
+            //$('#savoir-faire .swiper-slide').not('#savoir-faire .swiper-slide-active, #savoir-faire .swiper-slide-duplicate-active, #savoir-faire .swiper-slide-next, #savoir-faire .swiper-slide-duplicate-next, #savoir-faire .swiper-slide-prev, #savoir-faire .swiper-slide-duplicate-prev ').css('opacity','0');
+            //$('#savoir-faire .swiper-slide-active, #savoir-faire .swiper-slide-duplicate-active').find('.logoslide').css('margin','20px auto 20px auto');
+            //$('#savoir-faire .swiper-slide-active, #savoir-faire .swiper-slide-duplicate-active').find('.invisible-text').slideDown(500);
+            //$('#savoir-faire .swiper-slide-next, #savoir-faire .swiper-slide-duplicate-next').find('.invisible-text').slideUp(400);
+            //$('#savoir-faire .swiper-slide-prev, #savoir-faire .swiper-slide-duplicate-prev').find('.invisible-text').slideUp(400);
+            //$('#savoir-faire .swiper-slide-next, #savoir-faire .swiper-slide-duplicate-next').find('.logoslide').css('margin','112px auto 20px auto');
+            //$('#savoir-faire .swiper-slide-prev, #savoir-faire .swiper-slide-duplicate-prev').find('.logoslide').css('margin','112px auto 20px auto');
         },
     },
 });
@@ -97,5 +100,4 @@ const swiper3 = new Swiper('.swiper-container3', {
     direction: 'horizontal',
     effect:'slide',
     loop: true,
-
 });

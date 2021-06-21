@@ -23,7 +23,7 @@ class NotreOffre
     private $titre;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $image_titre;
 
@@ -54,6 +54,11 @@ class NotreOffre
     }
 
     public function getImageTitre(): ?string
+    {
+        return $this->image_titre;
+    }
+
+    public function getimage_titre(): ?string
     {
         return $this->image_titre;
     }

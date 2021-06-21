@@ -7,6 +7,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Config\Action;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Actions;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 
@@ -35,8 +36,11 @@ class NotreOffreCrudController extends AbstractCrudController
     {
         return [
             TextField::new('titre'),
-            TextField::new('image_titre', 'Image du titre'),
             TextEditorField::new('description'),
+            ImageField::new('image_titre','Image du titre')
+                ->setBasePath('uploads/images/slideroffre')
+                ->setUploadedFileNamePattern('[randomhash].[extension]')
+                ->setUploadDir('public/uploads/images/slideroffre')
         ];
     }
 }

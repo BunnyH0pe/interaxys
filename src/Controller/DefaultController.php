@@ -21,7 +21,7 @@ use App\Repository\NotreVisionRepository;
 class DefaultController extends AbstractController
 {
     /**
-     * @Route("/defaultpage")
+     * @Route("/defaultpage", name="accueil")
      */
     public function index(NotreVisionRepository $notreVisionRepository,
                           SliderBanniereRepository $sliderBanniereRepository,
@@ -62,6 +62,20 @@ class DefaultController extends AbstractController
             'motcleapproche' => $motcleapproche,
             'motclemenu' => $motclemenu,
             'citations' => $citations,
+        ]);
+    }
+
+    /**
+     * @Route("/mentionslegales",name="mentionslegales")
+     */
+    public function MentionsLegales( LienMenuRepository $lienMenuRepository,  ContactRepository $contactRepository):Response
+    {
+        $lienmenu = $lienMenuRepository->find(1);
+        $contact = $contactRepository->find(1);
+
+        return $this->render('mentionslegales.html.twig',[
+            'lienmenu' => $lienmenu,
+            'contact' => $contact,
         ]);
     }
 }
