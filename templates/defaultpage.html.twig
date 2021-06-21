@@ -310,7 +310,7 @@
 <footer>
     <section id="footer">
         <div class="tel"><img src="{{ asset('img/call.svg') }}" alt="Tel picto"><p>{{ contact.tel }}</p></div>
-        <div class="mail"><img src="{{ asset('img/email.svg') }}" alt="Mail picto"><p>{{ contact.email }}</p></div>
+        <div class="mail"><img src="{{ asset('img/email.svg') }}" alt="Mail picto"><a href="mailto:{{ contact.email }}">{{ contact.email }}</a></div>
         <div class="reseaux-sociaux">
             <a href="{{ contact.lien_facebook }}"><img id="facebook" src="{{ asset('img/001-facebook.svg') }}" alt="logo facebook"></a>
             <a href="{{ contact.lien_linkedin }}"><img id="linkedin" src="{{ asset('img/010-linkedin.svg') }}" alt="logo linkedin"></a>
