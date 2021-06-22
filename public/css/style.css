@@ -1104,6 +1104,20 @@ footer{
 
 }
 
+@media screen and (max-width: 420px){
+
+    .sliderdiv h2{
+        font-size: 24px;
+        text-shadow: 1px -1px 0 #94C8EE;
+    }
+
+    .sliderundertitle div{
+        font-size: 12px;
+        width: 100%;
+        line-height: 22px;
+    }
+}
+
 #savoir-faire .logoslide{
     width: 50%;
     display: block;
