@@ -1087,12 +1087,15 @@ footer{
     }
 
     .flexcolumncat{
-        height: 50px;
+        flex-wrap: wrap;
+        height: initial;
     }
 
     .flexcolumncat div{
         height: 50px;
-        width: 20%;
+        margin-bottom: 10px;
+        width: 48%;
+        font-size: 18px !important;
     }
 
     .cardsol h3{
@@ -1114,7 +1117,7 @@ footer{
     }
 
     #solutions{
-        min-height: 1000px;
+        min-height: 1100px;
     }
 
     .flexcolumncat div{
