@@ -1058,8 +1058,9 @@ footer{
     }
 
     .sliderdiv h2{
-        font-size: 28px;
+        font-size: 32px;
         text-shadow: 1px -1px 0 #94C8EE;
+        letter-spacing: 6px;
     }
 
     .sliderundertitle div{
@@ -1106,9 +1107,14 @@ footer{
 
 @media screen and (max-width: 420px){
 
+    #headerbg{
+        height: 400px;
+    }
+
     .sliderdiv h2{
-        font-size: 24px;
+        font-size: 26px;
         text-shadow: 1px -1px 0 #94C8EE;
+        letter-spacing: 5px;
     }
 
     .sliderundertitle div{
