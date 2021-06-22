@@ -907,6 +907,31 @@ footer{
 }
 
 @media screen and (max-width: 960px){
+
+    iframe{
+        width: 680px;
+        height: 380px;
+    }
+
+
+    .swiper-button-next{
+        --swiper-navigation-size: 60px !important;
+    }
+    .swiper-button-prev{
+        --swiper-navigation-size: 60px !important;
+    }
+
+
+
+    .sliderdiv h2{
+        font-size: 80px;
+    }
+
+    .sliderundertitle div{
+        font-size: 24px;
+        width: 100%;
+    }
+
     .flex-solution{
         flex-direction: column;
     }
@@ -915,6 +940,7 @@ footer{
         width: 100%;
         flex-direction: row;
         height: 80px;
+        gap: 0;
     }
 
     .flexcolumncat div{
@@ -922,9 +948,147 @@ footer{
         width: 20%;
     }
 
+    .flexcolumncat{
+        height: 80px;
+    }
+
     .cardsol h3{
         font-size: 30px;
         margin-top: 10px;
+    }
+
+    .cardsol article{
+        height: 90%;
+    }
+
+    #solutions{
+        min-height: 800px;
+    }
+
+    .flexcolumncat div{
+        font-size: 1.5vw;
+    }
+
+}
+
+@media screen and (max-width: 780px){
+
+    iframe{
+        width: 480px;
+        height: 269px;
+    }
+
+
+    #headerbg{
+        height: 700px;
+    }
+
+    .swiper-button-next{
+        --swiper-navigation-size: 40px !important;
+    }
+    .swiper-button-prev{
+        --swiper-navigation-size: 40px !important;
+    }
+
+    .sliderdiv h2{
+        font-size: 60px;
+    }
+
+    .sliderundertitle div{
+        font-size: 18px;
+        width: 100%;
+    }
+
+    .bgcitation{
+        height: 300px;
+    }
+
+    .presentation-video{
+        height: 500px;
+        min-height: initial;
+        max-height: initial;
+    }
+
+    .flex-solution{
+        gap: 20px;
+    }
+
+    .flexcolumncat div{
+        height: 60px;
+        width: 20%;
+    }
+
+    .flexcolumncat{
+        height: 60px;
+    }
+
+    .cardsol h3{
+        font-size: 30px;
+        margin-top: 10px;
+    }
+
+    .cardsol article{
+        height: 90%;
+    }
+
+    #solutions{
+        min-height: 800px;
+    }
+
+    .flexcolumncat div{
+        font-size: 1.5vw;
+    }
+
+}
+
+@media screen and (max-width: 520px){
+
+    iframe{
+        width: 280px;
+        height: 157px;
+    }
+
+    .presentation-video{
+        height: 300px;
+    }
+
+    #headerbg{
+        height: 500px;
+    }
+
+    .sliderdiv h2{
+        font-size: 40px;
+    }
+
+    .sliderundertitle div{
+        font-size: 16px;
+        width: 100%;
+    }
+
+    .bgcitation{
+        height: 200px;
+    }
+
+    .flex-solution{
+        gap: 20px;
+    }
+
+    .flexcolumncat{
+        height: 50px;
+    }
+
+    .flexcolumncat div{
+        height: 50px;
+        width: 20%;
+    }
+
+    .cardsol h3{
+        font-size: 30px;
+        margin-top: 10px;
+    }
+
+    .cardsol article{
+        height: 90%;
     }
 
     #solutions{
