@@ -925,6 +925,7 @@ footer{
 
     .sliderdiv h2{
         font-size: 80px;
+        text-shadow: 3px -3px 0 #94C8EE;
     }
 
     .sliderundertitle div{
@@ -1058,6 +1059,7 @@ footer{
 
     .sliderdiv h2{
         font-size: 28px;
+        text-shadow: 1px -1px 0 #94C8EE;
     }
 
     .sliderundertitle div{
