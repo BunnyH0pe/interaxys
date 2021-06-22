@@ -1069,6 +1069,15 @@ footer{
         line-height: 22px;
     }
 
+    .cardsol ul{
+        flex-wrap: wrap;
+    }
+
+    .cardsol ul>li{
+        width: 50%;
+        margin-bottom: 10px;
+    }
+
     .bgcitation{
         height: 200px;
     }
@@ -1091,12 +1100,21 @@ footer{
         margin-top: 10px;
     }
 
+    .cardsol h5{
+        font-size: 18px;
+    }
+
+
+    .cardsol h6 {
+        font-size: 16px;
+    }
+
     .cardsol article{
-        height: 90%;
+        height: 95%;
     }
 
     #solutions{
-        min-height: 800px;
+        min-height: 1000px;
     }
 
     .flexcolumncat div{
