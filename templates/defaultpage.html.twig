@@ -41,297 +41,308 @@
         <li><a id="contactlink" href="#contact"><p>{{ lienmenu.lien4 }}</p></a></li>
     </ul>
 </nav>
-<section id="headerbg">
-    <div class="sliderdiv">
-        <!-- Slider main container -->
-        <div class="swiper-container">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                {% for slide in slider %}
-                    <div class="swiper-slide">
-                        <div class="sliderslide" style="background-image: url('{{ asset('uploads/images/headslider/' ~ slide.image) }}');">
-                            <div class="centerslider">
-                                <h2 class="slidertitre" data-glitch="{{ slide.titre }}">{{ slide.titre }}</h2>
-                                <div class="sliderundertitle">{{ slide.soustitre|raw }}</div>
+<div class="content-page">
+    <div class="menumobile">
+        <div class="flexmobile">
+        <img class="logo-nav-mob" src="{{ asset('uploads/images/menu/' ~ lienmenu.logoImg ) }}" alt="logo">
+        <div class="menu-btn">
+            <div class="menu-btn__burger">
+            </div>
+        </div>
+        </div>
+        <div class="mobilenav">
+            <ul>
+                <li><a href="#presentation"><p>{{ lienmenu.lien1 }}</p></a></li>
+                <li><a href="#solutions"><p>{{ lienmenu.lien2 }}</p></a></li>
+                <li><a href="#savoir-faire"><p>{{ lienmenu.lien3 }}</p></a></li>
+                <li><a href="#contact"><p>{{ lienmenu.lien4 }}</p></a></li>
+            </ul>
+        </div>
+    </div>
+    <section id="headerbg">
+        <div class="sliderdiv">
+            <!-- Slider main container -->
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    {% for slide in slider %}
+                        <div class="swiper-slide">
+                            <div class="sliderslide" style="background-image: url('{{ asset('uploads/images/headslider/' ~ slide.image) }}');">
+                                <div class="centerslider">
+                                    <h2 class="slidertitre" data-glitch="{{ slide.titre }}">{{ slide.titre }}</h2>
+                                    <div class="sliderundertitle">{{ slide.soustitre|raw }}</div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="presentation">
+        <article>
+            <div class="premierepresentation">
+                <div class="sectionlimit">
+                    <h2>Notre vision</h2>
+                    <div class="doubleflex">
+                        <div class="textpresentation">
+                            {{ vision.paragraphe1|raw }}
+                        </div>
+                        <img id="imgtourne" src="{{ asset('img/formegeo1.svg') }}" alt="forme geométrique 1">
+                    </div>
+                    <div class="pflex">
+                        {{ vision.paragraphe2|raw }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="bgcitation">
+
+                <div class="citations">
+                    {% for citation in citations %}
+                    <div style="display: none">
+                        <p>« {{ citation.citation|striptags('div') }} »</p>
+                        <strong id="nommage">{{ citation.auteur }}</strong>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+
+            <div class="presentation-video">
+                <iframe width="907" height="510" src="{{ vision.lienvideo }}"
+                        title="YouTube video player" frameborder="0" allow="accelerometer;
+                         autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+            </div>
+        </article>
+    </section>
+    <section id="solutions">
+        <div class="sectionlimit">
+            <h2>Notre approche</h2>
+            <div class="flex-solution">
+                <div class="flexcolumncat">
+                    <div id="philo"><p>{{ approche.0.texte_bouton }}</p></div>
+                    <div id="strat"><p>{{ approche.1.texte_bouton }}</p></div>
+                    <div id="tact"><p>{{ approche.2.texte_bouton }}</p></div>
+                    <div id="ope"><p>{{ approche.3.texte_bouton }}</p></div>
+                </div>
+                <div class="safecard">
+                <div class="cardsol" id="cardphilo">
+                    <article>
+                        <h3>{{ approche.0.titre }}</h3>
+                        <p>{{ approche.0.description|raw }} </p>
+                        <h4>{{ approche.0.mot_clef }}</h4>
+                        <ul>
+                            <li><h5>{{ motcleapproche.motcle1 }}</h5><h6>{{ approche.0.motcle1 }}</h6></li>
+                            <li><h5>{{ motcleapproche.motcle2 }}</h5><h6>{{ approche.0.motcle2 }}</h6></li>
+                            <li><h5>{{ motcleapproche.motcle3 }}</h5><h6>{{ approche.0.motcle3 }}</h6></li>
+                            <li><h5>{{ motcleapproche.motcle4 }}</h5><h6>{{ approche.0.motcle4 }}</h6></li>
+                        </ul>
+                    </article>
+                </div>
+
+               <div class="cardsol" id="cardstrat">
+                    <article>
+                        <h3>{{ approche.1.titre }}</h3>
+                        <p>{{ approche.1.description|raw }}</p>
+                        <h4>{{ approche.1.mot_clef }}</h4>
+                        <ul>
+                            <li><h5>{{ motcleapproche.motcle1 }}</h5><h6>{{ approche.1.motcle1 }}</h6></li>
+                            <li><h5>{{ motcleapproche.motcle2 }}</h5><h6>{{ approche.1.motcle2 }}</h6></li>
+                            <li><h5>{{ motcleapproche.motcle3 }}</h5><h6>{{ approche.1.motcle3 }}</h6></li>
+                            <li><h5>{{ motcleapproche.motcle4 }}</h5><h6>{{ approche.1.motcle4 }}</h6></li>
+                        </ul>
+                    </article>
+                </div>
+
+                <div  class="cardsol" id="cardtact">
+                    <article>
+                        <h3>{{ approche.2.titre }}</h3>
+                        <p>{{ approche.2.description|raw }}</p>
+                        <h4>{{ approche.2.mot_clef }}</h4>
+                        <ul>
+                            <li><h5>{{ motcleapproche.motcle1 }}</h5><h6>{{ approche.2.motcle1 }}</h6></li>
+                            <li><h5>{{ motcleapproche.motcle2 }}</h5><h6>{{ approche.2.motcle2 }}</h6></li>
+                            <li><h5>{{ motcleapproche.motcle3 }}</h5><h6>{{ approche.2.motcle3 }}</h6></li>
+                            <li><h5>{{ motcleapproche.motcle4 }}</h5><h6>{{ approche.2.motcle4 }}</h6></li>
+                        </ul>
+                    </article>
+                </div>
+
+                <div class="cardsol" id="cardope">
+                    <article>
+                        <h3>{{ approche.3.titre }}</h3>
+                        <p>{{ approche.3.description|raw }}</p>
+                        <h4>{{ approche.3.mot_clef }}</h4>
+                        <ul>
+                            <li><h5>{{ motcleapproche.motcle1 }}</h5><h6>{{ approche.3.motcle1 }}</h6></li>
+                            <li><h5>{{ motcleapproche.motcle2 }}</h5><h6>{{ approche.3.motcle2 }}</h6></li>
+                            <li><h5>{{ motcleapproche.motcle3 }}</h5><h6>{{ approche.3.motcle3 }}</h6></li>
+                            <li><h5>{{ motcleapproche.motcle4 }}</h5><h6>{{ approche.3.motcle4 }}</h6></li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <div class="ban-etoile">
+        <canvas id="canvas" height="350" width="350"></canvas>
+        <div>
+            <strong class="titreinteraxys">{{ banapproche.titre }}</strong> <br> <br>
+            <strong>{{ banapproche.soustitre|striptags('div') }}</strong>
+        </div>
+    </div>
+
+    <section id="savoir-faire">
+        <div class="sectionlimit">
+          <h2>notre offre</h2>
+            <div class="alignswipecenter">
+                <!-- Slider main container -->
+                <div class="swiper-container2">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide flexswipe">
+                            <div>
+                                <div class="relative-logo">
+                                    <img class="logoslide" src="{{ asset('uploads/images/slideroffre/' ~ offre.0.image_titre) }}" alt="{{ offre.0.titre }}">
+                                    <h3 id="firsth3">{{ offre.0.titre }}</h3>
+                                </div>
+                                <div class="invisible-text">
+                                    <p>{{ offre.0.description|striptags('div') }}</p>
+                                    <button id="button1">Plus d'infos</button>
+                                    <input type="hidden" id="hidden1" value="{{ formulaire.0.Message }}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide flexswipe">
+                            <div>
+                                <div class="relative-logo">
+                                    <img class="logoslide" src="{{ asset('uploads/images/slideroffre/' ~ offre.1.image_titre) }}" alt="{{ offre.1.titre }}">
+                                    <h3 id="secondh3">{{ offre.1.titre }}</h3>
+                                </div>
+                                <div class="invisible-text">
+                                    <p>{{ offre.1.description|striptags('div') }}</p>
+                                    <button id="button2">Plus d'infos</button>
+                                    <input type="hidden" id="hidden2" value="{{ formulaire.1.Message }}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide flexswipe">
+                            <div>
+                                <div class="relative-logo">
+                                    <img class="logoslide" src="{{ asset('uploads/images/slideroffre/' ~ offre.2.image_titre) }}" alt="{{ offre.2.titre }}">
+                                    <h3 id="thirdh3">{{ offre.2.titre }}</h3>
+                                </div>
+                                <div class="invisible-text">
+                                    <p>{{ offre.2.description|striptags('div') }}</p>
+                                    <button id="button3">Plus d'infos</button>
+                                    <input type="hidden" id="hidden3" value="{{ formulaire.2.Message }}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide flexswipe">
+                            <div>
+                                <div class="relative-logo">
+                                    <img class="logoslide" src="{{ asset('uploads/images/slideroffre/' ~ offre.3.image_titre) }}" alt="{{ offre.3.titre }}">
+                                    <h3 id="lasth3">{{ offre.3.titre }}</h3>
+                                </div>
+                                <div class="invisible-text">
+                                    <p>{{ offre.3.description|striptags('div') }}</p>
+                                    <button id="button4">Plus d'infos</button>
+                                    <input type="hidden" id="hidden4" value="{{ formulaire.3.Message }}">
+                                </div>
                             </div>
                         </div>
                     </div>
-                {% endfor %}
+                </div>
             </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id="presentation">
-    <article>
-        <div class="premierepresentation">
+    <section id="clients">
+        <h2>NOS CLIENTS</h2>
+        <div class="flexclient">
             <div class="sectionlimit">
-                <h2>Notre vision</h2>
-                <div class="doubleflex">
-                    <div class="textpresentation">
-                        {{ vision.paragraphe1|raw }}
-                    </div>
-                    <img id="imgtourne" src="{{ asset('img/formegeo1.svg') }}" alt="forme geométrique 1">
-                </div>
-                <div class="pflex">
-                    {{ vision.paragraphe2|raw }}
-                </div>
-            </div>
-        </div>
-
-        <div class="bgcitation">
-
-            <div class="citations">
-                {% for citation in citations %}
-                <div style="display: none">
-                    <p>« {{ citation.citation|striptags('div') }} »</p>
-                    <strong id="nommage">{{ citation.auteur }}</strong>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-
-
-        <div class="presentation-video">
-            <iframe width="907" height="510" src="{{ vision.lienvideo }}"
-                    title="YouTube video player" frameborder="0" allow="accelerometer;
-                     autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-            </iframe>
-        </div>
-    </article>
-</section>
-<section id="solutions">
-    <div class="sectionlimit">
-        <h2>Notre approche</h2>
-        <div class="flex-solution">
-            <div class="flexcolumncat">
-                <div id="philo"><p>{{ approche.0.texte_bouton }}</p></div>
-                <div id="strat"><p>{{ approche.1.texte_bouton }}</p></div>
-                <div id="tact"><p>{{ approche.2.texte_bouton }}</p></div>
-                <div id="ope"><p>{{ approche.3.texte_bouton }}</p></div>
-            </div>
-            <div class="safecard">
-            <div class="cardsol" id="cardphilo">
-                <article>
-                    <h3>{{ approche.0.titre }}</h3>
-                    <p>{{ approche.0.description|raw }} </p>
-                    <h4>{{ approche.0.mot_clef }}</h4>
-                    <ul>
-                        <li><h5>{{ motcleapproche.motcle1 }}</h5><h6>{{ approche.0.motcle1 }}</h6></li>
-                        <li><h5>{{ motcleapproche.motcle2 }}</h5><h6>{{ approche.0.motcle2 }}</h6></li>
-                        <li><h5>{{ motcleapproche.motcle3 }}</h5><h6>{{ approche.0.motcle3 }}</h6></li>
-                        <li><h5>{{ motcleapproche.motcle4 }}</h5><h6>{{ approche.0.motcle4 }}</h6></li>
-                    </ul>
-                </article>
-            </div>
-
-           <div class="cardsol" id="cardstrat">
-                <article>
-                    <h3>{{ approche.1.titre }}</h3>
-                    <p>{{ approche.1.description|raw }}</p>
-                    <h4>{{ approche.1.mot_clef }}</h4>
-                    <ul>
-                        <li><h5>{{ motcleapproche.motcle1 }}</h5><h6>{{ approche.1.motcle1 }}</h6></li>
-                        <li><h5>{{ motcleapproche.motcle2 }}</h5><h6>{{ approche.1.motcle2 }}</h6></li>
-                        <li><h5>{{ motcleapproche.motcle3 }}</h5><h6>{{ approche.1.motcle3 }}</h6></li>
-                        <li><h5>{{ motcleapproche.motcle4 }}</h5><h6>{{ approche.1.motcle4 }}</h6></li>
-                    </ul>
-                </article>
-            </div>
-
-            <div  class="cardsol" id="cardtact">
-                <article>
-                    <h3>{{ approche.2.titre }}</h3>
-                    <p>{{ approche.2.description|raw }}</p>
-                    <h4>{{ approche.2.mot_clef }}</h4>
-                    <ul>
-                        <li><h5>{{ motcleapproche.motcle1 }}</h5><h6>{{ approche.2.motcle1 }}</h6></li>
-                        <li><h5>{{ motcleapproche.motcle2 }}</h5><h6>{{ approche.2.motcle2 }}</h6></li>
-                        <li><h5>{{ motcleapproche.motcle3 }}</h5><h6>{{ approche.2.motcle3 }}</h6></li>
-                        <li><h5>{{ motcleapproche.motcle4 }}</h5><h6>{{ approche.2.motcle4 }}</h6></li>
-                    </ul>
-                </article>
-            </div>
-
-            <div class="cardsol" id="cardope">
-                <article>
-                    <h3>{{ approche.3.titre }}</h3>
-                    <p>{{ approche.3.description|raw }}</p>
-                    <h4>{{ approche.3.mot_clef }}</h4>
-                    <ul>
-                        <li><h5>{{ motcleapproche.motcle1 }}</h5><h6>{{ approche.3.motcle1 }}</h6></li>
-                        <li><h5>{{ motcleapproche.motcle2 }}</h5><h6>{{ approche.3.motcle2 }}</h6></li>
-                        <li><h5>{{ motcleapproche.motcle3 }}</h5><h6>{{ approche.3.motcle3 }}</h6></li>
-                        <li><h5>{{ motcleapproche.motcle4 }}</h5><h6>{{ approche.3.motcle4 }}</h6></li>
-                    </ul>
-                </article>
-            </div>
-        </div>
-    </div>
-    </div>
-</section>
-
-<div class="ban-etoile">
-    <canvas id="canvas" height="350" width="350"></canvas>
-    <div>
-        <strong class="titreinteraxys">{{ banapproche.titre }}</strong> <br> <br>
-        <strong>{{ banapproche.soustitre|striptags('div') }}</strong>
-    </div>
-</div>
-
-<section id="savoir-faire">
-    <div class="sectionlimit">
-      <h2>notre offre</h2>
-        <div class="alignswipecenter">
             <!-- Slider main container -->
-            <div class="swiper-container2">
+            <div class="swiper-container3">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
-                    <div class="swiper-slide flexswipe">
-                        <div>
-                            <div class="relative-logo">
-                                <img class="logoslide" src="{{ asset('uploads/images/slideroffre/' ~ offre.0.image_titre) }}" alt="{{ offre.0.titre }}">
-                                <h3 id="firsth3">{{ offre.0.titre }}</h3>
-                            </div>
-                            <div class="invisible-text">
-                                <p>{{ offre.0.description|striptags('div') }}</p>
-                                <button id="button1">Plus d'infos</button>
-                                <input type="hidden" id="hidden1" value="{{ formulaire.0.Message }}">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide flexswipe">
-                        <div>
-                            <div class="relative-logo">
-                                <img class="logoslide" src="{{ asset('uploads/images/slideroffre/' ~ offre.1.image_titre) }}" alt="{{ offre.1.titre }}">
-                                <h3 id="secondh3">{{ offre.1.titre }}</h3>
-                            </div>
-                            <div class="invisible-text">
-                                <p>{{ offre.1.description|striptags('div') }}</p>
-                                <button id="button2">Plus d'infos</button>
-                                <input type="hidden" id="hidden2" value="{{ formulaire.1.Message }}">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide flexswipe">
-                        <div>
-                            <div class="relative-logo">
-                                <img class="logoslide" src="{{ asset('uploads/images/slideroffre/' ~ offre.2.image_titre) }}" alt="{{ offre.2.titre }}">
-                                <h3 id="thirdh3">{{ offre.2.titre }}</h3>
-                            </div>
-                            <div class="invisible-text">
-                                <p>{{ offre.2.description|striptags('div') }}</p>
-                                <button id="button3">Plus d'infos</button>
-                                <input type="hidden" id="hidden3" value="{{ formulaire.2.Message }}">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide flexswipe">
-                        <div>
-                            <div class="relative-logo">
-                                <img class="logoslide" src="{{ asset('uploads/images/slideroffre/' ~ offre.3.image_titre) }}" alt="{{ offre.3.titre }}">
-                                <h3 id="lasth3">{{ offre.3.titre }}</h3>
-                            </div>
-                            <div class="invisible-text">
-                                <p>{{ offre.3.description|striptags('div') }}</p>
-                                <button id="button4">Plus d'infos</button>
-                                <input type="hidden" id="hidden4" value="{{ formulaire.3.Message }}">
-                            </div>
-                        </div>
-                    </div>
+                    {% for client in clients %}
+                        <div class="swiper-slide"><img src="{{ asset('uploads/images/clients/' ~ client.imageFile) }}" alt="{{ client.attr_alt }}"></div>
+                    {% endfor %}
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-
-<section id="clients">
-    <h2>NOS CLIENTS</h2>
-    <div class="flexclient">
-        <div class="sectionlimit">
-        <!-- Slider main container -->
-        <div class="swiper-container3">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                {% for client in clients %}
-                    <div class="swiper-slide"><img src="{{ asset('uploads/images/clients/' ~ client.imageFile) }}" alt="{{ client.attr_alt }}"></div>
-                {% endfor %}
             </div>
         </div>
-        </div>
-    </div>
-</section>
-
-<section id="contact">
-    <div class="sectionlimit">
-        <h2>NOUS CONTACTER</h2>
-        <div class="formulaire">
-            <form action="" method="post">
-                <div class="flexline">
-                    <div class="firstflexform">
-                        <div class="geometrieconteneur">
-                            <input id="nom" type="text" nom="nom" placeholder="NOM" required>
-                        </div>
-                        <div class="geometrieconteneur">
-                            <input id="prenom" type="text" name="prenom" placeholder="PRENOM" required>
-                        </div>
-                    </div>
-                    <div class="secondflexform">
-                        <div class="geometrieconteneur">
-                            <input id="email" type="email" name="email" placeholder="EMAIL" required>
-                        </div>
-                        <div class="geometrieconteneur">
-                            <input id="tel" type="text" name="tel" placeholder="TEL" required>
-                        </div>
-                    </div>
-                </div>
-                <div class="geometrieconteneur geometrieconteneurobjet">
-                    <input id="objet" type="text" name="objet" placeholder="OBJET" required>
-                </div>
-
-                <div class="geometrieconteneur geometrieconteneurarea">
-                    <textarea style="resize: none" name="" id="message" cols="30" rows="10" required placeholder="Votre message..."></textarea>
-                </div>
-                <div class="btn-right">
-                        <input type="submit" value="VALIDER">
-                </div>
-            </form>
-        </div>
-    </div>
-
-</section>
-<footer>
-    <section id="footer">
-        <div class="tel"><img src="{{ asset('img/call.svg') }}" alt="Tel picto"><p>{{ contact.tel }}</p></div>
-        <div class="mail"><img src="{{ asset('img/email.svg') }}" alt="Mail picto"><a href="mailto:{{ contact.email }}">{{ contact.email }}</a></div>
-        <div class="reseaux-sociaux">
-            <a href="{{ contact.lien_facebook }}"><img id="facebook" src="{{ asset('img/001-facebook.svg') }}" alt="logo facebook"></a>
-            <a href="{{ contact.lien_linkedin }}"><img id="linkedin" src="{{ asset('img/010-linkedin.svg') }}" alt="logo linkedin"></a>
-            <a href="{{ contact.lien_twitter }}"><img id="twitter" src="{{ asset('img/013-twitter.svg') }}" alt="logo twitter"></a></div>
-        <a class="mentions-legales" href="{{ path('mentionslegales') }}"><p >Mentions Légales</p></a>
-        <p class="copyright">© Interaxys 2021</p>
     </section>
-</footer>
+
+    <section id="contact">
+        <div class="sectionlimit">
+            <h2>NOUS CONTACTER</h2>
+            <div class="formulaire">
+                <form action="" method="post">
+                    <div class="flexline">
+                        <div class="firstflexform">
+                            <div class="geometrieconteneur">
+                                <input id="nom" type="text" nom="nom" placeholder="NOM" required>
+                            </div>
+                            <div class="geometrieconteneur">
+                                <input id="prenom" type="text" name="prenom" placeholder="PRENOM" required>
+                            </div>
+                        </div>
+                        <div class="secondflexform">
+                            <div class="geometrieconteneur">
+                                <input id="email" type="email" name="email" placeholder="EMAIL" required>
+                            </div>
+                            <div class="geometrieconteneur">
+                                <input id="tel" type="text" name="tel" placeholder="TEL" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="geometrieconteneur geometrieconteneurobjet">
+                        <input id="objet" type="text" name="objet" placeholder="OBJET" required>
+                    </div>
+
+                    <div class="geometrieconteneur geometrieconteneurarea">
+                        <textarea style="resize: none" name="" id="message" cols="30" rows="10" required placeholder="Votre message..."></textarea>
+                    </div>
+                    <div class="btn-right">
+                            <input type="submit" value="VALIDER">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </section>
+    <footer>
+        <section id="footer">
+            <div class="tel"><img src="{{ asset('img/call.svg') }}" alt="Tel picto"><p>{{ contact.tel }}</p></div>
+            <div class="mail"><img src="{{ asset('img/email.svg') }}" alt="Mail picto"><a href="mailto:{{ contact.email }}">{{ contact.email }}</a></div>
+            <div class="reseaux-sociaux">
+                <a href="{{ contact.lien_facebook }}"><img id="facebook" src="{{ asset('img/001-facebook.svg') }}" alt="logo facebook"></a>
+                <a href="{{ contact.lien_linkedin }}"><img id="linkedin" src="{{ asset('img/010-linkedin.svg') }}" alt="logo linkedin"></a>
+                <a href="{{ contact.lien_twitter }}"><img id="twitter" src="{{ asset('img/013-twitter.svg') }}" alt="logo twitter"></a></div>
+            <a class="mentions-legales" href="{{ path('mentionslegales') }}"><p >Mentions Légales</p></a>
+            <p class="copyright">© Interaxys 2021</p>
+        </section>
+    </footer>
+</div>
 
 <script src="{{ asset('js/script.js') }}"></script>
 <script src="{{ asset('js/animatedball.js') }}"></script>
 <script src="{{ asset('js/swiperslider.js') }}"></script>
 <script src="{{ asset('js/jquery.nicescroll.min.js') }}"></script>
-<script>
-    $(document).ready(function (){
-        $("body").niceScroll({
-            cursorwidth:'0px',
-            cursorborder: '0px',
-        });
-    });
-</script>
 </body>
 </html>

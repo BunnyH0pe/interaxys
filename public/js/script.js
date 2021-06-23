@@ -6,6 +6,27 @@ $(window).on('load', function () {
 })
 
 $(document).ready(function (){
+
+    $('.menu-btn').on('click', function (){
+       console.log('clicked')
+    })
+
+    const menuBtn = document.querySelector('.menu-btn');
+    let menuOpen = false;
+    menuBtn.addEventListener('click', () => {
+        if(!menuOpen) {
+            menuBtn.classList.add('open');
+            menuOpen = true;
+            $('.mobilenav').css('margin-left','0px');
+        } else {
+            $('.mobilenav').css('margin-left','100vw');
+            menuBtn.classList.remove('open');
+            menuOpen = false;
+        }
+    });
+
+
+    console.log('ça marche !')
     $('.cardsol').hide();
     $('#cardphilo').show();
     CitationMaker();
