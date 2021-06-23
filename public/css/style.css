@@ -904,6 +904,90 @@ footer{
         font-size: 13px;
         line-height: 23px;
     }
+
+    #footer{
+        font-size: 12px !important;
+    }
+
+}
+
+@media screen and (max-width: 1054px){
+    .firstflexform{
+        margin-bottom: 50px;
+        margin-right: 0;
+        width: 100%;
+    }
+
+    .formulaire input{
+        width: 100%;
+    }
+
+    #contact{
+        height: 920px;
+        min-height: initial;
+    }
+
+    footer{
+        height: initial;
+    }
+
+    #footer{
+        flex-wrap: wrap;
+        height: initial;
+        gap: 0;
+        font-size: 20px !important;
+    }
+
+    .mail, .tel, .mentions-legales, .copyright {
+        width: 49.5%;
+    }
+
+    .mail, .copyright{
+        text-align: right;
+    }
+
+    .tel, .mentions-legales{
+        text-align: left;
+    }
+
+    .copyright, .mentions-legales{
+        padding-bottom: 20px;
+        padding-top: 5px;
+    }
+
+    .tel{
+        justify-content: left;
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+
+    .mail{
+        justify-content: flex-end;
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+
+    .reseaux-sociaux{
+        width: 100%;
+    }
+
+    .reseaux-sociaux img{
+        width: 50px;
+        height: 50px;
+    }
+
+    .reseaux-sociaux a{
+        width: 50px;
+        height: 50px;
+    }
+
+    .flexline{
+        flex-direction: column;
+    }
+
+    .geometrieconteneur{
+        width: 100% !important;
+    }
 }
 
 @media screen and (max-width: 960px){
@@ -974,6 +1058,12 @@ footer{
 
 @media screen and (max-width: 780px){
 
+    #canvas{
+        width: 300px;
+        height: 300px;
+        margin-left: -18%;
+    }
+
     iframe{
         width: 480px;
         height: 269px;
@@ -1043,6 +1133,19 @@ footer{
 }
 
 @media screen and (max-width: 520px){
+
+    .mail, .tel, .mentions-legales, .copyright{
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+
+    .reseaux-sociaux {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
 
     iframe{
         width: 280px;
@@ -1120,6 +1223,28 @@ footer{
         min-height: 1100px;
     }
 
+    #canvas{
+        width: 300px;
+        height: 300px;
+        margin-left: -35%;
+    }
+
+    .ban-etoile div{
+        margin-right: 5%;
+    }
+
+    .flexclient img{
+        width: 100px;
+    }
+
+    .titreinteraxys{
+        font-size: 44px !important;
+    }
+
+    .ban-etoile strong{
+        font-size: 22px;
+    }
+
     .flexcolumncat div{
         font-size: 1.5vw;
     }
@@ -1128,9 +1253,24 @@ footer{
 
 @media screen and (max-width: 420px){
 
+    #canvas{
+        width: 300px;
+        height: 300px;
+        margin-left: -55%;
+    }
+
     #headerbg{
         height: 400px;
     }
+
+    .titreinteraxys{
+        font-size: 38px !important;
+    }
+
+    .ban-etoile strong{
+        font-size: 20px;
+    }
+
 
     .sliderdiv h2{
         font-size: 30px;

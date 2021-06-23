@@ -92,6 +92,13 @@ const swiper3 = new Swiper('.swiper-container3', {
     keyboard: {
         enabled: false,
     },
+    breakpoints :{
+        // when window width is >= 640px
+        520: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+        }
+    },
     speed:400,
     spaceBetween: 160,
     loopedSlides: 4,
