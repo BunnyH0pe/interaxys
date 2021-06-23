@@ -26,9 +26,14 @@ time, mark, audio, video {
     src: url("../fonts/qualy_bold.ttf") format("truetype");
 }
 
+.flexmobile{
+    display: none;
+}
+
 .content-page{
     overflow-x: hidden !important;
     width: 100vw;
+    max-width: 100%;
     position: relative;
 }
  /* SCROLLBAR */
