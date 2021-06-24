@@ -1087,6 +1087,11 @@ footer{
         display: none;
     }
 
+    #preloader h1{
+        font-size: 100px !important;
+        letter-spacing: 8px !important;
+    }
+
     .menumobile{
         position: fixed;
         top: 0;
@@ -1261,6 +1266,11 @@ footer{
         text-align: center;
         padding-bottom: 20px;
         padding-top: 20px;
+    }
+
+    #preloader h1{
+        font-size: 52px !important;
+        letter-spacing: 6px !important;
     }
 
     .reseaux-sociaux {
