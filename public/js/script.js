@@ -25,7 +25,15 @@ $(document).ready(function (){
         }
     });
 
-
+    $('.mobilenav a').click(function (){
+        $('.mobilenav').css('margin-left','100vw');
+        menuBtn.classList.remove('open');
+        menuOpen = false;
+        $('html, body').animate({
+            scrollTop: $( $(this).attr('href') ).offset().top - 45
+        }, 500);
+        return false;
+    })
     console.log('ça marche !')
     $('.cardsol').hide();
     $('#cardphilo').show();

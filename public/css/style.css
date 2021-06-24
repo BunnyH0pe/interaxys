@@ -903,6 +903,7 @@ footer{
 
     #headerbg{
         height: 700px;
+        margin-top: -100px;
     }
 
 }
@@ -1173,7 +1174,9 @@ footer{
     }
 
     #imgtourne{
-        width: 100%;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     #canvas{
@@ -1275,7 +1278,8 @@ footer{
     }
 
     #headerbg{
-        height: 500px;
+        height: 100vh;
+        margin-top: -100px;
     }
 
     .sliderdiv h2{
@@ -1378,7 +1382,8 @@ footer{
     }
 
     #headerbg{
-        height: 400px;
+        height: 100vh;
+        margin-top: -100px;
     }
 
     .titreinteraxys{
