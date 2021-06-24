@@ -108,3 +108,20 @@ const swiper3 = new Swiper('.swiper-container3', {
     effect:'slide',
     loop: true,
 });
+
+const swiper4 = new Swiper('.swiper-container4', {
+    autoplay: {
+        delay: 3000,
+    },
+    keyboard: {
+        enabled: false,
+    },
+    speed:400,
+    spaceBetween: 10,
+    loopedSlides: 2,
+    slidesPerView: 2,
+    // Optional parameters
+    direction: 'horizontal',
+    effect:'slide',
+    loop: true,
+});

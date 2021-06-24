@@ -638,6 +638,11 @@ h2{
     padding-bottom: 5px;
 }
 
+
+.swiper-container4{
+    display: none;
+}
+
 .flexclient{
     overflow: hidden;
 }
@@ -1259,6 +1264,14 @@ footer{
 }
 
 @media screen and (max-width: 520px){
+
+    .swiper-container3{
+        display: none;
+    }
+
+    .swiper-container4{
+        display: initial;
+    }
 
     .mail, .tel, .mentions-legales, .copyright{
         width: 100%;

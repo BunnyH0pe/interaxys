@@ -284,6 +284,15 @@
                     {% endfor %}
                 </div>
             </div>
+                <div class="swiper-container4">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        {% for client in clients %}
+                            <div class="swiper-slide"><img src="{{ asset('uploads/images/clients/' ~ client.imageFile) }}" alt="{{ client.attr_alt }}"></div>
+                        {% endfor %}
+                    </div>
+                </div>
             </div>
         </div>
     </section>
