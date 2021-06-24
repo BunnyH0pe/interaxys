@@ -1305,6 +1305,15 @@ footer{
 
     .bgcitation{
         height: 200px;
+        font-size: 18px;
+    }
+
+    #nommage{
+        font-size: 16px;
+    }
+
+    .bgcitation p{
+        width: 90%;
     }
 
     .flex-solution{
