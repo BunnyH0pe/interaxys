@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\BalisesSite;
 use App\Entity\BanApproche;
 use App\Entity\Citations;
 use App\Entity\Clients;
@@ -43,6 +44,7 @@ class DashboardController extends AbstractDashboardController
     public function configureMenuItems(): iterable
     {
         return[
+            MenuItem::linkToCrud('Configuration du site', 'fas fa-cogs', BalisesSite::class),
             MenuItem::section('Haut de page'),
             MenuItem::linkToCrud('Mots clés du menu', 'fas fa-key', MotClefMenu::class),
             MenuItem::linkToCrud('Liens du menu', 'fas fa-link', LienMenu::class),

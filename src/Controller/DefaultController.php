@@ -2,6 +2,7 @@
 
 
 namespace App\Controller;
+use App\Repository\BalisesSiteRepository;
 use App\Repository\BanApprocheRepository;
 use App\Repository\CitationsRepository;
 use App\Repository\ClientsRepository;
@@ -34,9 +35,11 @@ class DefaultController extends AbstractController
                           LienMenuRepository $lienMenuRepository,
                           MotCleApprocheRepository $motCleApprocheRepository,
                           MotClefMenuRepository $motClefMenuRepository,
+                          BalisesSiteRepository $balisesSiteRepository,
                           CitationsRepository $citationsRepository): Response
     {
         $slider = $sliderBanniereRepository->findAll();
+        $balisessite = $balisesSiteRepository->find(1);
         $vision = $notreVisionRepository->find(1);
         $approche = $notreApprocheRepository->findAll();
         $offre = $notreOffreRepository->findAll();
@@ -50,6 +53,7 @@ class DefaultController extends AbstractController
         $citations = $citationsRepository->findAll();
 
         return $this->render('defaultpage.html.twig', [
+            'balises' => $balisessite,
             'slider' => $slider,
             'vision' => $vision,
             'approche' => $approche,
@@ -68,14 +72,16 @@ class DefaultController extends AbstractController
     /**
      * @Route("/mentionslegales",name="mentionslegales")
      */
-    public function MentionsLegales( LienMenuRepository $lienMenuRepository,  ContactRepository $contactRepository):Response
+    public function MentionsLegales( LienMenuRepository $lienMenuRepository,BalisesSiteRepository $balisesSiteRepository,  ContactRepository $contactRepository):Response
     {
         $lienmenu = $lienMenuRepository->find(1);
         $contact = $contactRepository->find(1);
+        $balisessite = $balisesSiteRepository->find(1);
 
         return $this->render('mentionslegales.html.twig',[
             'lienmenu' => $lienmenu,
             'contact' => $contact,
+            'balises' => $balisessite
         ]);
     }
 }
