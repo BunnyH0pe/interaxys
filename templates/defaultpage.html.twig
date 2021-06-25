@@ -98,9 +98,6 @@
                         </div>
                         <img id="imgtourne" src="{{ asset('img/formegeo1.svg') }}" alt="forme geométrique 1">
                     </div>
-                    <div class="pflex">
-                        {{ vision.paragraphe2|raw }}
-                    </div>
                 </div>
             </div>
 
@@ -215,9 +212,11 @@
                         <!-- Slides -->
                         <div class="swiper-slide flexswipe">
                             <div>
-                                <div class="relative-logo">
-                                    <img class="logoslide" src="{{ asset('uploads/images/slideroffre/' ~ offre.0.image_titre) }}" alt="{{ offre.0.titre }}">
-                                    <h3 id="firsth3">{{ offre.0.titre }}</h3>
+                                <div class="absolutelogo">
+                                    <div class="relative-logo">
+                                        <img class="logoslide" src="{{ asset('uploads/images/slideroffre/' ~ offre.0.image_titre) }}" alt="{{ offre.0.titre }}">
+                                        <h3 id="firsth3">{{ offre.0.titre }}</h3>
+                                    </div>
                                 </div>
                                 <div class="invisible-text">
                                     <p>{{ offre.0.description|striptags('div') }}</p>
@@ -228,9 +227,11 @@
                         </div>
                         <div class="swiper-slide flexswipe">
                             <div>
-                                <div class="relative-logo">
-                                    <img class="logoslide" src="{{ asset('uploads/images/slideroffre/' ~ offre.1.image_titre) }}" alt="{{ offre.1.titre }}">
-                                    <h3 id="secondh3">{{ offre.1.titre }}</h3>
+                                <div class="absolutelogo">
+                                    <div class="relative-logo">
+                                        <img class="logoslide" src="{{ asset('uploads/images/slideroffre/' ~ offre.1.image_titre) }}" alt="{{ offre.1.titre }}">
+                                        <h3 id="secondh3">{{ offre.1.titre }}</h3>
+                                    </div>
                                 </div>
                                 <div class="invisible-text">
                                     <p>{{ offre.1.description|striptags('div') }}</p>
@@ -241,9 +242,11 @@
                         </div>
                         <div class="swiper-slide flexswipe">
                             <div>
-                                <div class="relative-logo">
-                                    <img class="logoslide" src="{{ asset('uploads/images/slideroffre/' ~ offre.2.image_titre) }}" alt="{{ offre.2.titre }}">
-                                    <h3 id="thirdh3">{{ offre.2.titre }}</h3>
+                                <div class="absolutelogo">
+                                    <div class="relative-logo">
+                                        <img class="logoslide" src="{{ asset('uploads/images/slideroffre/' ~ offre.2.image_titre) }}" alt="{{ offre.2.titre }}">
+                                        <h3 id="thirdh3">{{ offre.2.titre }}</h3>
+                                    </div>
                                 </div>
                                 <div class="invisible-text">
                                     <p>{{ offre.2.description|striptags('div') }}</p>
@@ -254,14 +257,31 @@
                         </div>
                         <div class="swiper-slide flexswipe">
                             <div>
-                                <div class="relative-logo">
-                                    <img class="logoslide" src="{{ asset('uploads/images/slideroffre/' ~ offre.3.image_titre) }}" alt="{{ offre.3.titre }}">
-                                    <h3 id="lasth3">{{ offre.3.titre }}</h3>
+                                <div class="absolutelogo">
+                                    <div class="relative-logo">
+                                        <img class="logoslide" src="{{ asset('uploads/images/slideroffre/' ~ offre.3.image_titre) }}" alt="{{ offre.3.titre }}">
+                                        <h3 id="lasth3">{{ offre.3.titre }}</h3>
+                                    </div>
                                 </div>
                                 <div class="invisible-text">
                                     <p>{{ offre.3.description|striptags('div') }}</p>
                                     <button id="button4">Plus d'infos</button>
                                     <input type="hidden" id="hidden4" value="{{ formulaire.3.Message }}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide flexswipe">
+                            <div>
+                                <div class="absolutelogo">
+                                    <div class="relative-logo">
+                                        <img class="logoslide" src="{{ asset('uploads/images/slideroffre/' ~ offre.4.image_titre) }}" alt="{{ offre.4.titre }}">
+                                        <h3 id="thirdh3">{{ offre.4.titre }}</h3>
+                                    </div>
+                                </div>
+                                <div class="invisible-text">
+                                    <p>{{ offre.4.description|striptags('div') }}</p>
+                                    <button id="button3">Plus d'infos</button>
+                                    <input type="hidden" id="hidden3" value="{{ formulaire.4.Message }}">
                                 </div>
                             </div>
                         </div>
@@ -285,15 +305,6 @@
                     {% endfor %}
                 </div>
             </div>
-                <div class="swiper-container4">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        {% for client in clients %}
-                            <div class="swiper-slide"><img src="{{ asset('uploads/images/clients/' ~ client.imageFile) }}" alt="{{ client.attr_alt }}"></div>
-                        {% endfor %}
-                    </div>
-                </div>
             </div>
         </div>
     </section>

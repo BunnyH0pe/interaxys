@@ -285,6 +285,10 @@ h2{
     justify-content: space-between;
     align-items: center;
     text-align: justify;
+    background-color: #1e1e1e;
+    border: 2px #E6E6E6 solid;
+    padding: 30px;
+    box-sizing: border-box;
 }
 
 .textpresentation{
@@ -544,7 +548,7 @@ h2{
     background-size: 108%;
     background-position: 45%;
     height: 100vh;
-    min-height: 700px;
+    min-height: 800px;
     background-attachment: fixed;
 }
 
@@ -552,7 +556,7 @@ h2{
     font-family: Roboto;
     font-size: 18px;
     text-align: center;
-    padding: 25px;
+    line-height: 28px;
     box-sizing: border-box;
     min-height: 300px;
     width: 90%;
@@ -578,6 +582,7 @@ h2{
     margin-left: auto;
     margin-right: auto;
     cursor: pointer;
+    margin-top: 50px;
     background-color: #E6E6E6;
     transition: background-color 0.5s ease-in;
 }
@@ -596,7 +601,14 @@ h2{
 }
 
 .relative-logo{
-    position: relative;
+    position:relative;
+}
+
+.absolutelogo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
 .flexswipe h3{
@@ -604,27 +616,13 @@ h2{
     top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 34%;
+    width: 100%;
+    -webkit-text-stroke: 1px #1e1e1e;
     text-align: center;
     font-family: Qualy;
     font-size: 1.6vw;
 }
 
-#buttonorient{
-    background-color: #1e1e1e;
-}
-
-#buttongestion{
-    background-color: #1e1e1e;
-}
-
-#buttonmanage{
-     background-color: #1e1e1e;
-}
-
-#buttonpilote{
-    background-color: #1e1e1e;
-}
 
 #clients h2{
     display: none;
@@ -636,11 +634,6 @@ h2{
     align-items: center;
     padding-top: 5px;
     padding-bottom: 5px;
-}
-
-
-.swiper-container4{
-    display: none;
 }
 
 .flexclient{
@@ -1177,6 +1170,10 @@ footer{
     .doubleflex{
         flex-direction: column;
         gap: 60px;
+        background-color: #1e1e1e;
+        border: 2px #E6E6E6 solid;
+        padding: 20px;
+        box-sizing: border-box;
     }
 
     .textpresentation{
@@ -1264,14 +1261,6 @@ footer{
 }
 
 @media screen and (max-width: 520px){
-
-    .swiper-container3{
-        display: none;
-    }
-
-    .swiper-container4{
-        display: initial;
-    }
 
     .mail, .tel, .mentions-legales, .copyright{
         width: 100%;
@@ -1441,18 +1430,22 @@ footer{
 }
 
 #savoir-faire .logoslide{
-    width: 50%;
+    width: 100%;
     display: block;
-    margin: 112px auto 20px auto;
+    margin-right: auto;
+    margin-left: auto;
     transition: margin ease-in 0.4s;
 }
 
 .flexswipe > div{
     padding: 30px;
-    min-height: 300px;
+    min-height: 400px;
     background-color: #1e1e1e ;
     border:#E6E6E6 2px solid ;
     color: #E6E6E6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .swiper-wrapper{
@@ -1466,6 +1459,7 @@ footer{
 
 .invisible-text{
     display: none;
+    margin-top: 140px;
 }
 
 .swiper-container{
