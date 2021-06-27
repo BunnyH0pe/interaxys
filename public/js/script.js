@@ -5,6 +5,60 @@ $(window).on('load', function () {
         $('body').css('overflow','initial');
 })
 
+//AUTOREMPLISSAGE CONTACT
+
+$('#button1').on('click', function (){
+    var title = $('#firsth3').text();
+    var message = $('#hidden1').val();
+    $('html, body').animate({
+        scrollTop: $('#contact').offset().top - 20
+    }, 500);
+    $('#objet').val('Informations : ' + title );
+    $('#message').val(message);
+})
+
+$('#button2').on('click', function (){
+    var title = $('#secondh3').text();
+    var message = $('#hidden2').val();
+    $('html, body').animate({
+        scrollTop: $('#contact').offset().top - 20
+    }, 500);
+    $('#objet').val('Informations : ' + title );
+    $('#message').val(message);
+})
+
+$('#button3').on('click', function (){
+    var title = $('#thirdh3').text();
+    var message = $('#hidden3').val();
+    $('html, body').animate({
+        scrollTop: $('#contact').offset().top - 20
+    }, 500);
+    $('#objet').val('Informations : ' + title );
+    $('#message').val(message);
+})
+
+$('#buttonlast').on('click', function (){
+    console.log('HELLO');
+    var title = $('#lasth3').text();
+    var message = $('#hidden4').val();
+    $('html, body').animate({
+        scrollTop: $('#contact').offset().top - 20
+    }, 500);
+    $('#objet').val('Informations : ' + title );
+    $('#message').val(message);
+})
+
+$('#buttonlastlast').on('click', function (){
+    console.log('HELLO');
+    var title = $('#lastlasth3').text();
+    var message = $('#hidden5').val();
+    $('html, body').animate({
+        scrollTop: $('#contact').offset().top - 20
+    }, 500);
+    $('#objet').val('Informations : ' + title );
+    $('#message').val(message);
+})
+
 $(document).ready(function (){
 
     $('.menu-btn').on('click', function (){
@@ -294,60 +348,6 @@ $(document).ready(function (){
         setTimeout(function (){
             $('#cardstrat').fadeIn('fast');
         },200)
-    })
-
-    //AUTOREMPLISSAGE CONTACT
-
-    $('#button1').on('click', function (){
-        var title = $('#firsth3').text();
-        var message = $('#hidden1').val();
-        $('html, body').animate({
-            scrollTop: $('#contact').offset().top - 20
-        }, 500);
-        $('#objet').val('Informations : ' + title );
-        $('#message').val(message);
-    })
-
-    $('#button2').on('click', function (){
-        var title = $('#secondh3').text();
-        var message = $('#hidden2').val();
-        $('html, body').animate({
-            scrollTop: $('#contact').offset().top - 20
-        }, 500);
-        $('#objet').val('Informations : ' + title );
-        $('#message').val(message);
-    })
-
-    $('#button3').on('click', function (){
-        var title = $('#thirdh3').text();
-        var message = $('#hidden3').val();
-        $('html, body').animate({
-            scrollTop: $('#contact').offset().top - 20
-        }, 500);
-        $('#objet').val('Informations : ' + title );
-        $('#message').val(message);
-    })
-
-    $('#button4').on('click', function (){
-        console.log('HELLO');
-        var title = $('#lasth3').text();
-        var message = $('#hidden4').val();
-        $('html, body').animate({
-            scrollTop: $('#contact').offset().top - 20
-        }, 500);
-        $('#objet').val('Informations : ' + title );
-        $('#message').val(message);
-    })
-
-    $('#button5').on('click', function (){
-        console.log('HELLO');
-        var title = $('#lastlasth3').text();
-        var message = $('#hidden5').val();
-        $('html, body').animate({
-            scrollTop: $('#contact').offset().top - 20
-        }, 500);
-        $('#objet').val('Informations : ' + title );
-        $('#message').val(message);
     })
 
 
