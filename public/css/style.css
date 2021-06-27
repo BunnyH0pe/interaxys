@@ -1166,6 +1166,10 @@ footer{
         box-sizing: border-box;
     }
 
+    nav{
+        display: none;
+    }
+
 
     .swiper-pagination-bullet{
         width: 8px !important;
