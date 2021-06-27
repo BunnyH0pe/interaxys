@@ -54,16 +54,18 @@ time, mark, audio, video {
 header{
     z-index: 1200;
     position: relative;
+    padding-bottom: 20px;
     padding-top: 20px;
     background-color: #1e1e1e;
 }
 
 .logo-nav{
     align-self: flex-end;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     transform: scale(1.65) translate(-14%,-25%);
     transition: transform ease-in 0.3s;
 }
+
 
 .logo-nav-mob{
     display: none;
@@ -166,6 +168,10 @@ nav img{
     overflow: hidden;
     width: 100% ;
     height: 100%;
+}
+
+#presentation .sectionlimit{
+    width: 90%;
 }
 
 .everybgdiv{
@@ -296,7 +302,7 @@ h2{
 }
 
 .doubleflex img{
-    width: 30%;
+    width: 35%;
 }
 
 .pflex{
@@ -404,6 +410,7 @@ h2{
     height: 120px;
     display: flex;
     align-items: center;
+    text-align: center;
     justify-content: center;
     background-color: #1e1e1e;
     font-family: Qualy;
@@ -1339,7 +1346,7 @@ footer{
 
     .flexcolumncat div{
         height: 50px;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
         width: 48%;
         font-size: 18px !important;
     }

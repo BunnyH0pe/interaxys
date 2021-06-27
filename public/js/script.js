@@ -166,6 +166,7 @@ $(document).ready(function (){
             $('nav p').not('#contactlink p').css('margin-bottom','0').css('color','#E6E6E6').css('font-size','18px');
         }
         $(".logo-nav").css('transform','scale(1) translate(-14%)');
+        $(".logo-nav").css('margin-bottom','10px');
         $("nav a").mouseover(function() {
             $(this).css("color","#94C8EE")
             $(this).not('.logo-nav-link').css('border-bottom','#94C8EE solid 5px')
@@ -175,6 +176,7 @@ $(document).ready(function (){
         });
     }else{
         $(".logo-nav").css('transform','scale(1.65) translate(-14%,-25%)');
+        $(".logo-nav").css('margin-bottom','20px');
         $("nav a").mouseover(function() {
             $(this).css("color","#94C8EE")
             $(this).not('.logo-nav-link').css('border-bottom','#94C8EE solid 5px')
@@ -222,6 +224,7 @@ $(document).ready(function (){
                 $('nav p').not('#contactlink p').css('margin-bottom','0').css('color','#E6E6E6').css('font-size','18px');
             }
             $(".logo-nav").css('transform','scale(1) translate(-14%)');
+            $(".logo-nav").css('margin-bottom','10px');
             $("nav a").mouseover(function() {
                 $(this).css("color","#94C8EE")
                 $(this).not('.logo-nav-link').css('border-bottom','#94C8EE solid 5px')
@@ -232,6 +235,7 @@ $(document).ready(function (){
                 $(this).find('p').css('margin-bottom','0px');
             });
         }else{
+            $(".logo-nav").css('margin-bottom','20px');
             $(".logo-nav").css('transform','scale(1.65) translate(-14%,-25%)');
             $("nav a").mouseover(function() {
                 $(this).css("color","#94C8EE")
@@ -325,8 +329,20 @@ $(document).ready(function (){
     })
 
     $('#button4').on('click', function (){
+        console.log('HELLO');
         var title = $('#lasth3').text();
         var message = $('#hidden4').val();
+        $('html, body').animate({
+            scrollTop: $('#contact').offset().top - 20
+        }, 500);
+        $('#objet').val('Informations : ' + title );
+        $('#message').val(message);
+    })
+
+    $('#button5').on('click', function (){
+        console.log('HELLO');
+        var title = $('#lastlasth3').text();
+        var message = $('#hidden5').val();
         $('html, body').animate({
             scrollTop: $('#contact').offset().top - 20
         }, 500);

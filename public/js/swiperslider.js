@@ -117,6 +117,7 @@ const swiper2 = new Swiper('.swiper-container2', {
         stretch: 100,
         depth : 200,
     },
+    slideToClickedSlide : true,
     followFinger :false,
     on: {
         afterInit: function (){
@@ -130,6 +131,9 @@ const swiper2 = new Swiper('.swiper-container2', {
             $('#savoir-faire .swiper-slide-prev, #savoir-faire .swiper-slide-duplicate-prev').find('.invisible-text').slideUp(400);
             $('#savoir-faire .swiper-slide-next, #savoir-faire .swiper-slide-duplicate-next').find('.absolutelogo').css('top','50%');
             $('#savoir-faire .swiper-slide-prev, #savoir-faire .swiper-slide-duplicate-prev').find('.absolutelogo').css('top','50%');
+            $('#savoir-faire .swiper-slide-next, #savoir-faire .swiper-slide-duplicate-next').css('cursor','pointer');
+            $('#savoir-faire .swiper-slide-prev, #savoir-faire .swiper-slide-duplicate-prev').css('cursor','pointer');
+            $('#savoir-faire .swiper-slide-active, #savoir-faire .swiper-slide-duplicate-active').css('cursor','initial');
         },
     }
 })
