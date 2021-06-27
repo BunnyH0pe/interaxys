@@ -1084,12 +1084,8 @@ footer{
         display: block;
     }
 
-    body>.content-page>header{
-        display: none;
-    }
-
-    body>.content-page>nav{
-        display: none;
+    body{
+        height: 100vh;
     }
 
     #preloader h1{
