@@ -161,7 +161,7 @@ nav img{
     height: 100vmin;
     position: relative;
     z-index: 1000;
-    margin-top: -112px;
+    margin-top: -132px;
 }
 
 .sliderdiv{
@@ -899,17 +899,6 @@ footer{
 
 .reseaux-sociaux{
     width: 15%;
-}
-
-/* POUR LE RESPONSIVE */
-
-@media screen and (max-height: 700px){
-
-    #headerbg{
-        height: 700px;
-        margin-top: -100px;
-    }
-
 }
 
 @media screen and (max-width: 1480px) {
