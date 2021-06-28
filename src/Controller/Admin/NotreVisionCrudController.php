@@ -37,8 +37,6 @@ class NotreVisionCrudController extends AbstractCrudController
         return [
             TextField::new('titre','Titre (n\'apparait pas)'),
             TextEditorField::new('paragraphe1', 'Premier paragraphe'),
-            TextEditorField::new('paragraphe2', 'Second paragraphe'),
-            TextField::new('lienvideo', 'Lien vidéo'),
         ];
     }
 }

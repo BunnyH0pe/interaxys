@@ -125,7 +125,11 @@ const swiper2 = new Swiper('.swiper-container2', {
             $('#savoir-faire .swiper-slide-active, #savoir-faire .swiper-slide-duplicate-active').find('.invisible-text').slideDown(500);
         },
         slideChangeTransitionStart: function () {
-            $('#savoir-faire .swiper-slide-active, #savoir-faire .swiper-slide-duplicate-active').find('.absolutelogo').css('top','15%');
+            if (window.innerWidth < 520){
+                $('#savoir-faire .swiper-slide-active, #savoir-faire .swiper-slide-duplicate-active').find('.absolutelogo').css('top','10%');
+            }else{
+                $('#savoir-faire .swiper-slide-active, #savoir-faire .swiper-slide-duplicate-active').find('.absolutelogo').css('top','15%');
+            }
             $('#savoir-faire .swiper-slide-active, #savoir-faire .swiper-slide-duplicate-active').find('.invisible-text').slideDown(500);
             $('#savoir-faire .swiper-slide-next, #savoir-faire .swiper-slide-duplicate-next').find('.invisible-text').slideUp(400);
             $('#savoir-faire .swiper-slide-prev, #savoir-faire .swiper-slide-duplicate-prev').find('.invisible-text').slideUp(400);

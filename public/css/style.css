@@ -353,7 +353,6 @@ h2{
 }
 
 .presentation-video{
-    background-image: url("../img/videoban.jpg");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -627,7 +626,7 @@ h2{
     -webkit-text-stroke: 1px #1e1e1e;
     text-align: center;
     font-family: Qualy;
-    font-size: 1.6vw;
+    font-size: 1.8vw;
 }
 
 
@@ -922,8 +921,8 @@ footer{
 
 @media screen and (max-width: 1200px) {
     .cardsol div{
-        font-size: 13px;
-        line-height: 23px;
+        font-size: 16px;
+        line-height: 26px;
     }
 
     #footer{
@@ -1018,6 +1017,10 @@ footer{
         height: 380px;
     }
 
+    .flexswipe h3{
+        font-size: 20px;
+    }
+
 
     .swiper-button-next{
         --swiper-navigation-size: 60px !important;
@@ -1084,8 +1087,16 @@ footer{
         display: block;
     }
 
-    body{
-        height: 100vh;
+    header{
+        display: none;
+    }
+
+    nav{
+        display: none;
+    }
+
+    .flexswipe h3{
+        font-size: 18px;
     }
 
     #preloader h1{
@@ -1094,7 +1105,7 @@ footer{
     }
 
     .menumobile{
-        position: fixed;
+        position: sticky;
         top: 0;
         left: 0;
         z-index: 1800;
@@ -1235,17 +1246,43 @@ footer{
         max-height: initial;
     }
 
+    .flexcolumncat{
+        flex-wrap: wrap;
+        height: initial;
+    }
+
+    .flexcolumncat div{
+        height: 50px;
+        margin-bottom: 5px;
+        width: 48%;
+        font-size: 18px !important;
+    }
+
+    .cardsol h3{
+        font-size: 30px;
+        margin-top: 10px;
+    }
+
+    .cardsol h5{
+        font-size: 18px;
+    }
+
+
+    .cardsol h6 {
+        font-size: 16px;
+    }
+
+    .cardsol article{
+        height: 95%;
+    }
+
+
     .flex-solution{
         gap: 20px;
     }
 
-    .flexcolumncat div{
-        height: 60px;
-        width: 20%;
-    }
-
     .flexcolumncat{
-        height: 60px;
+        height:initial;
     }
 
     .cardsol h3{
@@ -1257,14 +1294,26 @@ footer{
         height: 90%;
     }
 
+    .cardsol ul{
+        flex-wrap: wrap;
+    }
+
+    .cardsol ul>li{
+        width: 50%;
+        margin-bottom: 10px;
+    }
+
     #solutions{
-        min-height: 800px;
+        min-height: 1000px;
     }
 
     .flexcolumncat div{
         font-size: 1.5vw;
     }
 
+    .cardsol div{
+        font-size: 14px;
+    }
 }
 
 @media screen and (max-width: 520px){
@@ -1275,6 +1324,16 @@ footer{
         text-align: center;
         padding-bottom: 20px;
         padding-top: 20px;
+    }
+
+
+    .flexswipe h3{
+        font-size: 16px;
+    }
+
+    .cardsol div{
+        font-size: 14px;
+        line-height: 22px;
     }
 
     #preloader h1{
@@ -1295,6 +1354,8 @@ footer{
     .presentation-video{
         height: 300px;
     }
+
+
 
     #headerbg{
         height: 100vh;
@@ -1399,6 +1460,15 @@ footer{
         font-size: 1.5vw;
     }
 
+    #savoir-faire{
+        height: 1000px;
+        min-height: initial;
+    }
+
+    #savoir-faire .sectionlimit {
+        min-height: 900px;
+    }
+
 }
 
 @media screen and (max-width: 420px){
@@ -1433,6 +1503,22 @@ footer{
         font-size: 12px;
         width: 100%;
         line-height: 22px;
+    }
+
+    #savoir-faire{
+        height: 1200px;
+        min-height: initial;
+    }
+
+    #savoir-faire .sectionlimit {
+        min-height: 1100px;
+    }
+}
+
+@media screen and (max-width: 360px){
+    .cardsol div{
+        font-size: 12px;
+        line-height: 20px;
     }
 }
 

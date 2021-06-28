@@ -14,6 +14,7 @@ use App\Repository\MotClefMenuRepository;
 use App\Repository\NotreApprocheRepository;
 use App\Repository\NotreOffreRepository;
 use App\Repository\SliderBanniereRepository;
+use App\Repository\VideoRepository;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -36,6 +37,7 @@ class DefaultController extends AbstractController
                           MotCleApprocheRepository $motCleApprocheRepository,
                           MotClefMenuRepository $motClefMenuRepository,
                           BalisesSiteRepository $balisesSiteRepository,
+                          VideoRepository $videoRepository,
                           CitationsRepository $citationsRepository): Response
     {
         $slider = $sliderBanniereRepository->findAll();
@@ -43,6 +45,7 @@ class DefaultController extends AbstractController
         $vision = $notreVisionRepository->find(1);
         $approche = $notreApprocheRepository->findAll();
         $offre = $notreOffreRepository->findAll();
+        $video = $videoRepository->find(1);
         $clients = $clientsRepository->findAll();
         $contact = $contactRepository->find(1);
         $contactform = $contactFormRepository->findAll();
@@ -66,6 +69,7 @@ class DefaultController extends AbstractController
             'motcleapproche' => $motcleapproche,
             'motclemenu' => $motclemenu,
             'citations' => $citations,
+            'video' => $video
         ]);
     }
 

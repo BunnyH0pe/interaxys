@@ -15,6 +15,7 @@ use App\Entity\NotreApproche;
 use App\Entity\NotreOffre;
 use App\Entity\NotreVision;
 use App\Entity\SliderBanniere;
+use App\Entity\Video;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
@@ -50,8 +51,9 @@ class DashboardController extends AbstractDashboardController
             MenuItem::linkToCrud('Liens du menu', 'fas fa-link', LienMenu::class),
             MenuItem::linkToCrud('Slider', 'fas fa-chalkboard-teacher', SliderBanniere::class),
             MenuItem::section('Section Vision'),
-            MenuItem::linkToCrud('Contenu texte et vidéo', 'fas fa-eye', NotreVision::class),
+            MenuItem::linkToCrud('Contenu texte', 'fas fa-eye', NotreVision::class),
             MenuItem::linkToCrud('Citations', 'fas fa-quote-left', Citations::class),
+            MenuItem::linkToCrud('Vidéo', 'fas fa-video', Video::class),
             MenuItem::section('Section Approche'),
             MenuItem::linkToCrud('Menu d\'approche', 'fas fa-map-signs', NotreApproche::class),
             MenuItem::linkToCrud('Mots clés secondaires d\'approche', 'fas fa-key', MotCleApproche::class),
