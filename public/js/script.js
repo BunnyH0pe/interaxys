@@ -353,11 +353,4 @@ $(document).ready(function (){
 
 
     //PARALLAX
-
-    $(document).ready(function() {
-        $('#solutions').parallax("50%", 0.1);
-        $('#savoir-faire').parallax("50%", 0.1);
-        $('#contact').parallax("50%", 0.1);
-        $('.premierepresentation').parallax("50%", 0.1);
-    })
 })
