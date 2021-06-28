@@ -1307,14 +1307,6 @@ footer{
 
 @media screen and (max-width: 520px){
 
-    body{
-        height: 100vh;
-    }
-
-    html{
-        height: 100vh;
-    }
-
     .mail, .tel, .mentions-legales, .copyright{
         width: 100%;
         justify-content: center;
@@ -1359,6 +1351,7 @@ footer{
 
     #headerbg{
         height: 100vh;
+        margin: 0;
     }
 
     .sliderdiv h2{
@@ -1480,6 +1473,7 @@ footer{
 
     #headerbg{
         height: 100vh;
+        margin: 0;
     }
 
     .titreinteraxys{
