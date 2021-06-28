@@ -1315,6 +1315,9 @@ footer{
         padding-top: 20px;
     }
 
+    .absolutelogo{
+        width: 70%;
+    }
 
     .flexswipe h3{
         font-size: 16px;
