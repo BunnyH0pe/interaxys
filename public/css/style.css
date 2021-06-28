@@ -1094,7 +1094,7 @@ footer{
     }
 
     .menumobile{
-        position: fixed;
+        position: initial;
         top: 0;
         left: 0;
         z-index: 1800;
