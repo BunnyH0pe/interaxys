@@ -60,33 +60,6 @@
             </ul>
         </div>
     </div>
-    {#<section id="headerbg">
-        <div class="sliderdiv">
-            <!-- Slider main container -->
-            <div class="swiper-container">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
-                    {% for slide in slider %}
-                        <div class="swiper-slide">
-                            <div class="sliderslide" style="background-image: url('{{ asset('uploads/images/headslider/' ~ slide.image) }}');">
-                                <div class="centerslider">
-                                    <h2 class="slidertitre" data-glitch="{{ slide.titre }}">{{ slide.titre }}</h2>
-                                    <div class="sliderundertitle">{{ slide.soustitre|raw }}</div>
-                                </div>
-                            </div>
-                        </div>
-                    {% endfor %}
-                </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
-        </div>
-    </section>#}
-
     <section id="presentation">
         <article>
             <div class="premierepresentation">
