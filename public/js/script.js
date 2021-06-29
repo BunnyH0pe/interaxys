@@ -38,7 +38,6 @@ $('#button3').on('click', function (){
 })
 
 $('#buttonlast').on('click', function (){
-    console.log('HELLO');
     var title = $('#lasth3').text();
     var message = $('#hidden4').val();
     $('html, body').animate({
@@ -49,7 +48,6 @@ $('#buttonlast').on('click', function (){
 })
 
 $('#buttonlastlast').on('click', function (){
-    console.log('HELLO');
     var title = $('#lastlasth3').text();
     var message = $('#hidden5').val();
     $('html, body').animate({
@@ -60,10 +58,6 @@ $('#buttonlastlast').on('click', function (){
 })
 
 $(document).ready(function (){
-
-    $('.menu-btn').on('click', function (){
-       console.log('clicked')
-    })
 
     const menuBtn = document.querySelector('.menu-btn');
     let menuOpen = false;
@@ -88,7 +82,6 @@ $(document).ready(function (){
         }, 500);
         return false;
     })
-    console.log('ça marche !')
     $('.cardsol').hide();
     $('#cardphilo').show();
     CitationMaker();
@@ -98,7 +91,6 @@ $(document).ready(function (){
 
     var citation = 1;
     var numberCitation = $('.citations div').length;
-    console.log(numberCitation)
 
     function CitationMaker(){
         if (citation < numberCitation) {
@@ -152,7 +144,6 @@ $(document).ready(function (){
             i += 0.5;
             rotation = positionscroll + i;
         }
-        console.log(upscroll)
         $('#imgtourne').css('transform','rotate('+ rotation +'deg)');
     }, 20)
 
@@ -225,7 +216,6 @@ $(document).ready(function (){
 
     $(document).scroll(function (){
         var positionscroll = $(document).scrollTop();
-        console.log(positionscroll);
         var limitnav = 40;
 
         if( positionscroll > 40){
