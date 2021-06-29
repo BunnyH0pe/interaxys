@@ -2,6 +2,8 @@
 
 
 namespace App\Controller;
+use App\Repository\BalisesSiteRepository;
+use App\Repository\LienMenuRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Mailer\MailerInterface;
@@ -18,8 +20,14 @@ class MailerController extends AbstractController
      * @Route("/email", name="emailcontact")
      */
     public function sendEmail(MailerInterface $mailer,
-                              ContactRepository $contactRepository, Request $request): Response
+                              ContactRepository $contactRepository,
+                              Request $request,
+                              LienMenuRepository $lienMenuRepository,
+                              BalisesSiteRepository $balisesSiteRepository): Response
     {
+        $lienmenu = $lienMenuRepository->find(1);
+        $balisessite = $balisesSiteRepository->find(1);
+
         $nom = $request->request->get('nom');
         $prenom = $request->request->get('prenom');
         $mailclient = $request->request->get('email');
@@ -47,6 +55,10 @@ class MailerController extends AbstractController
                          <p>'.$message.'</p>');
 
         $mailer->send($email);
-        return $this->render('mail.html.twig');
+        return $this->render('mail.html.twig',[
+            'lienmenu' => $lienmenu,
+            'contact' => $contact,
+            'balises' => $balisessite
+        ]);
     }
 }
