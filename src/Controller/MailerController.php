@@ -28,8 +28,7 @@ class MailerController extends AbstractController
         $message = $request->request->get('message');
 
         $contact = $contactRepository->find(1);
-        dump($contact);
-        $address = $contact['email'];
+        $address = $contact->getEmail();
 
         $email = (new Email())
             ->from('infos@interaxys.fr')
