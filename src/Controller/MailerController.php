@@ -47,5 +47,6 @@ class MailerController extends AbstractController
                          <p>'.$message.'</p>');
 
         $mailer->send($email);
+        return $this->render('mail.html.twig');
     }
 }
