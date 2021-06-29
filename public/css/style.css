@@ -284,8 +284,8 @@ h2{
 .doubleflex{
     display: flex;
     width: 100%;
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 20px;
+    line-height: 32px;
     color: #E6E6E6;
     font-family: Roboto;
     justify-content: space-between;
@@ -297,21 +297,16 @@ h2{
     box-sizing: border-box;
 }
 
+.flexcolumncat div p{
+    font-size: 22px;
+}
+
 .textpresentation{
     width: 60%;
 }
 
 .doubleflex img{
     width: 35%;
-}
-
-.pflex{
-    margin-top: 50px;
-    font-size: 18px;
-    line-height: 28px;
-    color: #E6E6E6;
-    font-family: Roboto;
-    text-align: justify;
 }
 
 .bgcitation{
@@ -502,9 +497,9 @@ h2{
 }
 
 .cardsol div {
-    font-size: 18px;
+    font-size: 20px;
     font-family: Roboto;
-    line-height: 30px;
+    line-height: 32px;
 }
 
 .ban-etoile{
@@ -560,9 +555,9 @@ h2{
 
 #savoir-faire p{
     font-family: Roboto;
-    font-size: 18px;
+    font-size: 20px;
     text-align: center;
-    line-height: 28px;
+    line-height: 32px;
     box-sizing: border-box;
     min-height: 300px;
     width: 90%;
@@ -903,8 +898,8 @@ footer{
 
 @media screen and (max-width: 1480px) {
     .cardsol div{
-        font-size: 15px;
-        line-height: 26px;
+        font-size: 18px;
+        line-height: 28px;
     }
 }
 
@@ -1063,8 +1058,16 @@ footer{
         min-height: 800px;
     }
 
+    .flexcolumncat{
+        flex-wrap: wrap;
+        height: initial;
+    }
+
     .flexcolumncat div{
-        font-size: 1.5vw;
+        height: 50px;
+        margin-bottom: 10px;
+        width: 48%;
+        font-size: 18px !important;
     }
 
 }
@@ -1319,6 +1322,18 @@ footer{
         width: 70%;
     }
 
+    .doubleflex{
+        text-align: left;
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    #savoir-faire p{
+        font-size: 14px;
+        line-height: 22px;
+        text-align: center;
+    }
+
     .flexswipe h3{
         font-size: 16px;
     }
@@ -1339,8 +1354,8 @@ footer{
     }
 
     iframe{
-        width: 280px;
-        height: 157px;
+        width: 350px;
+        height: 196px;
     }
 
     .presentation-video{
@@ -1350,7 +1365,7 @@ footer{
 
 
     #headerbg{
-        height: 100vh;
+        height: 500px;
         margin: 0;
     }
 
@@ -1453,12 +1468,12 @@ footer{
     }
 
     #savoir-faire{
-        height: 1000px;
+        height: 850px;
         min-height: initial;
     }
 
     #savoir-faire .sectionlimit {
-        min-height: 900px;
+        min-height: 750px;
     }
 
 }
@@ -1472,7 +1487,7 @@ footer{
     }
 
     #headerbg{
-        height: 100vh;
+        height: 500px;
         margin: 0;
     }
 
@@ -1498,12 +1513,12 @@ footer{
     }
 
     #savoir-faire{
-        height: 1200px;
+        height: 1000px;
         min-height: initial;
     }
 
     #savoir-faire .sectionlimit {
-        min-height: 1100px;
+        min-height: 900px;
     }
 }
 
@@ -1511,6 +1526,43 @@ footer{
     .cardsol div{
         font-size: 12px;
         line-height: 20px;
+    }
+
+    iframe{
+        width: 250px;
+        height: 140px;
+    }
+
+    .doubleflex{
+        text-align: left;
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    #savoir-faire p{
+        font-size: 12px;
+        line-height: 20px;
+        text-align: center;
+    }
+
+    .flexcolumncat div p{
+        font-size: 14px;
+    }
+
+    .cardsol h3{
+        font-size: 22px;
+    }
+
+    .cardsol h4{
+        font-size: 24px;
+    }
+
+    .cardsol h5{
+        font-size: 16px;
+    }
+
+    #canvas{
+        margin-left: -70%;
     }
 }
 
