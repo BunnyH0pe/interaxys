@@ -1322,6 +1322,10 @@ footer{
         padding-top: 20px;
     }
 
+    #imgtourne{
+        display: none;
+    }
+
     .absolutelogo{
         width: 70%;
     }
