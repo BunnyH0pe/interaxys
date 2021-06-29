@@ -657,7 +657,6 @@ h2{
     background-image: url("../img/grille.png");
     background-size: 108%;
     background-position: 20% 30%;
-    height: 100vh;
     min-height: 750px;
     background-attachment: fixed;
 }
