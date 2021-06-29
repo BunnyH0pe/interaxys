@@ -38,12 +38,13 @@ class MailerController extends AbstractController
         $contact = $contactRepository->find(1);
         $address = $contact->getEmail();
 
-        $email = (new Email())
-            ->from('infos@interaxys.fr')
-            ->to($address)
-            //->priority(Email::PRIORITY_HIGH)
-            ->subject('Nouvelle demande de contact : '.$nom.' '.$prenom)
-            ->html('<h1>Une nouvelle de demande de contact est arrivée !</h1>
+        if (!empty($nom) || !empty($prenom)){
+            $email = (new Email())
+                ->from('infos@interaxys.fr')
+                ->to($address)
+                //->priority(Email::PRIORITY_HIGH)
+                ->subject('Nouvelle demande de contact : '.$nom.' '.$prenom)
+                ->html('<h1>Une nouvelle de demande de contact est arrivée !</h1>
                          <h2>Consultez dès à présent celle-ci.</h2>
                          <br>
                          <p>'.$nom.' '.$prenom.'<br>
@@ -54,11 +55,18 @@ class MailerController extends AbstractController
                          <br>
                          <p>'.$message.'</p>');
 
-        $mailer->send($email);
-        return $this->render('mail.html.twig',[
-            'lienmenu' => $lienmenu,
-            'contact' => $contact,
-            'balises' => $balisessite
-        ]);
+            $mailer->send($email);
+            return $this->render('mail.html.twig',[
+                'lienmenu' => $lienmenu,
+                'contact' => $contact,
+                'balises' => $balisessite
+            ]);
+        }else{
+            return $this->render('mailrip.html.twig',[
+                'lienmenu' => $lienmenu,
+                'contact' => $contact,
+                'balises' => $balisessite
+            ]);
+        }
     }
 }
