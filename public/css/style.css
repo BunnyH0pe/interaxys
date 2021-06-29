@@ -606,10 +606,15 @@ h2{
 }
 
 .absolutelogo {
+    width: 55%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+}
+
+.logoslide{
+    margin-left: 10px;
 }
 
 .flexswipe h3{
@@ -618,10 +623,10 @@ h2{
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
-    -webkit-text-stroke: 1px #1e1e1e;
+    font-weight: normal;
     text-align: center;
     font-family: Qualy;
-    font-size: 1.8vw;
+    font-size: 1.55vw;
 }
 
 
