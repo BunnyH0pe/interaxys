@@ -86,7 +86,7 @@ const swiper = new Swiper('.swiper-container', {
 
 const swiper2 = new Swiper('.swiper-container2', {
     autoplay: {
-        delay : 3000,
+        delay : 8000,
     },
     direction: 'horizontal',
     effect:'coverflow',
@@ -120,6 +120,9 @@ const swiper2 = new Swiper('.swiper-container2', {
     slideToClickedSlide : true,
     followFinger :false,
     on: {
+        click: function (){
+            swiper.autoplay.stop()
+        },
         afterInit: function (){
             //$('#savoir-faire .swiper-slide-active, #savoir-faire .swiper-slide-duplicate-active').find('.logoslide').css('margin','20px auto 20px auto');
             $('#savoir-faire .swiper-slide-active, #savoir-faire .swiper-slide-duplicate-active').find('.invisible-text').slideDown(500);
