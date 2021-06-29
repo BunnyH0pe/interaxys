@@ -165,26 +165,6 @@ $(document).ready(function (){
         return false;
     });
 
-    //HOVER FOOTER
-
-    $("#facebook").mouseover(function() {
-        $(this).attr('src','../img/001-facebook-hover.svg')
-    }).mouseout(function (){
-        $(this).attr('src','../img/001-facebook.svg')
-    });
-
-    $("#linkedin").mouseover(function() {
-        $(this).attr('src','../img/010-linkedin-hover.svg')
-    }).mouseout(function (){
-        $(this).attr('src','../img/010-linkedin.svg')
-    });
-
-    $("#twitter").mouseover(function() {
-        $(this).attr('src','../img/013-twitter-hover.svg')
-    }).mouseout(function (){
-        $(this).attr('src','../img/013-twitter.svg')
-    });
-
     // NAVBAR
 
     var positionscroll = $(document).scrollTop();
